@@ -14,7 +14,7 @@ namespace DeeBeeTeeAlphaBot
     {
         static void Main(string[] args)
         {
-            TelegramRequest Tr = new TelegramRequest(MainSettings.Default.Token);
+            TelegramRequest Tr = new TelegramRequest(MainSettings.Default.Token, MainSettings.Default.API_URL);
             Tr.MessageText += Tr_MessageText;
             Tr.MessageSticker += Tr_MessageSticker;
             Tr.MessagePhoto += Tr_MessagePhoto;
@@ -29,7 +29,7 @@ namespace DeeBeeTeeAlphaBot
             //thr.Start();
             ////-----------------------МЕТОДЫ----------------------------------
             #region method
-            // Method m = new Method(MainSettings.Default.Token);
+            // Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
             //m.Getme();
             //m.SendMessage("Ну привет!", 243746390);
             //m.ForwardMessage(243746390, 243746390, 467);
@@ -69,7 +69,7 @@ namespace DeeBeeTeeAlphaBot
         {
             Console.WriteLine("ID сообщения:{0}\nID отправителя:{1}\nНик отправителя:{2}\nИмя:{3} Фамилия:{4}\nДата:{5}\nТекст сообщения:{6}",
                e.message_id, e.from.id, e.from.username, e.from.first_name, e.from.last_name, e.date, e.text);
-            Method m = new Method(MainSettings.Default.Token);
+            Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
             m.SendMessage("Спасибо ! Я получил сообщение " + e.text, e.chat.id);
         }
         private static void Tr_MessageSticker(object sendr, MessageSticker e)
@@ -88,7 +88,7 @@ namespace DeeBeeTeeAlphaBot
                 Console.WriteLine("ID Файла:{0}\nРазмер файла:{1}байт\nШирина:{2} Высота:{3}\n",
                     e.photo[i].file_id, e.photo[i].file_size, e.photo[i].width, e.photo[i].height);
             }
-            Method m = new Method(MainSettings.Default.Token);
+            Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
             m.SendMessage("Вы нам прислалим фотографию", e.chat.id);
             m.SendPhoto_link(e.chat.id, e.photo[e.photo.Count - 1].file_id, e.caption);
         }

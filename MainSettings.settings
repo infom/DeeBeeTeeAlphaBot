@@ -5,5 +5,8 @@
     <Setting Name="Token" Type="System.String" Scope="User">
       <Value Profile="(Default)">481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4</Value>
     </Setting>
+    <Setting Name="API_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://api.telegram.org/bot</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -1429,9 +1429,11 @@ namespace Telegram
         public class TelegramRequest
         {
             public string _token;
-            public TelegramRequest(string Token)
+            public string _link;
+            public TelegramRequest(string Token, string Link)
             {
                 _token = Token;
+                _link = Link;
             }
             int LastUpdateID = 0;
             //События
@@ -1868,10 +1870,11 @@ namespace Telegram
     class Method
     {
         string _token;
-        string _link = "https://api.telegram.org/bot";
-        public Method(string Token)
+        string _link;
+        public Method(string Token, string Link)
         {
             _token = Token;
+            _link = Link;
         }
         public string GetMe()
         {
