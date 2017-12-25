@@ -8,5 +8,17 @@
     <Setting Name="API_URL" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://api.telegram.org/bot</Value>
     </Setting>
+    <Setting Name="DB_DataSource" Type="System.String" Scope="User">
+      <Value Profile="(Default)">deebeetee.database.windows.net</Value>
+    </Setting>
+    <Setting Name="DB_UserID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbt_user</Value>
+    </Setting>
+    <Setting Name="DB_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">7Y0snkzO5LA2</Value>
+    </Setting>
+    <Setting Name="DB_InitialCatalog" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DeeBeeTeeDB</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

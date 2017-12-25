@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Threading;
+using System.Data.SqlClient;
 using Telegram;
 using Telegram.Request;
+using DeeBeeTeeDB;
 
 namespace DeeBeeTeeAlphaBot
 {
@@ -23,7 +25,50 @@ namespace DeeBeeTeeAlphaBot
             Tr.MessageLocation += Tr_MessageLocation;
             Tr.MessageContact += Tr_MessageContact;
             Tr.MessageVoice += Tr_MessageVoice;
-            Tr.GetUpdates();
+
+            DBAPI Db = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
+            Db.Connect();
+
+            Console.WriteLine("Ivan {0}", Db.GetUserBalance("Ivan"));
+            Console.WriteLine("Boris {0}", Db.GetUserBalance("Boris"));
+
+            //try
+            //{
+            //    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            //    builder.DataSource = "deebeetee.database.windows.net";
+            //    builder.UserID = "dbt_user";
+            //    builder.Password = "7Y0snkzO5LA2";
+            //    builder.InitialCatalog = "DeeBeeTeeDB";
+            //    using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            //    {
+            //        Console.WriteLine("\nQuery data example:");
+            //        Console.WriteLine("=========================================\n");
+
+            //        connection.Open();
+            //        StringBuilder sb = new StringBuilder();
+            //        sb.Append("SELECT [tid] ,[from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid] FROM [dbo].[transactions] ");
+            //        String sql = sb.ToString();
+            //        using (SqlCommand command = new SqlCommand(sql, connection))
+            //        {
+            //            using (SqlDataReader reader = command.ExecuteReader())
+            //            {
+            //                while (reader.Read())
+            //                {
+            //                    Console.WriteLine("{0} {1} to {2} ", reader.GetString(1), reader.GetDecimal(2), reader.GetString(3));
+            //                }
+            //            }
+            //        }
+            //    }
+
+
+            //}
+            //catch (SqlException e)
+            //{
+            //    Console.WriteLine(e.ToString());
+            //}
+
+            //Tr.GetUpdates();
+
             //Thread thr = new Thread(Tr.GetUpdates);
             //thr.IsBackground = true;
             //thr.Start();

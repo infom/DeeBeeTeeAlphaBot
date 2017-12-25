@@ -5,3 +5,4 @@ D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\DeeB
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\DeeBeeTeeAlphaBot.pdb
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\obj\Debug\DeeBeeTeeAlphaBot.exe
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\obj\Debug\DeeBeeTeeAlphaBot.pdb
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\System.Data.SqlClient.dll

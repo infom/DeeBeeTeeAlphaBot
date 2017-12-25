@@ -1309,7 +1309,7 @@ namespace Telegram
             public int file_size;
         }
         #endregion
-        #region Делгаты
+        #region Делегаты
         public delegate void ResponseText(object sendr, MessageText e);
         public delegate void ResponseSticker(object sendr, MessageSticker e);
         public delegate void ResponsePhoto(object sendr, MessagePhoto e);

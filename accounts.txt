@@ -1,0 +1,9 @@
+﻿##DataBase
+#path deebeetee.database.windows.net
+#db DeeBeeTeeDB
+#sa dbtsa DeeBeeTeeSeeAee1
+#user dbt_user 7Y0snkzO5LA2
+
+##Telegram
+#bot @DeeBeeTeeBot
+#token 481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4

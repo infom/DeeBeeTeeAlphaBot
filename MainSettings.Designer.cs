@@ -46,5 +46,53 @@ namespace DeeBeeTeeAlphaBot {
                 this["API_URL"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("deebeetee.database.windows.net")]
+        public string DB_DataSource {
+            get {
+                return ((string)(this["DB_DataSource"]));
+            }
+            set {
+                this["DB_DataSource"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("dbt_user")]
+        public string DB_UserID {
+            get {
+                return ((string)(this["DB_UserID"]));
+            }
+            set {
+                this["DB_UserID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("7Y0snkzO5LA2")]
+        public string DB_Password {
+            get {
+                return ((string)(this["DB_Password"]));
+            }
+            set {
+                this["DB_Password"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("DeeBeeTeeDB")]
+        public string DB_InitialCatalog {
+            get {
+                return ((string)(this["DB_InitialCatalog"]));
+            }
+            set {
+                this["DB_InitialCatalog"] = value;
+            }
+        }
     }
 }
