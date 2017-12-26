@@ -29,8 +29,8 @@ namespace DeeBeeTeeAlphaBot
             DBAPI Db = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
             Db.Connect();
 
-            Console.WriteLine("Ivan {0}", Db.GetUserBalance("Ivan"));
-            Console.WriteLine("Boris {0}", Db.GetUserBalance("Boris"));
+            //Console.WriteLine("Ivan {0}", Db.GetUserBalance("Ivan"));
+            //Console.WriteLine("Boris {0}", Db.GetUserBalance("Boris"));
 
             //try
             //{
@@ -67,7 +67,7 @@ namespace DeeBeeTeeAlphaBot
             //    Console.WriteLine(e.ToString());
             //}
 
-            //Tr.GetUpdates();
+            Tr.GetUpdates();
 
             //Thread thr = new Thread(Tr.GetUpdates);
             //thr.IsBackground = true;
@@ -115,7 +115,58 @@ namespace DeeBeeTeeAlphaBot
             Console.WriteLine("ID сообщения:{0}\nID отправителя:{1}\nНик отправителя:{2}\nИмя:{3} Фамилия:{4}\nДата:{5}\nТекст сообщения:{6}",
                e.message_id, e.from.id, e.from.username, e.from.first_name, e.from.last_name, e.date, e.text);
             Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
-            m.SendMessage("Спасибо ! Я получил сообщение " + e.text, e.chat.id);
+            DBAPI d = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
+            d.Connect();
+            string answer;
+            string message = e.text.Replace("@DeeBeeTeeBot", "");
+            int space = message.IndexOf(" ");
+            string command;
+            if (space == -1)
+            {
+                command = message; 
+            }
+            else
+            {
+                command = message.Substring(0, space);
+            }
+
+            switch (command)
+            {
+                case "/balance":
+                    answer = d.Command_balance(e.from.username);                    
+                    break;
+                case "/b":
+                    answer = d.Command_balance(e.from.username);
+                    break;
+                case "/details":
+                    answer = d.Command_details(e.from.username);
+                    break;
+                case "/d":
+                    answer = d.Command_details(e.from.username);
+                    break;
+                case "/hello":
+                    answer = d.Command_hello();
+                    break;
+                case "/help":
+                    answer = d.Command_help();
+                    break;
+                case "/start":
+                    answer = d.Command_start(e.from.username);
+                    break;
+                case "/t":
+                    answer = d.Command_transaction(message);
+                    break;
+                case "/transaction":
+                    answer = d.Command_transaction(message);
+                    break;
+                default:
+                    answer = "Извините я команду '" + command + "' не поддерживаю. Поддерживаемые команды можно посмотреть /help";
+                    break;
+            }
+
+            m.SendMessage(answer, e.chat.id);
+            d.Disconnect();
+
         }
         private static void Tr_MessageSticker(object sendr, MessageSticker e)
         {
