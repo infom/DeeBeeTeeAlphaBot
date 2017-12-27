@@ -29,91 +29,17 @@ namespace DeeBeeTeeAlphaBot
             DBAPI Db = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
             Db.Connect();
 
-            //Console.WriteLine("Ivan {0}", Db.GetUserBalance("Ivan"));
-            //Console.WriteLine("Boris {0}", Db.GetUserBalance("Boris"));
-
-            //try
-            //{
-            //    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            //    builder.DataSource = "deebeetee.database.windows.net";
-            //    builder.UserID = "dbt_user";
-            //    builder.Password = "7Y0snkzO5LA2";
-            //    builder.InitialCatalog = "DeeBeeTeeDB";
-            //    using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
-            //    {
-            //        Console.WriteLine("\nQuery data example:");
-            //        Console.WriteLine("=========================================\n");
-
-            //        connection.Open();
-            //        StringBuilder sb = new StringBuilder();
-            //        sb.Append("SELECT [tid] ,[from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid] FROM [dbo].[transactions] ");
-            //        String sql = sb.ToString();
-            //        using (SqlCommand command = new SqlCommand(sql, connection))
-            //        {
-            //            using (SqlDataReader reader = command.ExecuteReader())
-            //            {
-            //                while (reader.Read())
-            //                {
-            //                    Console.WriteLine("{0} {1} to {2} ", reader.GetString(1), reader.GetDecimal(2), reader.GetString(3));
-            //                }
-            //            }
-            //        }
-            //    }
-
-
-            //}
-            //catch (SqlException e)
-            //{
-            //    Console.WriteLine(e.ToString());
-            //}
 
             Tr.GetUpdates();
 
-            //Thread thr = new Thread(Tr.GetUpdates);
-            //thr.IsBackground = true;
-            //thr.Start();
-            ////-----------------------МЕТОДЫ----------------------------------
-            #region method
-            // Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
-            //m.Getme();
-            //m.SendMessage("Ну привет!", 243746390);
-            //m.ForwardMessage(243746390, 243746390, 467);
-
-            //m.SendPhotoLink(243746390, "http://gallsource.com/wp-content/uploads/2014/08/Nice-Fantas-Tigers-Cat-Page-Wallpaper.jpg","Ky");
-            //m.SendAudioIputFile(ChatID, @"C:\Users\XTreme.ws\Downloads\scream.mp3","Вам отправлен локальный фаил",9999999,"Тарзан","Поет");
-
-            //m.SendDocumentIputFile(ChatID, @"C:\Users\XTreme.ws\Downloads\Evseeva.pdf");
-            //m.SendDocumentoLink(ChatID, "http://www.t-krep.ru/files/ankera.pdf");
-
-            //m.SendSticker(ChatID, "BQADAgADNgADyIsGAAFUgH2PcO7e6QI");
-
-            // m.SendVideoInputFile(ChatID, @"C:\Users\XTreme.ws\Downloads\Керш 2 наркотические вещества RYTP.mp4");
-            //m.SendVideoLink(ChatID, "http://cs05.userfiles.me/v/0/1474991977/2189314/x1/58d1c46728bd865d0daa61469a3ce3f3/Staraja_reklama_Twix._Xlektrika_vyzyvali-space.mp4");
-
-            // m.SendVoiceInputFile(ChatID, @"C:\Users\XTreme.ws\Downloads\audio_2016-09-26_10-21-14.ogg");
-
-            // m.SendLocation(ChatID, 51.482805f, -0.172431f);
-
-            // m.SendVenue(ChatID, 40.717690f, -74.013885f, "Приходи к 5ти часам,не забудь!", "Chambers Street1");
-
-            // m.SendContact(ChatID,"79196668880", "Dick", "Petrov");
-
-            //m.SendChatAction(ChatID, Method.ChatAction.upload_document);
-
-            //m.SendPhotoLink(ChatID, m.getUserProfilePhotos(ChatID, 0));
-
-            //string[] aa = m.getUserProfilePhotosAllTime(ChatID, 0);
-
-            //m.SendMessage(m.getFile("AgADAgADqacxG1ZGhw4jBAEaBjDnKjkocQ0ABFT1a221mxG7UdcBAAEC"), ChatID);
-            #endregion
             Console.ReadLine();
-            ////---------------------------------------------------------------
+
         }
 
         private static void Tr_MessageText(object sendr, MessageText e)
         {
-            Console.WriteLine("ID сообщения:{0}\nID отправителя:{1}\nНик отправителя:{2}\nИмя:{3} Фамилия:{4}\nДата:{5}\nТекст сообщения:{6}",
-               e.message_id, e.from.id, e.from.username, e.from.first_name, e.from.last_name, e.date, e.text);
+            Console.WriteLine("ID сообщения:{0}\nID отправителя:{1}\nchat_id:{2}\nНик отправителя:{3}\nИмя:{4} Фамилия:{5}\nДата:{6}\nТекст сообщения:{7}",
+               e.message_id, e.from.id,e.chat.id, e.from.username, e.from.first_name, e.from.last_name, e.date, e.text);
             Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
             DBAPI d = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
             d.Connect();
@@ -151,7 +77,7 @@ namespace DeeBeeTeeAlphaBot
                     answer = d.Command_help();
                     break;
                 case "/start":
-                    answer = d.Command_start(e.from.username);
+                    answer = d.Command_start(e.from.username, e.from.id);
                     break;
                 case "/t":
                     answer = d.Command_transaction(message);

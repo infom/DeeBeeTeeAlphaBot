@@ -7,3 +7,5 @@
 ##Telegram
 #bot @DeeBeeTeeBot
 #token 481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4
+#Test chat_id=-230606976
+#My user_id=2730927

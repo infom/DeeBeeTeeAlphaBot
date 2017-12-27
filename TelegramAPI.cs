@@ -2153,6 +2153,25 @@ namespace Telegram
                 return _linkPhoto;
             }
         }
+        public Request.User[] getChatUsers(int chat_id)
+        {
+            using (WebClient webClient = new WebClient())
+            {
+                string response = webClient.DownloadString(_link + _token + "/getChatMember?chat_id=" + chat_id + "&user_id=1");
+                JSONNode N = JSON.Parse(response);
+
+                Request.User[] _users = new Request.User[1];
+
+                //string[] _linkPhoto = new string[N["result"]["total_count"].AsInt];
+                //int k = 0;
+                //foreach (JSONNode r in N["result"]["photos"].AsArray)
+                //{
+                //    _linkPhoto[k] = r[r.Count - 1]["file_id"];
+                //    k++;
+                //}
+                return _users;
+            }
+        }
         public string getFile(string file_id)
         {
             using (WebClient webClient = new WebClient())

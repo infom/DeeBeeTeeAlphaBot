@@ -1,0 +1,7 @@
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Release\DeeBeeTeeAlphaBot.exe.config
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Release\DeeBeeTeeAlphaBot.exe
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Release\DeeBeeTeeAlphaBot.pdb
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Release\System.Data.SqlClient.dll
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\obj\Release\DeeBeeTeeAlphaBot.csproj.CoreCompileInputs.cache
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\obj\Release\DeeBeeTeeAlphaBot.exe
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\obj\Release\DeeBeeTeeAlphaBot.pdb
