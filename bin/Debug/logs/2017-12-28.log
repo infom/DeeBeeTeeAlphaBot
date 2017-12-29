@@ -1,0 +1,50 @@
+2017-12-28 15:44:51.8707 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 15:52:56.5561 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 16:00:43.2269 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 16:07:44.9982 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 16:09:03.5033 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 17:38:08.7903 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 17:38:22.3411 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 17:38:43.6217 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 17:39:08.6707 | DeeBeeTeeAlphaBot.Program.Main | DEBUG | Запуск программы 
+
+2017-12-28 17:42:32.8339 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-28 17:42:32.8825 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-28 17:42:33.3790 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-28 17:43:52.2250 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-28 17:43:52.2768 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-28 17:43:52.8413 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-28 17:47:35.2627 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-28 17:47:35.3232 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-28 17:47:35.8355 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-28 17:50:35.7016 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-28 17:50:35.7576 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-28 17:50:36.3703 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-28 18:04:05.7137 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-28 18:04:05.7613 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-28 18:04:06.3716 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-28 18:04:07.3190 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | message_id:255 user_id:2730927 chat_id:-156558308 username:Infom name: Ruslan Kasimov date: 1514473447 message:/d 
+

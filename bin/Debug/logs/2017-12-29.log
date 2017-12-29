@@ -1,0 +1,1095 @@
+2017-12-29 11:44:57.6239 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 11:44:57.6684 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 11:44:58.2936 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 11:45:17.2645 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | message_id:258 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514537117 message:/d 
+
+2017-12-29 11:45:17.6846 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2017-12-29 11:45:17.6846 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Infom' 
+
+2017-12-29 11:45:17.7026 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: System.Data.SqlClient.SqlCommand 
+
+2017-12-29 11:45:17.7905 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: System.Data.SqlClient.SqlCommand 
+
+2017-12-29 11:45:17.8747 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: System.Data.SqlClient.SqlCommand 
+
+2017-12-29 11:45:17.9580 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Sergeiaf amount: -425,00  
+
+2017-12-29 11:45:17.9631 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: TretyakRoman amount: 0,00  
+
+2017-12-29 11:45:17.9631 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Infom. Баланс: -425,00
+ @Infom должен 425,00 @Sergeiaf
+ 
+
+2017-12-29 12:00:10.2554 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 12:00:10.3181 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 12:00:10.9472 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 12:00:10.9693 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:11.3656 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:11.3656 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:11.4457 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:11.4497 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:11.5257 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:11.5307 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:11.6051 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:11.6101 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:11.6891 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:11.6891 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:11.7692 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:11.7692 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:11.8482 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:11.8482 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:11.9323 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:11.9573 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.0358 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.0358 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.1179 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.1229 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.2024 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.2024 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.2852 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.2852 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.3647 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.3647 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.4443 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.4493 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.5268 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.5329 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.6089 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.6089 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.6925 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.6925 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.7720 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.7720 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.8531 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.8571 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:12.9335 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:12.9335 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.0126 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.0126 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.0926 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.0926 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.1718 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.1718 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.2510 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.2510 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.3296 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.3296 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.4091 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.4091 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.4914 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.4914 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.5712 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.5797 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.6582 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.6582 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.7401 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.7491 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.8290 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.8290 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:13.9202 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:13.9202 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.0068 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.0158 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.0956 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.0956 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.1766 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.1766 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.2580 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.2670 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.3529 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.3609 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.4450 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.4530 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.5360 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.5360 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.6286 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.6286 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.7091 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.7091 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.8001 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.8086 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.8891 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.8891 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:14.9772 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:14.9852 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.0648 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.0648 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.1531 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.1531 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.2415 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.2500 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.3403 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.3403 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.4289 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.4374 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.5169 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.5169 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.6004 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.6089 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.6880 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.6880 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.7785 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.7785 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.8596 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.8596 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:15.9484 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:15.9564 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.0376 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.0455 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.1248 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.1248 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.2135 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.2185 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.2953 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.2953 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.3827 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.3907 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.4706 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.4706 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.5596 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.5596 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.6445 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.6530 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.7345 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.7345 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.8230 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.8285 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.9056 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.9056 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:16.9863 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:16.9863 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.0753 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.0753 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.1620 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.1700 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.2501 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.2501 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.3395 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.3395 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.4270 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.4355 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.5144 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.5144 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.6039 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.6129 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.6900 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.6900 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.7704 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.7794 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.8584 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.8584 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:17.9426 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:17.9426 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.0354 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.0354 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.1185 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.1271 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.2088 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.2148 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.3053 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.3137 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.3934 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.3934 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.4804 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.4804 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.5699 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.5779 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.6595 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.6595 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.7434 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.7519 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.8307 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.8307 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:18.9200 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:18.9200 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.0034 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.0034 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.0847 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.0927 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.1720 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.1720 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.2596 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.2695 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.3507 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.3592 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.4378 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.4378 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.5247 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.5337 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.6101 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.6101 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.6993 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.6993 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.7792 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.7792 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:19.8677 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:19.8772 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.1009 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.1089 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.1878 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.1878 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.2761 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.2862 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.3680 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.3720 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.4472 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.4552 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.5383 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.5434 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.6182 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.6267 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.7057 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.7057 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.7892 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.7941 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.8701 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.8746 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:20.9493 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:20.9493 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.0393 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.0438 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.1184 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.1234 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.1988 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.1988 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.2864 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.2864 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.3667 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.3717 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.4477 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.4557 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.5379 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.5469 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.6263 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.6263 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.7149 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.7149 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.8054 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.8139 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.8928 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.8928 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:21.9834 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:21.9834 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.0643 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.0643 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.1455 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.1455 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.2285 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.2370 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.3162 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.3247 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.4055 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.4055 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.4944 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.5039 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.5812 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.5812 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.6599 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.6599 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.7390 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.7480 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.8240 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.8240 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.9058 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.9058 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:22.9853 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:22.9853 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.0706 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.0751 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.1510 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.1560 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.2461 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.2461 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.3488 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.3578 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.4661 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.4661 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.5576 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.5676 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.6517 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.6566 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.7329 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.7329 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.8159 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.8159 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.8998 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.9083 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:23.9874 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:23.9874 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.0732 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.0822 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.1737 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.1737 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.2663 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.2663 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.3548 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.3638 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.4461 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.4541 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.5378 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.5508 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.6393 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.6393 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.7186 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.7186 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.8060 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.8165 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.8980 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.9035 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:24.9820 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:24.9820 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.0707 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.0797 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.1603 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.1688 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.2479 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.2479 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.3385 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.3485 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.4313 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.4413 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.5270 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.5270 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.6095 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.6095 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.6990 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.6990 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.7893 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.7983 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.8769 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.8769 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:25.9571 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:25.9654 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:26.0459 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:26.0459 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:26.1366 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:26.1366 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:26.2257 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:26.2307 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:26.3059 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:26.3103 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:26.3886 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:26.3886 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:26.4760 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response: {"ok":true,"result":[]} 
+
+2017-12-29 12:00:26.4850 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 12:00:58.2857 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 12:00:58.3437 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 12:00:58.7929 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 12:01:18.7497 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:01:18.7497 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:260 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538078 message:'GHbdtn' 
+
+2017-12-29 12:01:19.1819 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды GHbdtn 
+
+2017-12-29 12:01:40.3139 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:01:40.3139 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:262 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538100 message:'/re' 
+
+2017-12-29 12:01:40.3439 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /re 
+
+2017-12-29 12:01:48.2623 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:01:48.2623 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:264 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538108 message:'/help' 
+
+2017-12-29 12:01:48.2833 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /help 
+
+2017-12-29 12:01:48.3003 | DeeBeeTeeDB.DBAPI.Command_help | INFO | Возврат результата команды help с сообщением Поддерживаются команды 
+/balance /b 
+/details /d 
+/hello 
+/help 
+/start 
+/transaction /t 
+
+2017-12-29 12:02:04.7142 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:02:04.7142 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:266 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538124 message:'/start' 
+
+2017-12-29 12:02:04.7332 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /start 
+
+2017-12-29 12:02:04.7432 | DeeBeeTeeDB.DBAPI.Command_start | DEBUG | Поиск пользователя 'Infom' 
+
+2017-12-29 12:02:04.7432 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2017-12-29 12:02:04.8335 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2017-12-29 12:02:04.8395 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2017-12-29 12:02:04.9205 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2017-12-29 12:02:05.0020 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -425,00 
+
+2017-12-29 12:02:05.0125 | DeeBeeTeeDB.DBAPI.Command_start | INFO | Возврат результата команды start с сообщением Вы уже подключены к системе. 
+Баланс пользователя @Infom составляет -425,00. 
+Ваш номер 4. 
+Дата подключения 26.12.2017 13:11:13. 
+Лимит 1000,00 
+
+2017-12-29 12:02:59.5115 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:02:59.5115 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:268 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538179 message:'/t @Ivan 4355 @Boris' 
+
+2017-12-29 12:02:59.5115 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2017-12-29 12:02:59.5274 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Ivan 4355 @Boris' 
+
+2017-12-29 12:02:59.5274 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Ivan' 
+
+2017-12-29 12:02:59.5384 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '4355' 
+
+2017-12-29 12:02:59.5384 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Boris' 
+
+2017-12-29 12:02:59.5384 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 12:02:59.5384 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 12:08:19.7780 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 12:08:19.8230 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 12:08:20.4874 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 12:08:20.8226 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:08:20.8301 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:268 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538179 message:'/t @Ivan 4355 @Boris' 
+
+2017-12-29 12:08:21.2538 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2017-12-29 12:08:21.2538 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Ivan 4355 @Boris' 
+
+2017-12-29 12:08:21.2538 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Ivan' 
+
+2017-12-29 12:08:21.2678 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '4355' 
+
+2017-12-29 12:08:21.2678 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Boris' 
+
+2017-12-29 12:08:21.2678 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 12:08:21.2829 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 12:08:21.3697 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2017-12-29 12:08:21.3697 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2017-12-29 12:08:21.4538 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Ivan amount:4355 to:Boris 
+
+2017-12-29 12:08:21.4538 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Ivan' ,4355 ,'Boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2017-12-29 12:08:21.6104 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 12:08:21.6104 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 12:08:21.6939 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Ivan'), 0) as Bal  
+
+2017-12-29 12:08:21.7885 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Ivan составляет 9187,00 
+
+2017-12-29 12:08:21.7885 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2017-12-29 12:08:21.7885 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2017-12-29 12:08:21.8760 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2017-12-29 12:08:21.9581 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет -4156,00 
+
+2017-12-29 12:08:21.9581 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 28 успешно добавлена
+Баланс пользователя @Ivan составляет 9187,00
+Баланс пользователя @Boris составляет -4156,00 
+
+2017-12-29 12:08:22.1502 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:08:22.1502 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:269 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538261 message:'@Oleg' 
+
+2017-12-29 12:08:22.1627 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды @Oleg 
+
+2017-12-29 12:08:22.3421 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:08:22.3461 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:270 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538269 message:'@Sergei' 
+
+2017-12-29 12:08:22.3461 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды @Sergei 
+
+2017-12-29 12:08:22.5252 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 12:08:22.5252 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | New message: message_id:271 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514538285 message:'@Fedorov' 
+
+2017-12-29 12:08:22.5352 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды @Fedorov 
+
+2017-12-29 12:13:27.3278 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 12:13:27.3841 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 12:13:28.0037 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 14:29:05.1069 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 14:29:05.1742 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 14:29:05.6717 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 14:29:26.2313 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 14:29:26.2313 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:284 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514546966 message:'/t @Ivan 45 @Boris' 
+
+2017-12-29 14:29:26.7491 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2017-12-29 14:29:26.7601 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Ivan 45 @Boris' 
+
+2017-12-29 14:29:26.7601 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Ivan' 
+
+2017-12-29 14:29:26.7752 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '45' 
+
+2017-12-29 14:29:26.7752 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Boris' 
+
+2017-12-29 14:29:26.7752 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 14:29:26.7932 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 14:29:26.8726 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2017-12-29 14:29:26.8726 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2017-12-29 14:29:26.9561 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Ivan amount:45 to:Boris 
+
+2017-12-29 14:29:26.9674 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Ivan' ,45 ,'Boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2017-12-29 14:29:27.0650 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 14:29:27.0730 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 14:29:27.1534 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Ivan'), 0) as Bal  
+
+2017-12-29 14:29:27.2461 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Ivan составляет 9232,00 
+
+2017-12-29 14:29:27.2461 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2017-12-29 14:29:27.2461 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2017-12-29 14:29:27.3349 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2017-12-29 14:29:27.4245 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет -4201,00 
+
+2017-12-29 14:29:27.4290 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 31 успешно добавлена
+Баланс пользователя @Ivan составляет 9232,00
+Баланс пользователя @Boris составляет -4201,00 
+
+2017-12-29 14:29:42.2817 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 14:29:42.2817 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:286 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514546982 message:'/t @Boris 2450 @Ivan' 
+
+2017-12-29 14:29:42.2931 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2017-12-29 14:29:42.2931 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Boris 2450 @Ivan' 
+
+2017-12-29 14:29:42.3059 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Boris' 
+
+2017-12-29 14:29:42.3059 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '2450' 
+
+2017-12-29 14:29:42.3059 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Ivan' 
+
+2017-12-29 14:29:42.3214 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2017-12-29 14:29:42.3214 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2017-12-29 14:29:42.4052 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 14:29:42.4052 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 14:29:42.4912 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Boris amount:2450 to:Ivan 
+
+2017-12-29 14:29:42.4912 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Boris' ,2450 ,'Ivan' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2017-12-29 14:29:42.5872 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2017-12-29 14:29:42.5872 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2017-12-29 14:29:42.6795 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2017-12-29 14:29:42.7636 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет -1751,00 
+
+2017-12-29 14:29:42.7636 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 14:29:42.7803 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 14:29:42.8740 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Ivan'), 0) as Bal  
+
+2017-12-29 14:29:42.9550 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Ivan составляет 6782,00 
+
+2017-12-29 14:29:42.9630 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 32 успешно добавлена
+Баланс пользователя @Boris составляет -1751,00
+Баланс пользователя @Ivan составляет 6782,00 
+
+2017-12-29 14:30:04.9675 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 14:30:04.9675 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:288 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514547004 message:'/t @Boris 2450 @Ivan' 
+
+2017-12-29 14:30:04.9775 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2017-12-29 14:30:04.9775 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Boris 2450 @Ivan' 
+
+2017-12-29 14:30:04.9775 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Boris' 
+
+2017-12-29 14:30:04.9951 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '2450' 
+
+2017-12-29 14:30:04.9951 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Ivan' 
+
+2017-12-29 14:30:04.9951 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2017-12-29 14:30:05.0106 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2017-12-29 14:30:05.0911 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 14:30:05.0911 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 14:30:05.1821 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Boris amount:2450 to:Ivan 
+
+2017-12-29 14:30:05.1821 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Boris' ,2450 ,'Ivan' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2017-12-29 14:30:05.2917 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2017-12-29 14:30:05.2917 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2017-12-29 14:30:05.3763 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2017-12-29 14:30:05.4564 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет 699,00 
+
+2017-12-29 14:30:05.4609 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Ivan' 
+
+2017-12-29 14:30:05.4609 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2017-12-29 14:30:05.5445 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Ivan'), 0) as Bal  
+
+2017-12-29 14:30:05.6291 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Ivan составляет 4332,00 
+
+2017-12-29 14:30:05.6416 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 33 успешно добавлена
+Баланс пользователя @Boris составляет 699,00
+Баланс пользователя @Ivan составляет 4332,00 
+
+2017-12-29 14:30:43.5284 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 14:30:43.5284 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:290 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1514547043 message:'/d' 
+
+2017-12-29 14:30:43.5409 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2017-12-29 14:30:43.5409 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Infom' 
+
+2017-12-29 14:30:43.5562 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2017-12-29 14:30:43.6400 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2017-12-29 14:30:43.7203 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Infom' GROUP BY to_user 
+
+2017-12-29 14:30:43.8011 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Sergeiaf amount: -425,00  
+
+2017-12-29 14:30:43.8056 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: TretyakRoman amount: -540,00  
+
+2017-12-29 14:30:43.8056 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Infom. Баланс: -965,00
+ @Infom должен 425,00 @Sergeiaf
+ @Infom должен 540,00 @TretyakRoman
+ 
+
+2017-12-29 14:35:03.9154 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 14:35:03.9725 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 14:35:04.5939 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 14:35:22.5787 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 14:35:22.6298 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 14:35:23.0853 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 14:35:23.0929 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:27.3814 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:28.4875 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:29.5992 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:30.6930 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:31.7754 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:32.8599 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:33.9495 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:35.0353 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:36.1223 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:37.2170 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:38.2999 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:39.4038 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:40.4926 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:41.6002 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:42.6816 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:43.7650 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+
+2017-12-29 14:35:44.9262 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | New HTTP request: https://api.telegram.org/bot481905442:AAF69M-Qmaa6w5lTpot3j8a-TR8_mHdNqO4/getupdates?offset=1 
+

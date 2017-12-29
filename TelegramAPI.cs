@@ -9,6 +9,7 @@ using Telegram.SimpleJSON;
 using System.Collections.Specialized;
 using System.Net.Http;
 using System.IO;
+using NLog;
 
 namespace Telegram
 {
@@ -1428,6 +1429,7 @@ namespace Telegram
 
         public class TelegramRequest
         {
+            private static Logger logger = LogManager.GetCurrentClassLogger();
             public string _token;
             public string _link;
             public TelegramRequest(string Token, string Link)
@@ -1452,9 +1454,14 @@ namespace Telegram
                 {
                     using (WebClient webClient = new WebClient())
                     {
+                        //logger.Trace("New HTTP request: https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
                         string response = webClient.DownloadString("https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
+                        //logger.Trace("HTTP response: "+ response);
                         if (response.Length <= 23)
+                        {
+                            System.Threading.Thread.Sleep(1000);
                             continue;
+                        }
                         var N = JSON.Parse(response);
                         foreach (JSONNode r in N["result"].AsArray)
                         {
@@ -1469,12 +1476,14 @@ namespace Telegram
                                         try
                                         {
                                             MessageText.Method.Name.ToString();
-                                            Notification();
-                                            Console.WriteLine("Мы получили текстовое сообщение");
-                                            Notification(false);
+                                            logger.Debug("New message event");
+
                                         }
-                                        catch (Exception)
-                                        { break; }
+                                        catch (Exception e)
+                                        {
+                                            logger.Error(e.Message);
+                                            break;
+                                        }
                                         GetMessageText(r);
                                         break;
                                     }
@@ -1483,12 +1492,10 @@ namespace Telegram
                                         try
                                         {
                                             MessageText.Method.Name.ToString();
-                                            Notification();
-                                            Console.WriteLine("Мы получили cтикер");
-                                            Notification(false);
+                                            logger.Debug("New sticker event");
                                         }
-                                        catch (Exception)
-                                        { break; }
+                                        catch (Exception e)
+                                        { logger.Error(e.Message); break; }
                                         GetMessageSticker(r);
                                         break;
                                     }
@@ -1497,12 +1504,10 @@ namespace Telegram
                                         try
                                         {
                                             MessageText.Method.Name.ToString();
-                                            Notification();
-                                            Console.WriteLine("Мы получили фотографию");
-                                            Notification(false);
+                                            logger.Debug("New photo event");
                                         }
-                                        catch (Exception)
-                                        { break; }
+                                        catch (Exception e)
+                                        { logger.Error(e.Message); break; }
                                         GetMessagePhoto(r);
                                         break;
                                     }
@@ -1511,12 +1516,10 @@ namespace Telegram
                                         try
                                         {
                                             MessageText.Method.Name.ToString();
-                                            Notification();
-                                            Console.WriteLine("Мы получили видеозапись");
-                                            Notification(false);
+                                            logger.Debug("New video event");
                                         }
-                                        catch (Exception)
-                                        { break; }
+                                        catch (Exception e)
+                                        { logger.Error(e.Message); break; }
                                         GetMessageVideo(r);
                                         break;
                                     }
@@ -1525,12 +1528,10 @@ namespace Telegram
                                         try
                                         {
                                             MessageText.Method.Name.ToString();
-                                            Notification();
-                                            Console.WriteLine("Мы получили документ");
-                                            Notification(false);
+                                            logger.Debug("New document event");
                                         }
-                                        catch (Exception)
-                                        { break; }
+                                        catch (Exception e)
+                                        { logger.Error(e.Message); break; }
                                         GetMessageDocument(r);
                                         break;
                                     }
@@ -1539,12 +1540,10 @@ namespace Telegram
                                         try
                                         {
                                             MessageText.Method.Name.ToString();
-                                            Notification();
-                                            Console.WriteLine("Мы получили локацию");
-                                            Notification(false);
+                                            logger.Debug("New location event");
                                         }
-                                        catch (Exception)
-                                        { break; }
+                                        catch (Exception e )
+                                        { logger.Error(e.Message); break; }
                                         GetMessageLocation(r);
                                         break;
                                     }
@@ -1553,12 +1552,10 @@ namespace Telegram
                                         try
                                         {
                                             MessageText.Method.Name.ToString();
-                                            Notification();
-                                            Console.WriteLine("Мы получили контакт");
-                                            Notification(false);
+                                            logger.Debug("New contact event");
                                         }
-                                        catch (Exception)
-                                        { break; }
+                                        catch (Exception e)
+                                        { logger.Error(e.Message); break; }
                                         GetMessageContact(r);
                                         break;
                                     }
@@ -1567,12 +1564,10 @@ namespace Telegram
                                         try
                                         {
                                             MessageText.Method.Name.ToString();
-                                            Notification();
-                                            Console.WriteLine("Мы получили голосовую запись");
-                                            Notification(false);
+                                            logger.Debug("New voice event");
                                         }
-                                        catch (Exception)
-                                        { break; }
+                                        catch (Exception e)
+                                        { logger.Error(e.Message); break; }
                                         GetMessageVoice(r);
                                         break;
                                     }
@@ -1588,26 +1583,13 @@ namespace Telegram
                 for (int i = 0; i < Type.Length; i++)
                 {
                     try { JSON = JSON.Remove(0, JSON.LastIndexOf("\"" + Type[i] + "\"")); }
-                    catch (Exception) { continue; }
+                    catch (Exception e) { logger.Error(e.Message); continue; }
                     JSON = JSON.Remove(JSON.IndexOf(":"));
                     break;
                 }
                 return JSON;
             }
 
-            private void Notification(bool on = true)
-            {
-                if (on)
-                {
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                }
-                else
-                {
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-            }
             #region Method
             private void GetMessageText(JSONNode r)
             {

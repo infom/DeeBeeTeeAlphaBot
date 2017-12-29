@@ -1,0 +1,135 @@
+2017-12-29 14:23:40.4253 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 14:23:40.4633 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 14:23:41.0384 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2017-12-29 14:25:35.4923 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 14:25:35.5003 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:276 user_id:2730927 chat_id:-156558308 username:Infom name: Ruslan Kasimov date: 1514546735 message:'/t @TretyakRoman 540 @Infom' 
+
+2017-12-29 14:25:35.9778 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2017-12-29 14:25:36.0089 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@TretyakRoman 540 @Infom' 
+
+2017-12-29 14:25:36.0089 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'TretyakRoman' 
+
+2017-12-29 14:25:36.0089 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '540' 
+
+2017-12-29 14:25:36.0279 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Infom' 
+
+2017-12-29 14:25:36.0279 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2017-12-29 14:25:36.0279 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2017-12-29 14:25:36.1426 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2017-12-29 14:25:36.1426 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2017-12-29 14:25:36.2247 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:TretyakRoman amount:540 to:Infom 
+
+2017-12-29 14:25:36.2307 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('TretyakRoman' ,540 ,'Infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2017-12-29 14:25:36.3846 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2017-12-29 14:25:36.3846 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2017-12-29 14:25:36.4678 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'TretyakRoman'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'TretyakRoman'), 0) as Bal  
+
+2017-12-29 14:25:36.5467 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @TretyakRoman составляет 265,00 
+
+2017-12-29 14:25:36.5467 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2017-12-29 14:25:36.5627 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2017-12-29 14:25:36.6466 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2017-12-29 14:25:36.7297 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -965,00 
+
+2017-12-29 14:25:36.7297 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 29 успешно добавлена
+Баланс пользователя @TretyakRoman составляет 265,00
+Баланс пользователя @Infom составляет -965,00 
+
+2017-12-29 14:26:24.4137 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 14:26:34.6006 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:278 user_id:2730927 chat_id:-156558308 username:Infom name: Ruslan Kasimov date: 1514546784 message:'/t @TretyakRoman 320 @Sergeiaf' 
+
+2017-12-29 14:26:34.6056 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2017-12-29 14:26:34.6056 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@TretyakRoman 320 @Sergeiaf' 
+
+2017-12-29 14:26:34.6056 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'TretyakRoman' 
+
+2017-12-29 14:26:34.6194 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '320' 
+
+2017-12-29 14:26:34.6194 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Sergeiaf' 
+
+2017-12-29 14:26:34.6194 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2017-12-29 14:26:34.6194 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2017-12-29 14:26:34.7122 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2017-12-29 14:26:34.7122 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2017-12-29 14:26:34.8411 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:TretyakRoman amount:320 to:Sergeiaf 
+
+2017-12-29 14:26:34.8411 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('TretyakRoman' ,320 ,'Sergeiaf' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2017-12-29 14:26:34.9795 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2017-12-29 14:26:34.9795 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2017-12-29 14:26:35.0694 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'TretyakRoman'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'TretyakRoman'), 0) as Bal  
+
+2017-12-29 14:26:35.1525 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @TretyakRoman составляет 585,00 
+
+2017-12-29 14:26:35.1525 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2017-12-29 14:26:35.1525 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2017-12-29 14:26:35.2406 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2017-12-29 14:26:35.3204 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Sergeiaf составляет 380,00 
+
+2017-12-29 14:26:35.3204 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 30 успешно добавлена
+Баланс пользователя @TretyakRoman составляет 585,00
+Баланс пользователя @Sergeiaf составляет 380,00 
+
+2017-12-29 14:26:57.0757 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 14:26:57.0757 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:280 user_id:2730927 chat_id:-156558308 username:Infom name: Ruslan Kasimov date: 1514546817 message:'/t' 
+
+2017-12-29 14:26:57.0857 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2017-12-29 14:26:57.0857 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '' 
+
+2017-12-29 14:27:09.0962 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2017-12-29 14:27:09.1012 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:282 user_id:2730927 chat_id:-156558308 username:Infom name: Ruslan Kasimov date: 1514546829 message:'/d' 
+
+2017-12-29 14:27:09.1012 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2017-12-29 14:27:09.1012 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Infom' 
+
+2017-12-29 14:27:09.1012 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2017-12-29 14:27:09.1956 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2017-12-29 14:27:09.2818 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Infom' GROUP BY to_user 
+
+2017-12-29 14:27:09.3674 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Sergeiaf amount: -425,00  
+
+2017-12-29 14:27:09.3674 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: TretyakRoman amount: -540,00  
+
+2017-12-29 14:27:09.3856 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Infom. Баланс: -965,00
+ @Infom должен 425,00 @Sergeiaf
+ @Infom должен 540,00 @TretyakRoman
+ 
+
+2017-12-29 14:28:55.6802 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2017-12-29 14:28:55.7272 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2017-12-29 14:28:56.2630 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+

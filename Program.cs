@@ -9,13 +9,18 @@ using System.Data.SqlClient;
 using Telegram;
 using Telegram.Request;
 using DeeBeeTeeDB;
+using NLog;
 
 namespace DeeBeeTeeAlphaBot
 {
+    
     class Program
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
+
+            logger.Info("Запуск бота");
             TelegramRequest Tr = new TelegramRequest(MainSettings.Default.Token, MainSettings.Default.API_URL);
             Tr.MessageText += Tr_MessageText;
             Tr.MessageSticker += Tr_MessageSticker;
@@ -27,19 +32,19 @@ namespace DeeBeeTeeAlphaBot
             Tr.MessageVoice += Tr_MessageVoice;
 
             DBAPI Db = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
+            logger.Info("Подключение к БД"); 
             Db.Connect();
 
-
+            logger.Info("Запуск пуллинга telegram API");
             Tr.GetUpdates();
 
-            Console.ReadLine();
+            //Console.ReadLine();
 
         }
 
         private static void Tr_MessageText(object sendr, MessageText e)
         {
-            Console.WriteLine("ID сообщения:{0}\nID отправителя:{1}\nchat_id:{2}\nНик отправителя:{3}\nИмя:{4} Фамилия:{5}\nДата:{6}\nТекст сообщения:{7}",
-               e.message_id, e.from.id,e.chat.id, e.from.username, e.from.first_name, e.from.last_name, e.date, e.text);
+            logger.Debug($"New message: message_id:{e.message_id} user_id:{e.from.id} chat_id:{e.chat.id} username:{e.from.username} name: {e.from.first_name} {e.from.last_name} date: {e.date} message:'{e.text}'");
             Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
             DBAPI d = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
             d.Connect();
@@ -56,6 +61,7 @@ namespace DeeBeeTeeAlphaBot
                 command = message.Substring(0, space);
             }
 
+            logger.Info("Получение команды " + command);
             switch (command)
             {
                 case "/balance":
@@ -86,7 +92,7 @@ namespace DeeBeeTeeAlphaBot
                     answer = d.Command_transaction(message);
                     break;
                 default:
-                    answer = "Извините я команду '" + command + "' не поддерживаю. Поддерживаемые команды можно посмотреть /help";
+                    answer = $"Извините я команду '{command}' не поддерживаю. Поддерживаемые команды можно посмотреть /help";
                     break;
             }
 
