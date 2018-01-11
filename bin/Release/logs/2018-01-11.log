@@ -1,0 +1,41 @@
+2018-01-11 12:21:59.1535 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:21:59.2046 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:21:59.6474 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:22:00.0157 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:22:00.0287 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:332 user_id:459569 chat_id:-156558308 username:Sergeiaf name: Сергей Федоров date: 1515662451 message:'/d' 
+
+2018-01-11 12:22:00.4907 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-11 12:22:00.4997 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-11 12:22:00.4997 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-11 12:22:00.5937 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-01-11 12:22:00.6804 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Sergeiaf' GROUP BY to_user 
+
+2018-01-11 12:22:00.7642 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: Infom amount: -11,00  
+
+2018-01-11 12:22:00.7642 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: TretyakRoman amount: -345,00  
+
+2018-01-11 12:22:00.7797 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Sergeiaf. Баланс: -356,00
+ @Sergeiaf должен 11,00 @Infom
+ @Sergeiaf должен 345,00 @TretyakRoman
+ 
+
+2018-01-11 12:23:03.1168 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-11 12:24:07.5945 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 120 
+
+2018-01-11 12:25:11.9316 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 180 
+
+2018-01-11 12:35:59.0987 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:35:59.1505 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:35:59.6274 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+

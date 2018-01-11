@@ -264,13 +264,21 @@ namespace DeeBeeTeeDB
         {
             string r;
             logger.Debug($"Поиск пользователя '{username}'");
-            User su = SearchUser(username);
+
+            if (String.IsNullOrEmpty(username))
+            {
+                r = "Невозможно добавить пользователя без имени. Заполните username!";
+                return r;
+            }
 
             if (username.Length == 0)
             {
-                r = "Невозможно добавить пользователя без имени";
+                r = "Невозможно добавить пользователя без имени. Заполните username!";
                 return r;
             }
+
+            User su = SearchUser(username);
+
 
             if (su.uid == 0)
             {
@@ -305,7 +313,7 @@ namespace DeeBeeTeeDB
             int probel = m.IndexOf(' ');
             if (probel == -1)
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser. Например '@Ivan 226 @Petr'. Не найдены пробелы";
+                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser<s>. Например '@Ivan 226 @Petr'. Не найдены пробелы";
                 return r;
             }
             string from_user = m.Substring(1, probel - 1);
@@ -315,7 +323,7 @@ namespace DeeBeeTeeDB
             probel = m.IndexOf(' ');
             if (probel == -1)
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser. Например '@Ivan 226 @Petr'. Не найдена сумма";
+                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser<s>. Например '@Ivan 226 @Petr'. Не найдена сумма";
                 return r;
             }
             string s_amount = m.Substring(0, probel);
@@ -323,35 +331,123 @@ namespace DeeBeeTeeDB
             decimal amount = 0;
             if (Decimal.TryParse(s_amount, out amount) == false)
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser. Например '@Ivan 226 @Petr'. Сумма не преобразуется";
+                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser<s>. Например '@Ivan 226 @Petr'. Сумма не преобразуется";
                 return r;
             }
             m = m.Substring(probel + 2);
             m = m.Trim();
-            string to_user = m;
-            logger.Debug($"Пользователь to '{to_user}'");
-            if (m.Length == 0)
+            List<string> ToUsers = new List<string>();
+            bool FromUserInMulti = false;
+            bool SimpleTransaction = true;
+            int AtPos = m.IndexOf("@", 2, m.Length-2, StringComparison.CurrentCulture);
+            if (AtPos > 0)
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser. Например '@Ivan 226 @Petr'. Не найден пользователь to";
-                return r;
-            }
-            logger.Debug($"Поиск пользователя '{from_user}'");
-            User su = SearchUser(from_user);
-            if (su.uid == 0)
+                string ToUser;
+                SimpleTransaction = false;
+                m = "@" + m + " ";
+                logger.Debug("Обнаружена мультитранзакция, поиск пользователей в подстроке '" + m);
+                //logger.Trace("Search in '" + m + "'");
+                for (int p = 0; p < m.Length; p++)
+                {
+                    //logger.Trace("search " + p);
+                    if (m[p] == '@')
+                    {
+                        AtPos = p;
+                        //logger.Trace("at found  " + p);
+                    };
+
+                    if ((m[p] == ' ')&(AtPos >= 0))
+                    {
+                        //logger.Trace("space found  " + p);
+                        ToUser = m.Substring(AtPos + 1, p - 1 - AtPos);
+                        logger.Trace("add user  '" + ToUser + "'");
+                        ToUsers.Add(ToUser);
+                        FromUserInMulti = FromUserInMulti || (ToUser == from_user);
+                        AtPos = -1;
+                    };
+
+                };
+
+                logger.Trace("Количество пользователей to в мультитранзакции " + ToUsers.Count + ", сам пользователь " + FromUserInMulti);
+            };
+            if (SimpleTransaction)
             {
-                r = "Пользователь @" + from_user + " не подключен к системею. Регистрация транзакции невозможна";
-                return r;
+                string to_user = m;
+                logger.Debug($"Пользователь to '{to_user}'");
+                if (m.Length == 0)
+                {
+                    r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser<s>. Например '@Ivan 226 @Petr'. Не найден пользователь to";
+                    return r;
+                }
+                logger.Debug($"Поиск пользователя '{from_user}'");
+                User su = SearchUser(from_user);
+                if (su.uid == 0)
+                {
+                    r = "Пользователь @" + from_user + " не подключен к системею. Регистрация транзакции невозможна";
+                    return r;
+                }
+                logger.Debug($"Поиск пользователя '{to_user}'");
+                su = SearchUser(to_user);
+                if (su.uid == 0)
+                {
+                    r = "Пользователь @" + to_user + " не подключен к системею. Регистрация транзакции невозможна";
+                    return r;
+                }
+                logger.Debug($"Выполнение в SQL транзакции from:{from_user} amount:{amount} to:{to_user}");
+                int tid = NewTransaction(from_user, to_user, amount, 0);
+                r = "Транзакция " + tid.ToString() + " успешно добавлена\r\n" + Command_balance(from_user) + "\r\n" + Command_balance(to_user);
             }
-            logger.Debug($"Поиск пользователя '{to_user}'");
-            su = SearchUser(to_user);
-            if (su.uid == 0)
+            else
             {
-                r = "Пользователь @" + to_user + " не подключен к системею. Регистрация транзакции невозможна";
-                return r;
-            }
-            logger.Debug($"Выполнение в SQL транзакции from:{from_user} amount:{amount} to:{to_user}");
-            int tid = NewTransaction(from_user, to_user, amount, 0);
-            r = "Транзакция " + tid.ToString() + " успешно добавлена\r\n" + Command_balance(from_user) + "\r\n" + Command_balance(to_user);
+                logger.Debug($"Поиск пользователя '{from_user}'");
+                User su = SearchUser(from_user);
+                if (su.uid == 0)
+                {
+                    r = "Пользователь @" + from_user + " не подключен к системею. Регистрация мультитранзакции невозможна";
+                    return r;
+                }
+
+                for (int u = 0; u < ToUsers.Count; u++)
+                {
+                    string to_user = ToUsers[u];
+                    logger.Debug($"Пользователь номер '{u}' to '{to_user}'");
+                    logger.Debug($"Поиск пользователя '{to_user}'");
+                    su = SearchUser(to_user);
+                    if (su.uid == 0)
+                    {
+                        r = "Пользователь @" + to_user + " не подключен к системею. Регистрация мультитранзакции невозможна";
+                        return r;
+                    }
+                };
+
+                decimal c_amount = Math.Floor(amount / (ToUsers.Count));
+                string b = Command_balance(from_user) + "\r\n";
+                decimal last_amount = amount - c_amount * (ToUsers.Count - 1);
+                r = "Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части\r\n";
+                for (int u = 0; u < ToUsers.Count; u++)
+                {
+                    string to_user = ToUsers[u];
+                    int tid;
+                    if (from_user == to_user) { continue; };
+                    amount = c_amount;
+                    if (u < ToUsers.Count - 1)
+                    {
+                        logger.Debug($"Выполнение в SQL транзакции from:{from_user} amount:{c_amount} to:{to_user}");
+                        tid =  NewTransaction(from_user, to_user, c_amount, 0);
+                    }
+                    else
+                    {
+                        logger.Debug($"Выполнение в SQL транзакции from:{from_user} amount:{last_amount} to:{to_user}");
+                        tid =  NewTransaction(from_user, to_user, last_amount, 0);
+
+                    };
+                    r = r + "Транзакция " + tid.ToString() + " успешно добавлена\r\n" ;
+                    b = b + Command_balance(to_user) + "\r\n";
+                };
+                r = r + b;
+
+
+            };
             logger.Info("Возврат результата команды transaction с сообщением " + r);
             return r;
         }

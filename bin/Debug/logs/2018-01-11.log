@@ -1,0 +1,751 @@
+2018-01-11 11:59:02.7336 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 11:59:02.7791 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 11:59:03.3612 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:02:27.6767 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:02:27.7227 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:02:28.1920 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:03:31.9171 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-11 12:04:38.7661 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 120 
+
+2018-01-11 12:05:24.0441 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:05:24.0561 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:320 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515661523 message:'/t @Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-11 12:05:24.6107 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-11 12:05:24.7177 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-11 12:05:24.7227 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-11 12:05:24.7227 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-11 12:05:24.7227 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@Boris @Infom  @SergeiAf  
+
+2018-01-11 12:05:24.7367 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-11 12:05:24.7367 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Infom' 
+
+2018-01-11 12:05:24.7367 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'SergeiAf' 
+
+2018-01-11 12:05:24.7367 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 3, сам пользователь True 
+
+2018-01-11 12:05:24.7517 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:05:24.7517 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:05:24.8446 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'Boris' 
+
+2018-01-11 12:05:24.8526 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:05:24.8526 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:05:24.9421 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:400 to:Boris 
+
+2018-01-11 12:05:24.9421 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,400 ,'Boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:05:25.0491 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:05:25.0491 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:05:25.1396 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:05:25.2191 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -394,00 
+
+2018-01-11 12:05:25.2276 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:05:25.2361 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:05:25.3196 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:05:25.4062 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет 299,00 
+
+2018-01-11 12:05:25.4162 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'Infom' 
+
+2018-01-11 12:05:25.4247 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:05:25.4247 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:05:25.5144 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:400 to:Infom 
+
+2018-01-11 12:05:25.5234 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,400 ,'Infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:05:25.6200 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:05:25.6285 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:05:25.7104 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:05:25.7895 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -394,00 
+
+2018-01-11 12:05:25.7895 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:05:25.8065 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:05:25.8898 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:05:25.9725 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -394,00 
+
+2018-01-11 12:05:25.9725 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '2' to 'SergeiAf' 
+
+2018-01-11 12:05:25.9725 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:05:25.9865 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:05:26.0674 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:400 to:SergeiAf 
+
+2018-01-11 12:05:26.0674 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,400 ,'SergeiAf' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:05:26.1610 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:05:26.1610 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:05:26.2462 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:05:26.3300 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет 6,00 
+
+2018-01-11 12:05:26.3300 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:05:26.3480 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:05:26.4274 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'SergeiAf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'SergeiAf'), 0) as Bal  
+
+2018-01-11 12:05:26.5098 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @SergeiAf составляет -756,00 
+
+2018-01-11 12:05:26.5188 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:05:26.5188 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:05:26.6103 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:05:26.6943 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет 6,00 
+
+2018-01-11 12:05:26.6943 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:133 to:Boris 
+
+2018-01-11 12:05:26.7118 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:05:26.7118 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:05:26.8026 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:05:26.8831 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет 299,00 
+
+2018-01-11 12:05:26.8831 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:133 to:SergeiAf 
+
+2018-01-11 12:05:26.9001 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:05:26.9091 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:05:26.9923 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'SergeiAf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'SergeiAf'), 0) as Bal  
+
+2018-01-11 12:05:27.0750 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @SergeiAf составляет -756,00 
+
+2018-01-11 12:05:27.0830 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 0 успешно добавлена
+Транзакция 0 успешно добавлена
+Баланс пользователя @Infom составляет 6,00
+Баланс пользователя @Boris составляет 299,00
+Баланс пользователя @SergeiAf составляет -756,00
+ 
+
+2018-01-11 12:05:50.6783 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 180 
+
+2018-01-11 12:06:56.4769 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 240 
+
+2018-01-11 12:08:01.3655 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 300 
+
+2018-01-11 12:09:07.8897 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 360 
+
+2018-01-11 12:11:55.2096 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:11:55.2565 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:11:55.8405 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:12:05.9555 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:12:05.9695 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:322 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515661925 message:'/t @Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-11 12:12:06.4344 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-11 12:12:06.4344 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-11 12:12:06.4544 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-11 12:12:06.4544 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-11 12:12:06.4713 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@Boris @Infom  @SergeiAf  
+
+2018-01-11 12:12:06.4713 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-11 12:12:06.4873 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Infom' 
+
+2018-01-11 12:12:06.4873 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'SergeiAf' 
+
+2018-01-11 12:12:06.4983 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 3, сам пользователь True 
+
+2018-01-11 12:12:06.4983 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:12:06.4983 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:12:06.5904 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'Boris' 
+
+2018-01-11 12:12:06.5904 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:12:06.6074 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:12:06.6864 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:400 to:Boris 
+
+2018-01-11 12:12:06.6864 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,400 ,'Boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:12:06.7896 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:12:06.7954 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:12:06.8786 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:12:06.9709 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет 406,00 
+
+2018-01-11 12:12:06.9709 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:12:06.9912 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:12:07.0889 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:12:07.1991 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет -101,00 
+
+2018-01-11 12:12:07.2111 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'Infom' 
+
+2018-01-11 12:12:07.2211 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:12:07.2211 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:12:07.3117 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:400 to:Infom 
+
+2018-01-11 12:12:07.3117 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,400 ,'Infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:12:07.4209 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:12:07.4209 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:12:07.5219 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:12:07.6058 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет 406,00 
+
+2018-01-11 12:12:07.6178 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:12:07.6258 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:12:07.7038 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:12:07.7875 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет 406,00 
+
+2018-01-11 12:12:07.7955 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '2' to 'SergeiAf' 
+
+2018-01-11 12:12:07.7955 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:12:07.8165 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:12:07.8991 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:400 to:SergeiAf 
+
+2018-01-11 12:12:07.9081 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,400 ,'SergeiAf' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:12:08.0060 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:12:08.0150 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:12:08.0951 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:12:08.1785 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет 806,00 
+
+2018-01-11 12:12:08.1872 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:12:08.1872 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:12:08.2800 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'SergeiAf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'SergeiAf'), 0) as Bal  
+
+2018-01-11 12:12:08.3671 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @SergeiAf составляет -1156,00 
+
+2018-01-11 12:12:08.3761 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:12:08.3761 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:12:08.4673 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:12:08.5457 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет 806,00 
+
+2018-01-11 12:12:08.5457 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:133 to:Boris 
+
+2018-01-11 12:12:08.5623 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:12:08.5623 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:12:08.6516 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:12:08.7314 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет -101,00 
+
+2018-01-11 12:12:08.7314 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:1 to:SergeiAf 
+
+2018-01-11 12:12:08.7484 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:12:08.7484 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:12:08.8386 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'SergeiAf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'SergeiAf'), 0) as Bal  
+
+2018-01-11 12:12:08.9247 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @SergeiAf составляет -1156,00 
+
+2018-01-11 12:12:08.9247 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 0 успешно добавлена
+Транзакция 0 успешно добавлена
+Баланс пользователя @Infom составляет 806,00
+Баланс пользователя @Boris составляет -101,00
+Баланс пользователя @SergeiAf составляет -1156,00
+ 
+
+2018-01-11 12:13:01.8160 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-11 12:16:51.5948 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:16:51.6552 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:16:52.2051 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:16:52.5790 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:16:52.5790 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:324 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515662192 message:'/b' 
+
+2018-01-11 12:16:52.9947 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /b 
+
+2018-01-11 12:16:52.9947 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:16:52.9947 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:16:53.0848 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:16:53.1638 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -794,00 
+
+2018-01-11 12:17:06.3043 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:17:06.3143 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:326 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515662225 message:'/t @Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-11 12:17:06.3233 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-11 12:17:06.3233 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-11 12:17:06.3403 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-11 12:17:06.3403 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-11 12:17:06.3403 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@Boris @Infom  @SergeiAf  
+
+2018-01-11 12:17:06.3563 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-11 12:17:06.3563 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Infom' 
+
+2018-01-11 12:17:06.3563 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'SergeiAf' 
+
+2018-01-11 12:17:06.3699 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 3, сам пользователь True 
+
+2018-01-11 12:17:06.3699 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:17:06.3699 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:17:06.4635 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'Boris' 
+
+2018-01-11 12:17:06.4635 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:17:06.4798 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:17:06.5768 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'Infom' 
+
+2018-01-11 12:17:06.5768 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:17:06.5928 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:17:06.6855 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '2' to 'SergeiAf' 
+
+2018-01-11 12:17:06.6855 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:17:06.6855 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:17:06.7766 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:17:06.7766 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:17:06.8598 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:17:06.9421 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -794,00 
+
+2018-01-11 12:17:06.9481 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:133 to:Boris 
+
+2018-01-11 12:17:06.9481 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:17:06.9481 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:17:07.0372 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:17:07.1170 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет 699,00 
+
+2018-01-11 12:17:07.1250 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:1 to:SergeiAf 
+
+2018-01-11 12:17:07.1351 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:17:07.1351 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:17:07.2217 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'SergeiAf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'SergeiAf'), 0) as Bal  
+
+2018-01-11 12:17:07.3022 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @SergeiAf составляет -356,00 
+
+2018-01-11 12:17:07.3112 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 0 успешно добавлена
+Транзакция 0 успешно добавлена
+Баланс пользователя @Infom составляет -794,00
+Баланс пользователя @Boris составляет 699,00
+Баланс пользователя @SergeiAf составляет -356,00
+ 
+
+2018-01-11 12:17:55.8816 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-11 12:19:28.1237 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:19:28.1730 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:19:28.7632 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:19:40.1926 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:19:40.2026 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:328 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515662379 message:'/t @Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-11 12:19:40.6180 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-11 12:19:40.6180 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-11 12:19:40.6384 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-11 12:19:40.6384 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-11 12:19:40.6534 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@Boris @Infom  @SergeiAf  
+
+2018-01-11 12:19:40.6534 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-11 12:19:40.6534 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Infom' 
+
+2018-01-11 12:19:40.6682 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'SergeiAf' 
+
+2018-01-11 12:19:40.6682 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 3, сам пользователь True 
+
+2018-01-11 12:19:40.6682 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:19:40.6832 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:19:40.7622 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'Boris' 
+
+2018-01-11 12:19:40.7622 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:19:40.7622 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:19:40.8494 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'Infom' 
+
+2018-01-11 12:19:40.8574 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:19:40.8574 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:19:40.9499 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '2' to 'SergeiAf' 
+
+2018-01-11 12:19:40.9499 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:19:40.9623 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:19:41.0411 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:19:41.0411 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:19:41.1317 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:19:41.2154 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -794,00 
+
+2018-01-11 12:19:41.2154 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:133 to:Boris 
+
+2018-01-11 12:19:41.2329 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:19:41.2329 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:19:41.3244 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:19:41.4035 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет 699,00 
+
+2018-01-11 12:19:41.4035 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:134 to:SergeiAf 
+
+2018-01-11 12:19:41.4209 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:19:41.4209 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:19:41.5110 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'SergeiAf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'SergeiAf'), 0) as Bal  
+
+2018-01-11 12:19:41.5955 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @SergeiAf составляет -356,00 
+
+2018-01-11 12:19:41.6050 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 0 успешно добавлена
+Транзакция 0 успешно добавлена
+Баланс пользователя @Infom составляет -794,00
+Баланс пользователя @Boris составляет 699,00
+Баланс пользователя @SergeiAf составляет -356,00
+ 
+
+2018-01-11 12:19:59.0554 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:19:59.0554 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:330 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515662398 message:'/t @Infom 400 @Boris @SergeiAf' 
+
+2018-01-11 12:19:59.0744 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-11 12:19:59.0744 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Boris @SergeiAf' 
+
+2018-01-11 12:19:59.0944 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-11 12:19:59.1046 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-11 12:19:59.1046 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@Boris @SergeiAf  
+
+2018-01-11 12:19:59.1046 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-11 12:19:59.1181 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'SergeiAf' 
+
+2018-01-11 12:19:59.1181 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 2, сам пользователь False 
+
+2018-01-11 12:19:59.1181 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:19:59.1181 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:19:59.2091 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'Boris' 
+
+2018-01-11 12:19:59.2136 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:19:59.2136 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:19:59.2959 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'SergeiAf' 
+
+2018-01-11 12:19:59.3061 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:19:59.3061 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:19:59.3930 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-11 12:19:59.4019 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-11 12:19:59.4845 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-11 12:19:59.5678 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -794,00 
+
+2018-01-11 12:19:59.5768 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:200 to:Boris 
+
+2018-01-11 12:19:59.5768 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:19:59.5928 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:19:59.6769 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:19:59.7602 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет 699,00 
+
+2018-01-11 12:19:59.7602 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:200 to:SergeiAf 
+
+2018-01-11 12:19:59.7767 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'SergeiAf' 
+
+2018-01-11 12:19:59.7767 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'SergeiAf' 
+
+2018-01-11 12:19:59.8660 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'SergeiAf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'SergeiAf'), 0) as Bal  
+
+2018-01-11 12:19:59.9453 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @SergeiAf составляет -356,00 
+
+2018-01-11 12:19:59.9498 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 0 успешно добавлена
+Транзакция 0 успешно добавлена
+Баланс пользователя @Infom составляет -794,00
+Баланс пользователя @Boris составляет 699,00
+Баланс пользователя @SergeiAf составляет -356,00
+ 
+
+2018-01-11 12:26:49.9978 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:26:50.0459 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:26:50.6403 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:27:35.4274 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:27:35.4274 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:334 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515662854 message:'/t @Ivan 402 @Boris @Petr' 
+
+2018-01-11 12:27:35.8485 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-11 12:27:35.8485 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Ivan 402 @Boris @Petr' 
+
+2018-01-11 12:27:35.8485 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Ivan' 
+
+2018-01-11 12:27:35.8655 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '402' 
+
+2018-01-11 12:27:35.8655 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@Boris @Petr  
+
+2018-01-11 12:27:35.8655 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-11 12:27:35.8655 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Petr' 
+
+2018-01-11 12:27:35.8821 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 2, сам пользователь False 
+
+2018-01-11 12:27:35.8821 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Ivan' 
+
+2018-01-11 12:27:35.8821 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2018-01-11 12:27:35.9691 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'Boris' 
+
+2018-01-11 12:27:35.9734 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:27:35.9734 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:27:36.0603 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'Petr' 
+
+2018-01-11 12:27:36.0669 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Petr' 
+
+2018-01-11 12:27:36.0669 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Petr' 
+
+2018-01-11 12:27:36.1509 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Ivan' 
+
+2018-01-11 12:27:36.1509 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2018-01-11 12:27:36.2420 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Ivan'), 0) as Bal  
+
+2018-01-11 12:27:36.3250 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Ivan составляет 4332,00 
+
+2018-01-11 12:27:36.3340 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Ivan amount:201 to:Boris 
+
+2018-01-11 12:27:36.3340 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Ivan' ,201 ,'Boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:27:36.4927 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:27:36.4927 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:27:36.5753 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:27:36.6538 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет 498,00 
+
+2018-01-11 12:27:36.6538 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Ivan amount:201 to:Petr 
+
+2018-01-11 12:27:36.6658 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Ivan' ,201 ,'Petr' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:27:36.7622 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Petr' 
+
+2018-01-11 12:27:36.7702 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Petr' 
+
+2018-01-11 12:27:36.8528 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Petr'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Petr'), 0) as Bal  
+
+2018-01-11 12:27:36.9393 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Petr составляет -5232,00 
+
+2018-01-11 12:27:36.9467 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 46 успешно добавлена
+Транзакция 47 успешно добавлена
+Баланс пользователя @Ivan составляет 4332,00
+Баланс пользователя @Boris составляет 498,00
+Баланс пользователя @Petr составляет -5232,00
+ 
+
+2018-01-11 12:27:55.3754 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-11 12:28:32.9714 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-11 12:28:32.9814 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:336 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515662912 message:'/t @Ivan 701 @Boris @Ivan @Petr' 
+
+2018-01-11 12:28:32.9904 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-11 12:28:32.9904 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Ivan 701 @Boris @Ivan @Petr' 
+
+2018-01-11 12:28:33.0134 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Ivan' 
+
+2018-01-11 12:28:33.0134 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '701' 
+
+2018-01-11 12:28:33.0252 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@Boris @Ivan @Petr  
+
+2018-01-11 12:28:33.0252 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-11 12:28:33.0372 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Ivan' 
+
+2018-01-11 12:28:33.0372 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Petr' 
+
+2018-01-11 12:28:33.0372 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 3, сам пользователь True 
+
+2018-01-11 12:28:33.0372 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Ivan' 
+
+2018-01-11 12:28:33.0549 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2018-01-11 12:28:33.1326 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'Boris' 
+
+2018-01-11 12:28:33.1326 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:28:33.1496 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:28:33.2322 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'Ivan' 
+
+2018-01-11 12:28:33.2412 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Ivan' 
+
+2018-01-11 12:28:33.2412 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2018-01-11 12:28:33.3592 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '2' to 'Petr' 
+
+2018-01-11 12:28:33.3592 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Petr' 
+
+2018-01-11 12:28:33.3672 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Petr' 
+
+2018-01-11 12:28:33.4459 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Ivan' 
+
+2018-01-11 12:28:33.4459 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Ivan' 
+
+2018-01-11 12:28:33.5375 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Ivan'), 0) as Bal  
+
+2018-01-11 12:28:33.6786 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Ivan составляет 4734,00 
+
+2018-01-11 12:28:33.6786 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Ivan amount:233 to:Boris 
+
+2018-01-11 12:28:33.6786 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Ivan' ,233 ,'Boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:28:33.7951 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Boris' 
+
+2018-01-11 12:28:33.8032 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Boris' 
+
+2018-01-11 12:28:33.8854 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Boris'), 0) as Bal  
+
+2018-01-11 12:28:33.9665 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Boris составляет 265,00 
+
+2018-01-11 12:28:33.9665 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Ivan amount:235 to:Petr 
+
+2018-01-11 12:28:33.9753 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Ivan' ,235 ,'Petr' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-11 12:28:34.0656 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Petr' 
+
+2018-01-11 12:28:34.0709 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Petr' 
+
+2018-01-11 12:28:34.1486 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Petr'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Petr'), 0) as Bal  
+
+2018-01-11 12:28:34.2312 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Petr составляет -5467,00 
+
+2018-01-11 12:28:34.2402 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 48 успешно добавлена
+Транзакция 49 успешно добавлена
+Баланс пользователя @Ivan составляет 4734,00
+Баланс пользователя @Boris составляет 265,00
+Баланс пользователя @Petr составляет -5467,00
+ 
+
+2018-01-11 12:31:19.3491 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:31:19.3971 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:31:19.8994 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:32:23.9227 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-11 12:33:28.3830 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 120 
+
+2018-01-11 12:34:14.5916 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-11 12:34:14.6504 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-11 12:34:15.2277 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-11 12:35:18.8147 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+

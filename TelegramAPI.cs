@@ -1438,6 +1438,7 @@ namespace Telegram
                 _link = Link;
             }
             int LastUpdateID = 0;
+            int RequestCounter = 0;
             //События
             public event ResponseText MessageText;
             public event ResponseSticker MessageSticker;
@@ -1452,128 +1453,140 @@ namespace Telegram
             {
                 while (true)
                 {
-                    using (WebClient webClient = new WebClient())
+                    try
                     {
-                        //logger.Trace("New HTTP request: https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
-                        string response = webClient.DownloadString("https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
-                        //logger.Trace("HTTP response: "+ response);
-                        if (response.Length <= 23)
+                        using (WebClient webClient = new WebClient())
                         {
-                            System.Threading.Thread.Sleep(1000);
-                            continue;
-                        }
-                        var N = JSON.Parse(response);
-                        foreach (JSONNode r in N["result"].AsArray)
-                        {
-                            string _type = r["message"].ToString();
-                            _type = WhatsType(_type).Replace("\"", "");
-                            LastUpdateID = r["update_id"].AsInt;
-                            #region SWITCH
-                            switch (_type)
+                            //logger.Trace("New HTTP request: https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
+                            RequestCounter += 1;
+                            if ((RequestCounter % 60) == 0)
                             {
-                                case "text":
-                                    {
-                                        try
+                                logger.Trace("HTTP request number " + RequestCounter);
+                            };
+                            string response = webClient.DownloadString("https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
+                            //logger.Trace("HTTP response: "+ response);
+                            if (response.Length <= 23)
+                            {
+                                System.Threading.Thread.Sleep(1000);
+                                continue;
+                            }
+                            var N = JSON.Parse(response);
+                            foreach (JSONNode r in N["result"].AsArray)
+                            {
+                                string _type = r["message"].ToString();
+                                _type = WhatsType(_type).Replace("\"", "");
+                                LastUpdateID = r["update_id"].AsInt;
+                                #region SWITCH
+                                switch (_type)
+                                {
+                                    case "text":
                                         {
-                                            MessageText.Method.Name.ToString();
-                                            logger.Debug("New message event");
+                                            try
+                                            {
+                                                MessageText.Method.Name.ToString();
+                                                logger.Debug("New message event");
 
-                                        }
-                                        catch (Exception e)
-                                        {
-                                            logger.Error(e.Message);
+                                            }
+                                            catch (Exception e)
+                                            {
+                                                logger.Error(e.Message);
+                                                break;
+                                            }
+                                            GetMessageText(r);
                                             break;
                                         }
-                                        GetMessageText(r);
-                                        break;
-                                    }
-                                case "sticker":
-                                    {
-                                        try
+                                    case "sticker":
                                         {
-                                            MessageText.Method.Name.ToString();
-                                            logger.Debug("New sticker event");
+                                            try
+                                            {
+                                                MessageText.Method.Name.ToString();
+                                                logger.Debug("New sticker event");
+                                            }
+                                            catch (Exception e)
+                                            { logger.Error(e.Message); break; }
+                                            GetMessageSticker(r);
+                                            break;
                                         }
-                                        catch (Exception e)
-                                        { logger.Error(e.Message); break; }
-                                        GetMessageSticker(r);
-                                        break;
-                                    }
-                                case "photo":
-                                    {
-                                        try
+                                    case "photo":
                                         {
-                                            MessageText.Method.Name.ToString();
-                                            logger.Debug("New photo event");
+                                            try
+                                            {
+                                                MessageText.Method.Name.ToString();
+                                                logger.Debug("New photo event");
+                                            }
+                                            catch (Exception e)
+                                            { logger.Error(e.Message); break; }
+                                            GetMessagePhoto(r);
+                                            break;
                                         }
-                                        catch (Exception e)
-                                        { logger.Error(e.Message); break; }
-                                        GetMessagePhoto(r);
-                                        break;
-                                    }
-                                case "video":
-                                    {
-                                        try
+                                    case "video":
                                         {
-                                            MessageText.Method.Name.ToString();
-                                            logger.Debug("New video event");
+                                            try
+                                            {
+                                                MessageText.Method.Name.ToString();
+                                                logger.Debug("New video event");
+                                            }
+                                            catch (Exception e)
+                                            { logger.Error(e.Message); break; }
+                                            GetMessageVideo(r);
+                                            break;
                                         }
-                                        catch (Exception e)
-                                        { logger.Error(e.Message); break; }
-                                        GetMessageVideo(r);
-                                        break;
-                                    }
-                                case "document":
-                                    {
-                                        try
+                                    case "document":
                                         {
-                                            MessageText.Method.Name.ToString();
-                                            logger.Debug("New document event");
+                                            try
+                                            {
+                                                MessageText.Method.Name.ToString();
+                                                logger.Debug("New document event");
+                                            }
+                                            catch (Exception e)
+                                            { logger.Error(e.Message); break; }
+                                            GetMessageDocument(r);
+                                            break;
                                         }
-                                        catch (Exception e)
-                                        { logger.Error(e.Message); break; }
-                                        GetMessageDocument(r);
-                                        break;
-                                    }
-                                case "location":
-                                    {
-                                        try
+                                    case "location":
                                         {
-                                            MessageText.Method.Name.ToString();
-                                            logger.Debug("New location event");
+                                            try
+                                            {
+                                                MessageText.Method.Name.ToString();
+                                                logger.Debug("New location event");
+                                            }
+                                            catch (Exception e)
+                                            { logger.Error(e.Message); break; }
+                                            GetMessageLocation(r);
+                                            break;
                                         }
-                                        catch (Exception e )
-                                        { logger.Error(e.Message); break; }
-                                        GetMessageLocation(r);
-                                        break;
-                                    }
-                                case "contact":
-                                    {
-                                        try
+                                    case "contact":
                                         {
-                                            MessageText.Method.Name.ToString();
-                                            logger.Debug("New contact event");
+                                            try
+                                            {
+                                                MessageText.Method.Name.ToString();
+                                                logger.Debug("New contact event");
+                                            }
+                                            catch (Exception e)
+                                            { logger.Error(e.Message); break; }
+                                            GetMessageContact(r);
+                                            break;
                                         }
-                                        catch (Exception e)
-                                        { logger.Error(e.Message); break; }
-                                        GetMessageContact(r);
-                                        break;
-                                    }
-                                case "voice":
-                                    {
-                                        try
+                                    case "voice":
                                         {
-                                            MessageText.Method.Name.ToString();
-                                            logger.Debug("New voice event");
+                                            try
+                                            {
+                                                MessageText.Method.Name.ToString();
+                                                logger.Debug("New voice event");
+                                            }
+                                            catch (Exception e)
+                                            { logger.Error(e.Message); break; }
+                                            GetMessageVoice(r);
+                                            break;
                                         }
-                                        catch (Exception e)
-                                        { logger.Error(e.Message); break; }
-                                        GetMessageVoice(r);
-                                        break;
-                                    }
+                                }
+                                #endregion
                             }
-                            #endregion
                         }
+                    }
+                    catch (Exception e)
+                    {
+                        logger.Error(e.Message);
                     }
                 }
             }

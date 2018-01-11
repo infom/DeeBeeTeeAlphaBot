@@ -1,0 +1,36 @@
+2018-01-09 10:04:32.3363 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-09 10:04:32.3793 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-09 10:04:33.2243 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-09 10:04:33.6152 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-09 10:04:33.6212 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:294 user_id:450402061 chat_id:450402061 username: name: Villain Mogor date: 1515447165 message:'/start' 
+
+2018-01-09 10:04:34.2829 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /start 
+
+2018-01-09 10:04:34.2829 | DeeBeeTeeDB.DBAPI.Command_start | DEBUG | Поиск пользователя '' 
+
+2018-01-09 10:07:35.2770 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-09 10:07:35.3375 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-09 10:07:35.8433 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-09 10:07:36.3156 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-09 10:07:36.3156 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:294 user_id:450402061 chat_id:450402061 username: name: Villain Mogor date: 1515447165 message:'/start' 
+
+2018-01-09 10:07:37.3767 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /start 
+
+2018-01-09 10:07:37.3767 | DeeBeeTeeDB.DBAPI.Command_start | DEBUG | Поиск пользователя '' 
+
+2018-01-09 12:01:51.5521 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-09 12:01:51.6122 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-09 12:01:52.1826 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-09 12:02:23.5733 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP response number 30 
+

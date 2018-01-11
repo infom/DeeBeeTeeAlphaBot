@@ -1,0 +1,374 @@
+2018-01-10 17:13:44.1502 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-10 17:13:44.2152 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-10 17:13:44.8019 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-10 17:14:12.5214 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:14:12.5214 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:316 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515593652 message:'/t @Infom 400 @Infom @Boris' 
+
+2018-01-10 17:14:12.9776 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:14:12.9896 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Infom @Boris' 
+
+2018-01-10 17:14:12.9896 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:14:13.0087 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:16:12.2241 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-10 17:16:12.2812 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-10 17:16:12.7615 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-10 17:16:13.1144 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:16:13.1144 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:316 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515593652 message:'/t @Infom 400 @Infom @Boris' 
+
+2018-01-10 17:16:13.6297 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:16:13.6297 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Infom @Boris' 
+
+2018-01-10 17:16:13.6297 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:16:13.6449 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:16:50.6137 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-10 17:16:50.6667 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-10 17:16:51.1287 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-10 17:16:51.5092 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:16:51.5092 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:316 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515593652 message:'/t @Infom 400 @Infom @Boris' 
+
+2018-01-10 17:16:51.9286 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:16:51.9286 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Infom @Boris' 
+
+2018-01-10 17:16:51.9286 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:16:51.9446 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:21:21.3069 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-10 17:21:21.3569 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-10 17:21:21.9648 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-10 17:21:22.3620 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:21:22.3675 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:316 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515593652 message:'/t @Infom 400 @Infom @Boris' 
+
+2018-01-10 17:21:22.7983 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:21:22.8048 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Infom @Boris' 
+
+2018-01-10 17:21:22.8048 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:21:22.8048 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:26:33.3798 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-10 17:26:33.4423 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-10 17:26:34.0265 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-10 17:26:34.3827 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:26:34.3827 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:316 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515593652 message:'/t @Infom 400 @Infom @Boris' 
+
+2018-01-10 17:26:34.8360 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:26:34.8360 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Infom @Boris' 
+
+2018-01-10 17:26:34.8480 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:26:34.8480 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:26:34.8660 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Search in '@Infom @Boris ' 
+
+2018-01-10 17:26:34.8660 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 1 
+
+2018-01-10 17:26:34.8660 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 2 
+
+2018-01-10 17:26:34.8800 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 3 
+
+2018-01-10 17:26:34.8800 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 4 
+
+2018-01-10 17:26:34.8800 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 5 
+
+2018-01-10 17:26:34.8941 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 6 
+
+2018-01-10 17:26:34.8941 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  6 
+
+2018-01-10 17:27:10.6148 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-10 17:27:10.6701 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-10 17:27:11.1192 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-10 17:27:11.4739 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:27:11.4739 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:316 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515593652 message:'/t @Infom 400 @Infom @Boris' 
+
+2018-01-10 17:27:11.8887 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:27:11.8947 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Infom @Boris' 
+
+2018-01-10 17:27:11.8947 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:27:11.8947 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:27:11.9107 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Search in '@Infom @Boris ' 
+
+2018-01-10 17:27:11.9107 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 0 
+
+2018-01-10 17:27:11.9107 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  0 
+
+2018-01-10 17:27:11.9257 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 1 
+
+2018-01-10 17:27:11.9257 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 2 
+
+2018-01-10 17:27:11.9257 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 3 
+
+2018-01-10 17:27:11.9257 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 4 
+
+2018-01-10 17:27:11.9437 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 5 
+
+2018-01-10 17:27:11.9437 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 6 
+
+2018-01-10 17:27:11.9437 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 7 
+
+2018-01-10 17:27:11.9567 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  7 
+
+2018-01-10 17:27:11.9567 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 8 
+
+2018-01-10 17:27:11.9567 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 9 
+
+2018-01-10 17:27:11.9567 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 10 
+
+2018-01-10 17:27:11.9748 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 11 
+
+2018-01-10 17:27:11.9748 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 12 
+
+2018-01-10 17:27:11.9748 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 13 
+
+2018-01-10 17:27:11.9908 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  13 
+
+2018-01-10 17:27:11.9908 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-10 17:27:11.9908 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 14 
+
+2018-01-10 17:27:54.3205 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-10 17:27:54.3705 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-10 17:27:54.8348 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-10 17:27:55.2085 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:27:55.2085 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:316 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515593652 message:'/t @Infom 400 @Infom @Boris' 
+
+2018-01-10 17:27:55.6281 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:27:55.6281 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Infom @Boris' 
+
+2018-01-10 17:27:55.6281 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:27:55.6451 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:27:55.6451 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Search in '@Infom @Boris ' 
+
+2018-01-10 17:27:55.6451 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 0 
+
+2018-01-10 17:27:55.6591 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  0 
+
+2018-01-10 17:27:55.6591 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 1 
+
+2018-01-10 17:27:55.6591 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 2 
+
+2018-01-10 17:27:55.6591 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 3 
+
+2018-01-10 17:27:55.6771 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 4 
+
+2018-01-10 17:27:55.6771 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 5 
+
+2018-01-10 17:27:55.6771 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 6 
+
+2018-01-10 17:27:55.6901 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  6 
+
+2018-01-10 17:27:55.6901 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Infom' 
+
+2018-01-10 17:27:55.6901 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 7 
+
+2018-01-10 17:27:55.6901 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  7 
+
+2018-01-10 17:27:55.7091 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 8 
+
+2018-01-10 17:27:55.7091 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 9 
+
+2018-01-10 17:27:55.7091 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 10 
+
+2018-01-10 17:27:55.7241 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 11 
+
+2018-01-10 17:27:55.7241 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 12 
+
+2018-01-10 17:27:55.7241 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 13 
+
+2018-01-10 17:27:55.7382 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  13 
+
+2018-01-10 17:27:55.7382 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-10 17:27:55.7382 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 14 
+
+2018-01-10 17:28:38.3658 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-10 17:28:38.4368 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-10 17:28:38.8801 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-10 17:28:39.2293 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:28:39.2363 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:316 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515593652 message:'/t @Infom 400 @Infom @Boris' 
+
+2018-01-10 17:28:39.6736 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:28:39.6736 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Infom @Boris' 
+
+2018-01-10 17:28:39.6736 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:28:39.6896 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:28:39.6896 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Search in '@Infom @Boris ' 
+
+2018-01-10 17:28:39.6896 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 0 
+
+2018-01-10 17:28:39.6896 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  0 
+
+2018-01-10 17:28:39.7076 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 1 
+
+2018-01-10 17:28:39.7076 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 2 
+
+2018-01-10 17:28:39.7076 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 3 
+
+2018-01-10 17:28:39.7204 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 4 
+
+2018-01-10 17:28:39.7204 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 5 
+
+2018-01-10 17:28:39.7204 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 6 
+
+2018-01-10 17:28:39.7204 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  6 
+
+2018-01-10 17:28:39.7384 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Infom' 
+
+2018-01-10 17:28:39.7384 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 7 
+
+2018-01-10 17:28:39.7384 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  7 
+
+2018-01-10 17:28:39.7514 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 8 
+
+2018-01-10 17:28:39.7514 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 9 
+
+2018-01-10 17:28:39.7514 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 10 
+
+2018-01-10 17:28:39.7674 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 11 
+
+2018-01-10 17:28:39.7940 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 12 
+
+2018-01-10 17:28:39.7990 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 13 
+
+2018-01-10 17:28:39.7990 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  13 
+
+2018-01-10 17:28:39.7990 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-10 17:28:39.7990 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to 2 Сам пользователь True 
+
+2018-01-10 17:29:32.6719 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-10 17:29:32.6819 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:318 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1515594572 message:'/t @Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-10 17:29:32.6909 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-10 17:29:32.6909 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 400 @Boris @Infom  @SergeiAf' 
+
+2018-01-10 17:29:32.7089 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-10 17:29:32.7089 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '400' 
+
+2018-01-10 17:29:32.7194 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Search in '@Boris @Infom  @SergeiAf ' 
+
+2018-01-10 17:29:32.7194 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 0 
+
+2018-01-10 17:29:32.7194 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  0 
+
+2018-01-10 17:29:32.7194 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 1 
+
+2018-01-10 17:29:32.7385 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 2 
+
+2018-01-10 17:29:32.7385 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 3 
+
+2018-01-10 17:29:32.7385 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 4 
+
+2018-01-10 17:29:32.7535 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 5 
+
+2018-01-10 17:29:32.7535 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 6 
+
+2018-01-10 17:29:32.7535 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  6 
+
+2018-01-10 17:29:32.7665 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Boris' 
+
+2018-01-10 17:29:32.7665 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 7 
+
+2018-01-10 17:29:32.7665 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  7 
+
+2018-01-10 17:29:32.7665 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 8 
+
+2018-01-10 17:29:32.7835 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 9 
+
+2018-01-10 17:29:32.7835 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 10 
+
+2018-01-10 17:29:32.7835 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 11 
+
+2018-01-10 17:29:32.7835 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 12 
+
+2018-01-10 17:29:32.8001 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 13 
+
+2018-01-10 17:29:32.8001 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  13 
+
+2018-01-10 17:29:32.8001 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Infom' 
+
+2018-01-10 17:29:32.8001 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 14 
+
+2018-01-10 17:29:32.8165 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 15 
+
+2018-01-10 17:29:32.8165 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | at found  15 
+
+2018-01-10 17:29:32.8165 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 16 
+
+2018-01-10 17:29:32.8165 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 17 
+
+2018-01-10 17:29:32.8331 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 18 
+
+2018-01-10 17:29:32.8331 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 19 
+
+2018-01-10 17:29:32.8331 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 20 
+
+2018-01-10 17:29:32.8466 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 21 
+
+2018-01-10 17:29:32.8466 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 22 
+
+2018-01-10 17:29:32.8466 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 23 
+
+2018-01-10 17:29:32.8601 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | search 24 
+
+2018-01-10 17:29:32.8601 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | space found  24 
+
+2018-01-10 17:29:32.8601 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'SergeiAf' 
+
+2018-01-10 17:29:32.8601 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to 3 Сам пользователь True 
+
+2018-01-10 17:29:42.7310 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
