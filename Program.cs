@@ -32,6 +32,9 @@ namespace DeeBeeTeeAlphaBot
             Tr.MessageVoice += Tr_MessageVoice;
 
             DBAPI Db = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
+            Db.RegTransactionEvent += RegisterTransaction;
+
+
             logger.Info("Подключение к БД"); 
             Db.Connect();
 
@@ -42,14 +45,24 @@ namespace DeeBeeTeeAlphaBot
 
         }
 
+        private static void RegisterTransaction(object sendr, Transaction e)
+        {
+
+            logger.Info("Отправка сообщения пользователю о новой транзакции в личный чат");
+            Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
+            m.SendMessage($"Пользователь @{e.from.user} зарегистрировал с вами новую транзакцию на сумму {e.amount}",e.to.user_id);
+        }
+
         private static void Tr_MessageText(object sendr, MessageText e)
         {
             logger.Debug($"New message: message_id:{e.message_id} user_id:{e.from.id} chat_id:{e.chat.id} username:{e.from.username} name: {e.from.first_name} {e.from.last_name} date: {e.date} message:'{e.text}'");
             Method m = new Method(MainSettings.Default.Token, MainSettings.Default.API_URL);
             DBAPI d = new DBAPI(MainSettings.Default.DB_DataSource, MainSettings.Default.DB_UserID, MainSettings.Default.DB_Password, MainSettings.Default.DB_InitialCatalog);
+            d.RegTransactionEvent += RegisterTransaction;
             d.Connect();
             string answer;
             string message = e.text.Replace("@DeeBeeTeeBot", "");
+            string command_params = "";
             int space = message.IndexOf(" ");
             string command;
             if (space == -1)
@@ -59,28 +72,29 @@ namespace DeeBeeTeeAlphaBot
             else
             {
                 command = message.Substring(0, space);
+                command_params = message.Substring(space, message.Length - space);
             }
 
             logger.Info("Получение команды " + command);
             switch (command)
             {
                 case "/balance":
-                    answer = d.Command_balance(e.from.username);                    
+                    answer = d.Command_balance(e.from.username, command_params);                    
                     break;
                 case "/b":
-                    answer = d.Command_balance(e.from.username);
+                    answer = d.Command_balance(e.from.username, command_params);
                     break;
                 case "/details":
-                    answer = d.Command_details(e.from.username);
+                    answer = d.Command_details(e.from.username, command_params);
                     break;
                 case "/d":
-                    answer = d.Command_details(e.from.username);
+                    answer = d.Command_details(e.from.username, command_params);
                     break;
                 case "/hello":
                     answer = d.Command_hello();
                     break;
                 case "/help":
-                    answer = d.Command_help();
+                    answer = d.Command_help(command_params);
                     break;
                 case "/start":
                     answer = d.Command_start(e.from.username, e.from.id);
@@ -97,6 +111,7 @@ namespace DeeBeeTeeAlphaBot
             }
 
             m.SendMessage(answer, e.chat.id);
+            d.UpdateChat(e.chat.id, e.chat.type, e.from.id, e.from.username, e.chat.title);
             d.Disconnect();
 
         }

@@ -16,6 +16,17 @@ namespace DeeBeeTeeDB
         public decimal limit;
         public int user_id;
     }
+
+    public class Transaction : EventArgs
+    {
+        public int tid;
+        public User from = new User();
+        public User to = new User();
+        public decimal amount;
+    }
+
+    public delegate void RegTransaction(object sendr, Transaction e);
+
     class DBAPI
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
@@ -29,7 +40,9 @@ namespace DeeBeeTeeDB
         string _NewUserSQL;
         string _NewTransactionSQL;
         string _GetUserDetailsSQL;
-
+        string _UpdateChatSQL;
+        string _UpdateChatUsersSQL;
+        public event RegTransaction RegTransactionEvent;
         public DBAPI(string DataSource, string UserID, string Password, string InitialCatalog)
         {
             _DataSource = DataSource;
@@ -42,6 +55,8 @@ namespace DeeBeeTeeDB
             _NewUserSQL = "INSERT INTO [dbo].[users] ([user] ,[assign_date],[limit], [user_id]) VALUES ('%UserName%', getdate(), %Limit%, %UserId%) SELECT top 1 uid FROM [dbo].[users] order by assign_date DESC";
             _NewTransactionSQL = "INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('%FromUser%' ,%Amount% ,'%ToUser%' ,getdate() ,%OID%) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC";
             _GetUserDetailsSQL = "SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = '%UserName%' GROUP BY to_user";
+            _UpdateChatSQL = "INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT %ChatId% ,'%ChatType%' ,'%ChatTitle%', '%ChatUsername%' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = %ChatId%)";
+            _UpdateChatUsersSQL = "INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT %ChatId% , %UserId%, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = %ChatId% AND [user_id] = %UserId%)";
             #endregion
 
         }
@@ -123,6 +138,41 @@ namespace DeeBeeTeeDB
             {
                 logger.Error(e.Message);
                 return e.ToString();
+            }
+        }
+
+        public void UpdateChat(int chat_id, string chattype, int user_id, string username, string title)
+        {
+            try
+            {
+                logger.Trace("Chat update" );
+                string _ChatUpdateSQLParam = _UpdateChatSQL.Replace("%ChatId%", chat_id.ToString());
+                _ChatUpdateSQLParam = _ChatUpdateSQLParam.Replace("%ChatType%", chattype);
+                _ChatUpdateSQLParam = _ChatUpdateSQLParam.Replace("%ChatTitle%", title);
+                _ChatUpdateSQLParam = _ChatUpdateSQLParam.Replace("%ChatUsername%", username);
+                SqlCommand command = new SqlCommand(_ChatUpdateSQLParam, connection);
+                logger.Trace("ChatUpdateSQL: " + command.CommandText);
+                SqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+             }
+            catch (SqlException e)
+            {
+                logger.Error(e.Message);
+             }
+
+            try
+            {
+                logger.Trace("Chat users update");
+                string _ChatUsersUpdateSQLParam = _UpdateChatUsersSQL.Replace("%ChatId%", chat_id.ToString());
+                _ChatUsersUpdateSQLParam = _ChatUsersUpdateSQLParam.Replace("%UserId%", user_id.ToString());
+                SqlCommand command = new SqlCommand(_ChatUsersUpdateSQLParam, connection);
+                logger.Trace("ChatUsersUpdateSQL: " + command.CommandText);
+                SqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            catch (SqlException e)
+            {
+                logger.Error(e.Message);
             }
         }
 
@@ -209,6 +259,13 @@ namespace DeeBeeTeeDB
                 }
 
                 reader.Close();
+                User su = SearchUser(ToUser);
+                Transaction tran = new Transaction();
+                tran.amount = Amount;
+                tran.from.user = FromUser;
+                tran.to.user = ToUser;
+                tran.to.user_id = su.user_id;
+                RegTransactionEvent(this, tran);
                 return tid;
             }
             catch (SqlException e)
@@ -217,7 +274,7 @@ namespace DeeBeeTeeDB
                 return 0;
             }
         }
-        public string Command_balance(string username)
+        public string Command_balance(string username, string cparams = "")
         {
             string r;
             logger.Debug($"Поиск пользователя '{username}'");
@@ -234,7 +291,7 @@ namespace DeeBeeTeeDB
             return r;
         }
 
-        public string Command_details(string username)
+        public string Command_details(string username, string cparams)
         {
             string r;
             logger.Debug($"Поиск пользователя '{username}'");
@@ -284,7 +341,7 @@ namespace DeeBeeTeeDB
             {
                 logger.Debug($"Добавление пользователя '{username}' с лимитом 1000");
                 int uid = NewUser(user_id, username, 1000);
-                r = "Поздравляю вы подключились к системе DeeBeeTee. Ваш номер " + uid.ToString() + ". Ваш начальный лимит 1000. Удачного использования";
+                r = "Поздравляю вы подключились к системе DeeBeeTee. Ваш номер " + uid.ToString() + ". Удачного использования";
             }
             else
             {
@@ -294,7 +351,7 @@ namespace DeeBeeTeeDB
             return r;
         }
 
-        public string Command_help()
+        public string Command_help(string cparams)
         {
             string r;
             r = "Поддерживаются команды \r\n/balance /b \r\n/details /d \r\n/hello \r\n/help \r\n/start \r\n/transaction /t";
@@ -313,7 +370,7 @@ namespace DeeBeeTeeDB
             int probel = m.IndexOf(' ');
             if (probel == -1)
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser<s>. Например '@Ivan 226 @Petr'. Не найдены пробелы";
+                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Не найдены пробелы";
                 return r;
             }
             string from_user = m.Substring(1, probel - 1);
@@ -323,7 +380,7 @@ namespace DeeBeeTeeDB
             probel = m.IndexOf(' ');
             if (probel == -1)
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser<s>. Например '@Ivan 226 @Petr'. Не найдена сумма";
+                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Не найдена сумма";
                 return r;
             }
             string s_amount = m.Substring(0, probel);
@@ -331,7 +388,7 @@ namespace DeeBeeTeeDB
             decimal amount = 0;
             if (Decimal.TryParse(s_amount, out amount) == false)
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser<s>. Например '@Ivan 226 @Petr'. Сумма не преобразуется";
+                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Сумма не преобразуется";
                 return r;
             }
             m = m.Substring(probel + 2);
@@ -376,7 +433,7 @@ namespace DeeBeeTeeDB
                 logger.Debug($"Пользователь to '{to_user}'");
                 if (m.Length == 0)
                 {
-                    r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser<s>. Например '@Ivan 226 @Petr'. Не найден пользователь to";
+                    r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Не найден пользователь to";
                     return r;
                 }
                 logger.Debug($"Поиск пользователя '{from_user}'");
