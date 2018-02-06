@@ -1,0 +1,1029 @@
+2018-01-23 09:15:57.3737 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-23 09:15:57.4254 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-23 09:15:57.9868 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-23 09:16:10.4446 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-23 09:16:10.4516 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:557 user_id:58530031 chat_id:58530031 username:amarshalkin name: Artem Marshalkin date: 1516688170 message:'/start' 
+
+2018-01-23 09:16:10.8660 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /start 
+
+2018-01-23 09:16:10.8760 | DeeBeeTeeDB.DBAPI.Command_start | DEBUG | Поиск пользователя 'amarshalkin' 
+
+2018-01-23 09:16:10.8760 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'amarshalkin' 
+
+2018-01-23 09:16:10.9684 | DeeBeeTeeDB.DBAPI.Command_start | DEBUG | Добавление пользователя 'amarshalkin' с лимитом 1000 
+
+2018-01-23 09:16:10.9684 | DeeBeeTeeDB.DBAPI.NewUser | TRACE | NewUserSQLParams: INSERT INTO [dbo].[users] ([user] ,[assign_date],[limit], [user_id]) VALUES ('amarshalkin', getdate(), 1000, 58530031) SELECT top 1 uid FROM [dbo].[users] order by assign_date DESC 
+
+2018-01-23 09:16:11.0720 | DeeBeeTeeDB.DBAPI.Command_start | INFO | Возврат результата команды start с сообщением Поздравляю вы подключились к системе DeeBeeTee. Ваш номер 9. Удачного использования 
+
+2018-01-23 09:16:11.2775 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-23 09:16:11.2855 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 58530031 ,'private' ,'', 'amarshalkin' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 58530031) 
+
+2018-01-23 09:16:11.3807 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-23 09:16:11.3887 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 58530031 , 58530031, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 58530031 AND [user_id] = 58530031) 
+
+2018-01-23 09:16:43.2986 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-23 09:16:43.3026 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:560 user_id:58530031 chat_id:58530031 username:amarshalkin name: Artem Marshalkin date: 1516688202 message:'/t' 
+
+2018-01-23 09:16:43.3026 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-23 09:16:43.3026 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '' 
+
+2018-01-23 09:16:43.5201 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-23 09:16:43.5251 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 58530031 ,'private' ,'', 'amarshalkin' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 58530031) 
+
+2018-01-23 09:16:43.6025 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-23 09:16:43.6025 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 58530031 , 58530031, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 58530031 AND [user_id] = 58530031) 
+
+2018-01-23 09:17:04.9007 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-23 09:18:05.4643 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-23 09:18:05.4643 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:563 user_id:58530031 chat_id:58530031 username:amarshalkin name: Artem Marshalkin date: 1516688284 message:'/t @amarshalkin 128 @infom' 
+
+2018-01-23 09:18:05.4822 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-23 09:18:05.4822 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@amarshalkin 128 @infom' 
+
+2018-01-23 09:18:05.4982 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'amarshalkin' 
+
+2018-01-23 09:18:05.4982 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '128' 
+
+2018-01-23 09:18:05.5112 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'infom' 
+
+2018-01-23 09:18:05.5112 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'amarshalkin' 
+
+2018-01-23 09:18:05.5112 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'amarshalkin' 
+
+2018-01-23 09:18:05.5982 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-23 09:18:05.6067 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-23 09:18:05.6888 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:amarshalkin amount:128 to:infom 
+
+2018-01-23 09:18:05.6983 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('amarshalkin' ,128 ,'infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-23 09:18:05.8176 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-23 09:18:05.9005 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-23 09:18:06.1265 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'amarshalkin' 
+
+2018-01-23 09:18:06.1355 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'amarshalkin' 
+
+2018-01-23 09:18:06.2189 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'amarshalkin'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'amarshalkin'), 0) as Bal  
+
+2018-01-23 09:18:06.3003 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @amarshalkin составляет 128,00 
+
+2018-01-23 09:18:06.4092 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-23 09:18:06.4172 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-23 09:18:06.5004 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'infom'), 0) as Bal  
+
+2018-01-23 09:18:06.5833 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @infom составляет -1323,00 
+
+2018-01-23 09:18:06.5923 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 82 успешно добавлена
+Баланс пользователя @amarshalkin составляет 128,00
+Баланс пользователя @infom составляет -1323,00 
+
+2018-01-23 09:18:06.7752 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-23 09:18:06.7752 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 58530031 ,'private' ,'', 'amarshalkin' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 58530031) 
+
+2018-01-23 09:18:06.8660 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-23 09:18:06.8740 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 58530031 , 58530031, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 58530031 AND [user_id] = 58530031) 
+
+2018-01-23 09:18:13.6693 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 120 
+
+2018-01-23 09:18:31.0975 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-23 09:18:31.0975 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:567 user_id:58530031 chat_id:58530031 username:amarshalkin name: Artem Marshalkin date: 1516688310 message:'/d' 
+
+2018-01-23 09:18:31.1146 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-23 09:18:31.1246 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'amarshalkin' 
+
+2018-01-23 09:18:31.1246 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'amarshalkin' 
+
+2018-01-23 09:18:31.2157 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'amarshalkin'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'amarshalkin'), 0) as Bal  
+
+2018-01-23 09:18:31.3001 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'amarshalkin' GROUP BY to_user 
+
+2018-01-23 09:18:31.3895 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: amarshalkin to: infom amount: 128,00  
+
+2018-01-23 09:18:31.3980 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @amarshalkin. Баланс: 128,00
+ @infom должен 128,00 @amarshalkin
+ 
+
+2018-01-23 09:18:31.5840 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-23 09:18:31.5840 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 58530031 ,'private' ,'', 'amarshalkin' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 58530031) 
+
+2018-01-23 09:18:31.6803 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-23 09:18:31.6878 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 58530031 , 58530031, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 58530031 AND [user_id] = 58530031) 
+
+2018-01-23 09:19:18.4936 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 180 
+
+2018-01-23 09:20:24.2402 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 240 
+
+2018-01-23 09:21:30.9565 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 300 
+
+2018-01-23 09:22:36.5188 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 360 
+
+2018-01-23 09:23:41.4452 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 420 
+
+2018-01-23 09:24:45.8010 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 480 
+
+2018-01-23 09:25:54.7734 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 540 
+
+2018-01-23 09:26:59.7230 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 600 
+
+2018-01-23 09:28:04.5273 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 660 
+
+2018-01-23 09:29:08.9900 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 720 
+
+2018-01-23 09:30:15.4219 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 780 
+
+2018-01-23 09:31:19.9279 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 840 
+
+2018-01-23 09:32:27.5585 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 900 
+
+2018-01-23 09:33:32.2024 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 960 
+
+2018-01-23 09:34:40.2607 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1020 
+
+2018-01-23 09:35:44.8906 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1080 
+
+2018-01-23 09:36:50.4469 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1140 
+
+2018-01-23 09:37:55.5289 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1200 
+
+2018-01-23 09:39:00.1243 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1260 
+
+2018-01-23 09:40:09.4602 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1320 
+
+2018-01-23 09:41:19.2620 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1380 
+
+2018-01-23 14:13:12.7462 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-23 14:13:12.7852 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-23 14:13:13.3557 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-23 14:14:21.3717 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-23 14:15:28.7765 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 120 
+
+2018-01-23 14:16:37.8007 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 180 
+
+2018-01-23 14:17:44.4040 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 240 
+
+2018-01-23 14:18:00.5995 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-23 14:18:00.6105 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:570 user_id:2730927 chat_id:-156558308 username:Infom name: Ruslan Kasimov date: 1516706280 message:'/d@DeeBeeTeeBot' 
+
+2018-01-23 14:18:00.6105 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-23 14:18:00.6255 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-23 14:18:00.6255 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-23 14:18:00.7128 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-23 14:18:00.7979 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Infom' GROUP BY to_user 
+
+2018-01-23 14:18:00.8822 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: amarshalkin amount: -128,00  
+
+2018-01-23 14:18:00.8822 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Kasim_RI amount: -761,00  
+
+2018-01-23 14:18:00.8912 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Sergeiaf amount: -159,00  
+
+2018-01-23 14:18:00.8912 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Svetlana_Shulgina amount: 0,00  
+
+2018-01-23 14:18:00.8912 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: TretyakRoman amount: -275,00  
+
+2018-01-23 14:18:00.9052 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Infom. Баланс: -1323,00
+ @Infom должен 128,00 @amarshalkin
+ @Infom должен 761,00 @Kasim_RI
+ @Infom должен 159,00 @Sergeiaf
+ @Infom должен 275,00 @TretyakRoman
+ 
+
+2018-01-23 14:18:01.0832 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-23 14:18:01.0922 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-23 14:18:01.1762 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-23 14:18:01.1762 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 2730927) 
+
+2018-01-23 14:18:48.7956 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 300 
+
+2018-01-23 14:19:53.3233 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 360 
+
+2018-01-23 14:20:58.1253 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 420 
+
+2018-01-23 14:22:02.8979 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 480 
+
+2018-01-23 14:23:09.4299 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 540 
+
+2018-01-23 14:24:16.2888 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 600 
+
+2018-01-23 14:24:18.5143 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-23 14:24:18.5143 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:573 user_id:459569 chat_id:-156558308 username:Sergeiaf name: Сергей Федоров date: 1516706657 message:'/t @Sergeiaf 1290 @Infom' 
+
+2018-01-23 14:24:19.0793 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-23 14:24:19.0793 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Sergeiaf 1290 @Infom' 
+
+2018-01-23 14:24:19.0921 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Sergeiaf' 
+
+2018-01-23 14:24:19.0921 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '1290' 
+
+2018-01-23 14:24:19.0921 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Infom' 
+
+2018-01-23 14:24:19.0921 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-23 14:24:19.1121 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-23 14:24:19.1904 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-23 14:24:19.1904 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-23 14:24:19.2741 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Sergeiaf amount:1290 to:Infom 
+
+2018-01-23 14:24:19.2791 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Sergeiaf' ,1290 ,'Infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-23 14:24:19.3769 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-23 14:24:19.4579 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-23 14:24:19.6623 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-23 14:24:19.6623 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-23 14:24:19.7482 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-01-23 14:24:19.8285 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Sergeiaf составляет 1465,00 
+
+2018-01-23 14:24:19.8285 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-23 14:24:19.8285 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-23 14:24:19.9169 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-23 14:24:19.9965 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -2613,00 
+
+2018-01-23 14:24:20.0029 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 83 успешно добавлена
+Баланс пользователя @Sergeiaf составляет 1465,00
+Баланс пользователя @Infom составляет -2613,00 
+
+2018-01-23 14:24:20.1660 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-23 14:24:20.1710 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-23 14:24:20.2509 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-23 14:24:20.2509 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 459569) 
+
+2018-01-23 14:25:22.8254 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 660 
+
+2018-01-23 14:25:38.1413 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-23 14:25:38.1413 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:577 user_id:459569 chat_id:-156558308 username:Sergeiaf name: Сергей Федоров date: 1516706737 message:'/t @Sergeiaf 140 @TretyakRoman' 
+
+2018-01-23 14:25:38.1513 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-23 14:25:38.1513 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Sergeiaf 140 @TretyakRoman' 
+
+2018-01-23 14:25:38.1513 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Sergeiaf' 
+
+2018-01-23 14:25:38.1663 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '140' 
+
+2018-01-23 14:25:38.1663 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'TretyakRoman' 
+
+2018-01-23 14:25:38.1663 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-23 14:25:38.1813 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-23 14:25:38.2592 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2018-01-23 14:25:38.2592 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2018-01-23 14:25:38.3422 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Sergeiaf amount:140 to:TretyakRoman 
+
+2018-01-23 14:25:38.3422 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Sergeiaf' ,140 ,'TretyakRoman' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-23 14:25:38.4404 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2018-01-23 14:25:38.5189 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-23 14:25:38.6935 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | ERROR | Удаленный сервер возвратил ошибку: (403) Запрещено. 
+
+2018-01-23 14:25:38.7025 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-23 14:25:38.7123 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-23 14:25:38.7966 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-01-23 14:25:38.8796 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Sergeiaf составляет 1605,00 
+
+2018-01-23 14:25:38.8836 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2018-01-23 14:25:38.8836 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2018-01-23 14:25:38.9680 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'TretyakRoman'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'TretyakRoman'), 0) as Bal  
+
+2018-01-23 14:25:39.0460 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @TretyakRoman составляет 119,00 
+
+2018-01-23 14:25:39.0460 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 84 успешно добавлена
+Баланс пользователя @Sergeiaf составляет 1605,00
+Баланс пользователя @TretyakRoman составляет 119,00 
+
+2018-01-23 14:25:39.3609 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-23 14:25:39.3609 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-23 14:25:39.4457 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-23 14:25:39.4457 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 459569) 
+
+2018-01-23 14:26:28.3613 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 720 
+
+2018-01-23 14:27:37.2177 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 780 
+
+2018-01-23 14:28:43.6491 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 840 
+
+2018-01-23 14:29:48.5697 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 900 
+
+2018-01-23 14:30:56.9245 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 960 
+
+2018-01-23 14:32:01.8130 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1020 
+
+2018-01-23 14:33:08.0442 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1080 
+
+2018-01-23 14:34:13.5506 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1140 
+
+2018-01-23 14:35:18.4554 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1200 
+
+2018-01-23 14:36:23.1449 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1260 
+
+2018-01-23 14:37:27.9308 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1320 
+
+2018-01-23 14:38:34.4621 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1380 
+
+2018-01-23 14:39:38.8806 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1440 
+
+2018-01-23 14:40:44.0570 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1500 
+
+2018-01-23 14:41:52.7449 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1560 
+
+2018-01-23 14:43:03.9195 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1620 
+
+2018-01-23 14:44:13.0295 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1680 
+
+2018-01-23 14:45:18.5090 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1740 
+
+2018-01-23 14:46:25.5644 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1800 
+
+2018-01-23 14:47:30.0952 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1860 
+
+2018-01-23 14:48:35.8277 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1920 
+
+2018-01-23 14:49:41.1677 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1980 
+
+2018-01-23 14:50:47.7138 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2040 
+
+2018-01-23 14:51:55.2383 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2100 
+
+2018-01-23 14:53:05.3855 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2160 
+
+2018-01-23 14:54:12.5427 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2220 
+
+2018-01-23 14:55:23.0417 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2280 
+
+2018-01-23 14:56:31.6441 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2340 
+
+2018-01-23 14:57:40.4573 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2400 
+
+2018-01-23 14:58:47.8887 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2460 
+
+2018-01-23 14:59:58.0437 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2520 
+
+2018-01-23 15:01:09.2179 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2580 
+
+2018-01-23 15:02:18.6854 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2640 
+
+2018-01-23 15:03:23.9681 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2700 
+
+2018-01-23 15:04:28.9852 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2760 
+
+2018-01-23 15:05:36.3443 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2820 
+
+2018-01-23 15:06:40.9384 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2880 
+
+2018-01-23 15:07:47.1122 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2940 
+
+2018-01-23 15:08:52.1842 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3000 
+
+2018-01-23 15:10:01.1082 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3060 
+
+2018-01-23 15:11:05.8344 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3120 
+
+2018-01-23 15:12:10.5635 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3180 
+
+2018-01-23 15:13:15.0476 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3240 
+
+2018-01-23 15:14:22.4846 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3300 
+
+2018-01-23 15:15:26.8422 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3360 
+
+2018-01-23 15:16:32.2901 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3420 
+
+2018-01-23 15:17:36.8830 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3480 
+
+2018-01-23 15:18:41.5342 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3540 
+
+2018-01-23 15:19:46.1159 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3600 
+
+2018-01-23 15:20:57.9556 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3660 
+
+2018-01-23 15:22:04.5892 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3720 
+
+2018-01-23 15:23:09.2019 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3780 
+
+2018-01-23 15:24:15.5157 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3840 
+
+2018-01-23 15:25:21.9523 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3900 
+
+2018-01-23 15:26:26.4383 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3960 
+
+2018-01-23 15:27:33.3327 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4020 
+
+2018-01-23 15:28:37.9193 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4080 
+
+2018-01-23 16:06:02.6990 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.0371 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.4484 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.7216 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.7566 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.7826 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.7996 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.8467 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.8777 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.8877 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.9037 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.9147 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4140 
+
+2018-01-23 16:06:03.9277 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.9277 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.9607 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.9607 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.9848 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:03.9958 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:04.0068 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:04.0068 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:04.0248 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:04.0408 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:04.0558 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:06:04.0708 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-23 16:07:01.2819 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4200 
+
+2018-01-23 16:08:08.7628 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4260 
+
+2018-01-23 16:09:15.1090 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4320 
+
+2018-01-23 16:10:20.5553 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4380 
+
+2018-01-23 16:11:25.6303 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4440 
+
+2018-01-23 16:12:30.8661 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4500 
+
+2018-01-23 16:13:35.6564 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4560 
+
+2018-01-23 16:14:43.0739 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4620 
+
+2018-01-23 16:15:49.1899 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4680 
+
+2018-01-23 16:16:54.2388 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4740 
+
+2018-01-23 16:18:00.3979 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4800 
+
+2018-01-23 16:19:09.2374 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4860 
+
+2018-01-23 16:20:15.4425 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4920 
+
+2018-01-23 16:21:20.6876 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4980 
+
+2018-01-23 16:22:25.0783 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5040 
+
+2018-01-23 16:23:31.1262 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5100 
+
+2018-01-23 16:24:35.8258 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5160 
+
+2018-01-23 16:25:40.3318 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5220 
+
+2018-01-23 16:26:45.9663 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5280 
+
+2018-01-23 16:27:54.0040 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5340 
+
+2018-01-23 16:28:59.4419 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5400 
+
+2018-01-23 16:30:05.5753 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5460 
+
+2018-01-23 16:31:11.6199 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5520 
+
+2018-01-23 16:32:17.4547 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5580 
+
+2018-01-23 16:33:22.4576 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5640 
+
+2018-01-23 16:34:27.5550 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5700 
+
+2018-01-23 16:35:33.0646 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5760 
+
+2018-01-23 16:36:39.0492 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5820 
+
+2018-01-23 16:37:45.6373 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5880 
+
+2018-01-23 16:38:50.3963 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5940 
+
+2018-01-23 16:39:57.5569 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6000 
+
+2018-01-23 16:41:07.4917 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6060 
+
+2018-01-23 16:42:14.3778 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6120 
+
+2018-01-23 16:43:26.7269 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6180 
+
+2018-01-23 16:44:33.3288 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6240 
+
+2018-01-23 16:45:40.7716 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6300 
+
+2018-01-23 16:46:46.7735 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6360 
+
+2018-01-23 16:47:52.1839 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6420 
+
+2018-01-23 16:48:57.8385 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6480 
+
+2018-01-23 16:50:02.5173 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6540 
+
+2018-01-23 16:51:09.1346 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6600 
+
+2018-01-23 16:52:16.6250 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6660 
+
+2018-01-23 16:53:22.9964 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6720 
+
+2018-01-23 16:54:27.4969 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6780 
+
+2018-01-23 16:55:32.5395 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6840 
+
+2018-01-23 16:56:37.1662 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6900 
+
+2018-01-23 16:57:43.7303 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6960 
+
+2018-01-23 16:58:51.7770 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7020 
+
+2018-01-23 16:59:58.7655 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7080 
+
+2018-01-23 17:01:08.3738 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7140 
+
+2018-01-23 17:02:14.8973 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7200 
+
+2018-01-23 17:03:20.1307 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7260 
+
+2018-01-23 17:04:28.7536 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7320 
+
+2018-01-23 17:05:37.4657 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7380 
+
+2018-01-23 17:06:44.2708 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7440 
+
+2018-01-23 17:07:54.7526 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7500 
+
+2018-01-23 17:09:04.7659 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7560 
+
+2018-01-23 17:10:13.3143 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7620 
+
+2018-01-23 17:11:20.6974 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7680 
+
+2018-01-23 17:12:30.7177 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7740 
+
+2018-01-23 17:13:36.2427 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7800 
+
+2018-01-23 17:14:44.0876 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7860 
+
+2018-01-23 17:15:50.2787 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7920 
+
+2018-01-23 17:16:57.0664 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7980 
+
+2018-01-23 17:18:04.3610 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8040 
+
+2018-01-23 17:19:09.1076 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8100 
+
+2018-01-23 17:20:15.0265 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8160 
+
+2018-01-23 17:21:21.9566 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8220 
+
+2018-01-23 17:22:32.3833 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8280 
+
+2018-01-23 17:23:43.0321 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8340 
+
+2018-01-23 17:24:52.5201 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8400 
+
+2018-01-23 17:25:59.1259 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8460 
+
+2018-01-23 17:27:09.3279 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8520 
+
+2018-01-23 17:28:15.1971 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8580 
+
+2018-01-23 17:29:19.5690 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8640 
+
+2018-01-23 17:30:24.4088 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8700 
+
+2018-01-23 17:31:31.6857 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8760 
+
+2018-01-23 17:32:37.0264 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8820 
+
+2018-01-23 17:33:44.7124 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8880 
+
+2018-01-23 17:34:51.3653 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8940 
+
+2018-01-23 17:35:57.4694 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9000 
+
+2018-01-23 17:37:02.0240 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9060 
+
+2018-01-23 17:38:06.7101 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9120 
+
+2018-01-23 17:39:11.3772 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9180 
+
+2018-01-23 17:40:19.0591 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9240 
+
+2018-01-23 17:41:24.1177 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9300 
+
+2018-01-23 17:42:28.6244 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9360 
+
+2018-01-23 17:43:43.7660 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9420 
+
+2018-01-23 17:44:50.9202 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9480 
+
+2018-01-23 17:45:55.2968 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9540 
+
+2018-01-23 17:46:59.8849 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9600 
+
+2018-01-23 17:48:05.6135 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9660 
+
+2018-01-23 17:49:12.1841 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9720 
+
+2018-01-23 17:50:22.4062 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9780 
+
+2018-01-23 17:51:26.7848 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9840 
+
+2018-01-23 17:52:33.1980 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9900 
+
+2018-01-23 17:53:41.4375 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9960 
+
+2018-01-23 17:54:49.3080 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10020 
+
+2018-01-23 17:55:55.5480 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10080 
+
+2018-01-23 17:57:02.1226 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10140 
+
+2018-01-23 17:58:12.0253 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10200 
+
+2018-01-23 17:59:17.4954 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10260 
+
+2018-01-23 18:00:26.2175 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10320 
+
+2018-01-23 18:01:32.8671 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10380 
+
+2018-01-23 18:02:42.4311 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10440 
+
+2018-01-23 18:03:48.8239 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10500 
+
+2018-01-23 18:04:58.0376 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10560 
+
+2018-01-23 18:06:06.3475 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10620 
+
+2018-01-23 18:07:14.6717 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10680 
+
+2018-01-23 18:08:25.4547 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10740 
+
+2018-01-23 18:09:34.7795 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10800 
+
+2018-01-23 18:10:39.6318 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10860 
+
+2018-01-23 18:11:45.4628 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10920 
+
+2018-01-23 18:12:55.4239 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10980 
+
+2018-01-23 18:14:01.6732 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11040 
+
+2018-01-23 18:15:08.0060 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11100 
+
+2018-01-23 18:16:14.1466 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11160 
+
+2018-01-23 18:17:21.2602 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11220 
+
+2018-01-23 18:18:28.7120 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11280 
+
+2018-01-23 18:19:34.2076 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11340 
+
+2018-01-23 18:20:39.9841 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11400 
+
+2018-01-23 18:21:46.2900 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11460 
+
+2018-01-23 18:22:53.1532 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11520 
+
+2018-01-23 18:23:59.6574 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11580 
+
+2018-01-23 18:25:04.7111 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11640 
+
+2018-01-23 18:26:09.7848 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11700 
+
+2018-01-23 18:27:14.7035 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11760 
+
+2018-01-23 18:28:19.0271 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11820 
+
+2018-01-23 18:29:24.7521 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11880 
+
+2018-01-23 18:30:29.5614 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11940 
+
+2018-01-23 18:31:34.3434 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12000 
+
+2018-01-23 18:32:39.1079 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12060 
+
+2018-01-23 18:33:43.6878 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12120 
+
+2018-01-23 18:34:48.3823 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12180 
+
+2018-01-23 18:35:53.7405 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12240 
+
+2018-01-23 18:37:01.5085 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12300 
+
+2018-01-23 18:38:08.8555 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12360 
+
+2018-01-23 18:39:13.7584 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12420 
+
+2018-01-23 18:40:18.5908 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12480 
+
+2018-01-23 18:41:27.5905 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12540 
+
+2018-01-23 18:42:35.0153 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12600 
+
+2018-01-23 18:43:54.2929 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12660 
+
+2018-01-23 18:44:58.6236 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12720 
+
+2018-01-23 18:46:03.0737 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12780 
+
+2018-01-23 18:47:09.0818 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12840 
+
+2018-01-23 18:48:13.7400 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12900 
+
+2018-01-23 18:49:20.6632 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12960 
+
+2018-01-23 18:50:25.7186 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13020 
+
+2018-01-23 18:51:30.5462 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13080 
+
+2018-01-23 18:52:37.2995 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13140 
+
+2018-01-23 18:53:44.4136 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13200 
+
+2018-01-23 18:54:50.5566 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13260 
+
+2018-01-23 18:55:58.7218 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13320 
+
+2018-01-23 18:57:04.2829 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13380 
+
+2018-01-23 18:58:11.2586 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13440 
+
+2018-01-23 18:59:16.6100 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13500 
+
+2018-01-23 19:00:22.0320 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13560 
+
+2018-01-23 19:01:29.2340 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13620 
+
+2018-01-23 19:02:40.5029 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13680 
+
+2018-01-23 19:03:47.9577 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13740 
+
+2018-01-23 19:04:55.0115 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13800 
+
+2018-01-23 19:06:01.2404 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13860 
+
+2018-01-23 19:07:06.7506 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13920 
+
+2018-01-23 19:08:13.1875 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13980 
+
+2018-01-23 19:09:17.5172 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14040 
+
+2018-01-23 19:10:22.0641 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14100 
+
+2018-01-23 19:11:26.5953 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14160 
+
+2018-01-23 19:12:33.0052 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14220 
+
+2018-01-23 19:13:37.5448 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14280 
+
+2018-01-23 19:14:43.8326 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14340 
+
+2018-01-23 19:15:49.2052 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14400 
+
+2018-01-23 19:16:53.7694 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14460 
+
+2018-01-23 19:17:59.2844 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14520 
+
+2018-01-23 19:19:05.2786 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14580 
+
+2018-01-23 19:20:11.8869 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14640 
+
+2018-01-23 19:21:18.8208 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14700 
+
+2018-01-23 19:22:24.8352 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14760 
+
+2018-01-23 19:23:32.7878 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14820 
+
+2018-01-23 19:24:37.3104 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14880 
+
+2018-01-23 19:25:41.7020 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14940 
+
+2018-01-23 19:26:47.4196 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15000 
+
+2018-01-23 19:27:52.6077 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15060 
+
+2018-01-23 19:28:58.8177 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15120 
+
+2018-01-23 19:30:03.3292 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15180 
+
+2018-01-23 19:31:08.0720 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15240 
+
+2018-01-23 19:32:13.5768 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15300 
+
+2018-01-23 19:33:19.5279 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15360 
+
+2018-01-23 19:34:25.2193 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15420 
+
+2018-01-23 19:35:30.5041 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15480 
+
+2018-01-23 19:36:34.8159 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15540 
+
+2018-01-23 19:37:41.4087 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15600 
+
+2018-01-23 19:38:45.9138 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15660 
+
+2018-01-23 19:39:50.7768 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15720 
+
+2018-01-23 19:40:57.3212 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15780 
+
+2018-01-23 19:42:01.6145 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15840 
+
+2018-01-23 19:43:11.8421 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15900 
+
+2018-01-23 19:44:18.2759 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15960 
+
+2018-01-23 19:45:25.9850 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16020 
+
+2018-01-23 19:46:30.5915 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16080 
+
+2018-01-23 19:47:34.9527 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16140 
+
+2018-01-23 19:48:41.6734 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16200 
+
+2018-01-23 19:49:46.1961 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16260 
+
+2018-01-23 19:50:50.4792 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16320 
+
+2018-01-23 19:51:54.9571 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16380 
+
+2018-01-23 19:53:00.4805 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16440 
+
+2018-01-23 19:54:07.7605 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16500 
+
+2018-01-23 19:55:13.7009 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16560 
+
+2018-01-23 19:56:19.5253 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16620 
+
+2018-01-23 19:57:24.5532 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16680 
+
+2018-01-23 19:58:32.4315 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16740 
+
+2018-01-23 19:59:40.0229 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16800 
+
+2018-01-23 20:00:46.4874 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16860 
+
+2018-01-23 20:01:54.7161 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16920 
+
+2018-01-23 20:02:59.2520 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16980 
+
+2018-01-23 20:04:07.8338 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17040 
+
+2018-01-23 20:05:13.0530 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17100 
+
+2018-01-23 20:06:17.4841 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17160 
+
+2018-01-23 20:07:21.8507 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17220 
+
+2018-01-23 20:08:28.6614 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17280 
+
+2018-01-23 20:09:35.9063 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17340 
+
+2018-01-23 20:10:42.3221 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17400 
+
+2018-01-23 20:11:47.3379 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17460 
+
+2018-01-23 20:12:57.5584 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17520 
+
+2018-01-23 20:14:02.6890 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17580 
+
+2018-01-23 20:15:08.1859 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17640 
+
+2018-01-23 20:16:12.8376 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17700 
+
+2018-01-23 20:17:17.2779 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17760 
+
+2018-01-23 20:18:21.6456 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17820 
+
+2018-01-23 20:19:26.4543 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17880 
+
+2018-01-23 20:20:31.6586 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17940 
+
+2018-01-23 20:21:36.1391 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18000 
+
+2018-01-23 20:22:41.6151 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18060 
+
+2018-01-23 20:23:46.3968 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18120 
+
+2018-01-23 20:24:52.5725 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18180 
+
+2018-01-23 20:26:00.7761 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18240 
+
+2018-01-23 20:27:05.4905 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18300 
+
+2018-01-23 20:28:10.8277 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18360 
+
+2018-01-23 20:29:17.1765 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18420 
+
+2018-01-23 20:30:26.7027 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18480 
+
+2018-01-23 20:31:31.3744 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18540 
+
+2018-01-23 20:32:36.1475 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18600 
+
+2018-01-23 20:33:41.0257 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18660 
+
+2018-01-23 20:34:45.3099 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18720 
+
+2018-01-23 20:35:51.7498 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18780 
+
+2018-01-23 20:36:59.8233 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18840 
+
+2018-01-23 20:38:07.4784 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18900 
+
+2018-01-23 20:39:12.2611 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18960 
+
+2018-01-23 20:40:19.1311 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19020 
+
+2018-01-23 20:41:27.8911 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19080 
+
+2018-01-23 20:42:36.6569 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19140 
+
+2018-01-23 20:43:53.8635 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19200 
+
+2018-01-23 20:44:59.1822 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19260 
+

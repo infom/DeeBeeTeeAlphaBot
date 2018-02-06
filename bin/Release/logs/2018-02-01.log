@@ -1,0 +1,192 @@
+2018-02-01 19:04:50.1414 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-02-01 19:04:50.2219 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-02-01 19:04:50.6541 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+
+2018-02-01 19:05:49.3025 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-02-01 19:05:49.3120 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | DEBUG | New message: message_id:757 user_id:459569 chat_id:-156558308 username:Sergeiaf name: Sergei Fedorov date: 1517501149 message:'/d' 
+
+2018-02-01 19:05:49.7578 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | INFO | Получение команды /d 
+
+2018-02-01 19:05:49.7638 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-02-01 19:05:49.7638 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-02-01 19:05:49.8509 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-02-01 19:05:49.9321 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Sergeiaf' GROUP BY to_user 
+
+2018-02-01 19:05:50.0104 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: Infom amount: 563,00  
+
+2018-02-01 19:05:50.0169 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: superkinder amount: -485,00  
+
+2018-02-01 19:05:50.0169 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: TretyakRoman amount: 201,00  
+
+2018-02-01 19:05:50.0169 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Sergeiaf. Баланс: 279,00
+ @Infom должен 563,00 @Sergeiaf
+ @Sergeiaf должен 485,00 @superkinder
+ @TretyakRoman должен 201,00 @Sergeiaf
+ 
+
+2018-02-01 19:05:50.1888 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-02-01 19:05:50.1888 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-02-01 19:05:50.2696 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-02-01 19:05:50.2696 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 459569) 
+
+2018-02-01 19:05:57.0386 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-02-01 19:06:48.7811 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-02-01 19:06:48.7811 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | DEBUG | New message: message_id:762 user_id:459569 chat_id:459569 username:Sergeiaf name: Sergei Fedorov date: 1517501207 message:'/b' 
+
+2018-02-01 19:06:48.7979 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | INFO | Получение команды /b 
+
+2018-02-01 19:06:48.7979 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-02-01 19:06:48.8129 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-02-01 19:06:48.8911 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-02-01 19:06:48.9766 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Sergeiaf составляет 279,00 
+
+2018-02-01 19:06:49.1497 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-02-01 19:06:49.1589 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 459569 ,'private' ,'', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 459569) 
+
+2018-02-01 19:06:49.2405 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-02-01 19:06:49.2495 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 459569 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 459569 AND [user_id] = 459569) 
+
+2018-02-01 19:06:59.2403 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-02-01 19:06:59.2493 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | DEBUG | New message: message_id:767 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1517501218 message:'/b' 
+
+2018-02-01 19:06:59.2493 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | INFO | Получение команды /b 
+
+2018-02-01 19:06:59.2653 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-02-01 19:06:59.2653 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-02-01 19:06:59.3558 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-02-01 19:06:59.4386 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -1757,00 
+
+2018-02-01 19:06:59.6393 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-02-01 19:06:59.6393 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-02-01 19:06:59.7295 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-02-01 19:06:59.7344 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-02-01 19:07:01.0640 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 120 
+
+2018-02-01 19:07:24.7549 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-02-01 19:07:24.7549 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | DEBUG | New message: message_id:772 user_id:459569 chat_id:459569 username:Sergeiaf name: Sergei Fedorov date: 1517501244 message:'/d' 
+
+2018-02-01 19:07:24.7709 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | INFO | Получение команды /d 
+
+2018-02-01 19:07:24.7800 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-02-01 19:07:24.7800 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-02-01 19:07:24.8639 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-02-01 19:07:24.9634 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Sergeiaf' GROUP BY to_user 
+
+2018-02-01 19:07:25.0451 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: Infom amount: 563,00  
+
+2018-02-01 19:07:25.0451 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: superkinder amount: -485,00  
+
+2018-02-01 19:07:25.0601 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: TretyakRoman amount: 201,00  
+
+2018-02-01 19:07:25.0601 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Sergeiaf. Баланс: 279,00
+ @Infom должен 563,00 @Sergeiaf
+ @Sergeiaf должен 485,00 @superkinder
+ @TretyakRoman должен 201,00 @Sergeiaf
+ 
+
+2018-02-01 19:07:25.2574 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-02-01 19:07:25.2654 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 459569 ,'private' ,'', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 459569) 
+
+2018-02-01 19:07:25.3473 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-02-01 19:07:25.3473 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 459569 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 459569 AND [user_id] = 459569) 
+
+2018-02-01 19:07:49.8503 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-02-01 19:07:49.8583 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | DEBUG | New message: message_id:777 user_id:459569 chat_id:459569 username:Sergeiaf name: Sergei Fedorov date: 1517501269 message:'/d' 
+
+2018-02-01 19:07:49.8583 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | INFO | Получение команды /d 
+
+2018-02-01 19:07:49.8763 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-02-01 19:07:49.8763 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-02-01 19:07:49.9934 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-02-01 19:07:50.0745 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Sergeiaf' GROUP BY to_user 
+
+2018-02-01 19:07:50.1570 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: Infom amount: 563,00  
+
+2018-02-01 19:07:50.1570 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: superkinder amount: -485,00  
+
+2018-02-01 19:07:50.1751 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: TretyakRoman amount: 201,00  
+
+2018-02-01 19:07:50.1751 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Sergeiaf. Баланс: 279,00
+ @Infom должен 563,00 @Sergeiaf
+ @Sergeiaf должен 485,00 @superkinder
+ @TretyakRoman должен 201,00 @Sergeiaf
+ 
+
+2018-02-01 19:07:50.3633 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-02-01 19:07:50.3633 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 459569 ,'private' ,'', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 459569) 
+
+2018-02-01 19:07:50.4536 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-02-01 19:07:50.4536 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 459569 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 459569 AND [user_id] = 459569) 
+
+2018-02-01 19:08:00.4720 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-02-01 19:08:00.4720 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | DEBUG | New message: message_id:782 user_id:459569 chat_id:459569 username:Sergeiaf name: Sergei Fedorov date: 1517501280 message:'/d' 
+
+2018-02-01 19:08:00.4890 | DeeBeeTeeAlphaBot.Bot.Tr_MessageText | INFO | Получение команды /d 
+
+2018-02-01 19:08:00.4980 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-02-01 19:08:00.4980 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-02-01 19:08:00.5911 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-02-01 19:08:00.6694 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Sergeiaf' GROUP BY to_user 
+
+2018-02-01 19:08:00.7489 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: Infom amount: 563,00  
+
+2018-02-01 19:08:00.7489 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: superkinder amount: -485,00  
+
+2018-02-01 19:08:00.7649 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: TretyakRoman amount: 201,00  
+
+2018-02-01 19:08:00.7649 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Sergeiaf. Баланс: 279,00
+ @Infom должен 563,00 @Sergeiaf
+ @Sergeiaf должен 485,00 @superkinder
+ @TretyakRoman должен 201,00 @Sergeiaf
+ 
+
+2018-02-01 19:08:00.9482 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-02-01 19:08:00.9582 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 459569 ,'private' ,'', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 459569) 
+
+2018-02-01 19:08:01.0420 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-02-01 19:08:01.0470 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 459569 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 459569 AND [user_id] = 459569) 
+
+2018-02-01 19:08:08.9663 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 180 
+

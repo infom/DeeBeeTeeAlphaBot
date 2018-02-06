@@ -241,14 +241,14 @@ namespace DeeBeeTeeDB
             }
         }
 
-        public int NewTransaction(string FromUser, string ToUser, decimal Amount, int OID)
+        public int NewTransaction(string FromUser, string ToUser, decimal Amount, string Description = "")
         {
             try
             {
                 string _NewTransactionSQLParam = _NewTransactionSQL.Replace("%FromUser%", FromUser);
                 _NewTransactionSQLParam = _NewTransactionSQLParam.Replace("%ToUser%", ToUser);
                 _NewTransactionSQLParam = _NewTransactionSQLParam.Replace("%Amount%", Amount.ToString());
-                _NewTransactionSQLParam = _NewTransactionSQLParam.Replace("%OID%", OID.ToString());
+                _NewTransactionSQLParam = _NewTransactionSQLParam.Replace("%OID%", "0");
                 SqlCommand command = new SqlCommand(_NewTransactionSQLParam, connection);
                 logger.Trace("NewTransactionSQLParam: " + command.CommandText);
                 SqlDataReader reader = command.ExecuteReader();
@@ -363,6 +363,7 @@ namespace DeeBeeTeeDB
         {
             string r = "";
             string m = message.Replace("/transaction","");
+            string desc = "";
             m = m.Replace("/t", "");
             m = m.Replace("@DeeBeeTeeBot", "");
             m = m.Trim();
@@ -421,7 +422,18 @@ namespace DeeBeeTeeDB
                         ToUsers.Add(ToUser);
                         FromUserInMulti = FromUserInMulti || (ToUser == from_user);
                         AtPos = -1;
+
+                        if (p < m.Length - 1)
+                            if (m[p + 1] != '@')
+                            {
+                                desc = m.Substring(p + 1, m.Length - p - 1);
+                                desc = desc.Trim();
+                                logger.Trace("find description '" + desc + "'");
+                                continue;
+                            };
                     };
+
+
 
                 };
 
@@ -430,7 +442,15 @@ namespace DeeBeeTeeDB
             if (SimpleTransaction)
             {
                 string to_user = m;
+                desc = "";
+                int SpacePos = m.IndexOf(" ", 2, m.Length - 2, StringComparison.CurrentCulture);
+                if (SpacePos > 0)
+                {
+                    to_user = m.Substring(0, SpacePos);
+                    desc = m.Substring(SpacePos + 1, m.Length - SpacePos - 1);
+                }
                 logger.Debug($"Пользователь to '{to_user}'");
+                logger.Debug($"Описание '{desc}'");
                 if (m.Length == 0)
                 {
                     r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Не найден пользователь to";
@@ -440,18 +460,18 @@ namespace DeeBeeTeeDB
                 User su = SearchUser(from_user);
                 if (su.uid == 0)
                 {
-                    r = "Пользователь @" + from_user + " не подключен к системею. Регистрация транзакции невозможна";
+                    r = "Пользователь @" + from_user + " не подключен к системе. Регистрация транзакции невозможна";
                     return r;
                 }
                 logger.Debug($"Поиск пользователя '{to_user}'");
                 su = SearchUser(to_user);
                 if (su.uid == 0)
                 {
-                    r = "Пользователь @" + to_user + " не подключен к системею. Регистрация транзакции невозможна";
+                    r = "Пользователь @" + to_user + " не подключен к системе. Регистрация транзакции невозможна";
                     return r;
                 }
                 logger.Debug($"Выполнение в SQL транзакции from:{from_user} amount:{amount} to:{to_user}");
-                int tid = NewTransaction(from_user, to_user, amount, 0);
+                int tid = NewTransaction(from_user, to_user, amount, desc);
                 r = "Транзакция " + tid.ToString() + " успешно добавлена\r\n" + Command_balance(from_user) + "\r\n" + Command_balance(to_user);
             }
             else
@@ -490,12 +510,12 @@ namespace DeeBeeTeeDB
                     if (u < ToUsers.Count - 1)
                     {
                         logger.Debug($"Выполнение в SQL транзакции from:{from_user} amount:{c_amount} to:{to_user}");
-                        tid =  NewTransaction(from_user, to_user, c_amount, 0);
+                        tid =  NewTransaction(from_user, to_user, c_amount, desc);
                     }
                     else
                     {
                         logger.Debug($"Выполнение в SQL транзакции from:{from_user} amount:{last_amount} to:{to_user}");
-                        tid =  NewTransaction(from_user, to_user, last_amount, 0);
+                        tid =  NewTransaction(from_user, to_user, last_amount, desc);
 
                     };
                     r = r + "Транзакция " + tid.ToString() + " успешно добавлена\r\n" ;

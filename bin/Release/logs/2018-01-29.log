@@ -1,0 +1,1974 @@
+2018-01-29 10:04:48.5711 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-29 10:04:48.6101 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-29 10:04:49.1844 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-29 10:05:57.8726 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-29 10:06:32.1680 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:06:32.1820 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:657 user_id:147141378 chat_id:147141378 username:Superkinder name: Михаил Сенокосов date: 1517209591 message:'/start' 
+
+2018-01-29 10:06:32.6131 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /start 
+
+2018-01-29 10:06:32.6231 | DeeBeeTeeDB.DBAPI.Command_start | DEBUG | Поиск пользователя 'Superkinder' 
+
+2018-01-29 10:06:32.6231 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Superkinder' 
+
+2018-01-29 10:06:32.7158 | DeeBeeTeeDB.DBAPI.Command_start | DEBUG | Добавление пользователя 'Superkinder' с лимитом 1000 
+
+2018-01-29 10:06:32.7158 | DeeBeeTeeDB.DBAPI.NewUser | TRACE | NewUserSQLParams: INSERT INTO [dbo].[users] ([user] ,[assign_date],[limit], [user_id]) VALUES ('Superkinder', getdate(), 1000, 147141378) SELECT top 1 uid FROM [dbo].[users] order by assign_date DESC 
+
+2018-01-29 10:06:32.8430 | DeeBeeTeeDB.DBAPI.Command_start | INFO | Возврат результата команды start с сообщением Поздравляю вы подключились к системе DeeBeeTee. Ваш номер 10. Удачного использования 
+
+2018-01-29 10:06:33.0790 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:06:33.0790 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 147141378 ,'private' ,'', 'Superkinder' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 147141378) 
+
+2018-01-29 10:06:33.1768 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:06:33.1768 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 147141378 , 147141378, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 147141378 AND [user_id] = 147141378) 
+
+2018-01-29 10:07:11.1218 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 120 
+
+2018-01-29 10:08:07.3845 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:08:07.3845 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:660 user_id:2730927 chat_id:-156558308 username:Infom name: Ruslan Kasimov date: 1517209686 message:'/t @Infom 1030 @infom @superkinder' 
+
+2018-01-29 10:08:07.4025 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-29 10:08:07.4165 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 1030 @infom @superkinder' 
+
+2018-01-29 10:08:07.4165 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-29 10:08:07.4285 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '1030' 
+
+2018-01-29 10:08:07.4285 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@infom @superkinder  
+
+2018-01-29 10:08:07.4285 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'infom' 
+
+2018-01-29 10:08:07.4435 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'superkinder' 
+
+2018-01-29 10:08:07.4435 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 2, сам пользователь False 
+
+2018-01-29 10:08:07.4435 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-29 10:08:07.4435 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 10:08:07.5356 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'infom' 
+
+2018-01-29 10:08:07.5406 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-29 10:08:07.5406 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:08:07.6271 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'superkinder' 
+
+2018-01-29 10:08:07.6351 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'superkinder' 
+
+2018-01-29 10:08:07.6351 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:08:07.7255 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-29 10:08:07.7255 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 10:08:07.8111 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-29 10:08:07.8903 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -1151,00 
+
+2018-01-29 10:08:07.8963 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:515 to:infom 
+
+2018-01-29 10:08:07.8963 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,515 ,'infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 10:08:07.9997 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:08:08.0800 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 10:08:08.3034 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-29 10:08:08.3034 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:08:08.3943 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'infom'), 0) as Bal  
+
+2018-01-29 10:08:08.4759 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @infom составляет -1151,00 
+
+2018-01-29 10:08:08.4759 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:515 to:superkinder 
+
+2018-01-29 10:08:08.4903 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,515 ,'superkinder' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 10:08:08.5827 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:08:08.6654 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 10:08:08.8884 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'superkinder' 
+
+2018-01-29 10:08:08.8974 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:08:08.9804 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'superkinder'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'superkinder'), 0) as Bal  
+
+2018-01-29 10:08:09.0674 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @superkinder составляет -515,00 
+
+2018-01-29 10:08:09.0764 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части
+Транзакция 103 успешно добавлена
+Транзакция 104 успешно добавлена
+Баланс пользователя @Infom составляет -1151,00
+Баланс пользователя @infom составляет -1151,00
+Баланс пользователя @superkinder составляет -515,00
+ 
+
+2018-01-29 10:08:09.2619 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:08:09.2729 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-29 10:08:09.3563 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:08:09.3653 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 2730927) 
+
+2018-01-29 10:08:26.4865 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 180 
+
+2018-01-29 10:09:31.5879 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 240 
+
+2018-01-29 10:10:15.9017 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:10:15.9067 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:665 user_id:147141378 chat_id:147141378 username:Superkinder name: Михаил Сенокосов date: 1517209814 message:'/t @superkinder 1940 @superkinder @infom @tretyakroman @sergeiaf' 
+
+2018-01-29 10:10:15.9067 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-29 10:10:15.9067 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@superkinder 1940 @superkinder @infom @tretyakroman @sergeiaf' 
+
+2018-01-29 10:10:15.9201 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'superkinder' 
+
+2018-01-29 10:10:15.9201 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '1940' 
+
+2018-01-29 10:10:15.9201 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@superkinder @infom @tretyakroman @sergeiaf  
+
+2018-01-29 10:10:15.9348 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'superkinder' 
+
+2018-01-29 10:10:15.9348 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'infom' 
+
+2018-01-29 10:10:15.9348 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'tretyakroman' 
+
+2018-01-29 10:10:15.9348 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'sergeiaf' 
+
+2018-01-29 10:10:15.9528 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 4, сам пользователь True 
+
+2018-01-29 10:10:15.9528 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'superkinder' 
+
+2018-01-29 10:10:15.9528 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:10:16.0418 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'superkinder' 
+
+2018-01-29 10:10:16.0468 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'superkinder' 
+
+2018-01-29 10:10:16.0468 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:10:16.1318 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'infom' 
+
+2018-01-29 10:10:16.1378 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-29 10:10:16.1378 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:10:16.2244 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '2' to 'tretyakroman' 
+
+2018-01-29 10:10:16.2244 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'tretyakroman' 
+
+2018-01-29 10:10:16.2346 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'tretyakroman' 
+
+2018-01-29 10:10:16.3134 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '3' to 'sergeiaf' 
+
+2018-01-29 10:10:16.3134 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'sergeiaf' 
+
+2018-01-29 10:10:16.3134 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'sergeiaf' 
+
+2018-01-29 10:10:16.4117 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'superkinder' 
+
+2018-01-29 10:10:16.4117 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:10:16.4950 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'superkinder'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'superkinder'), 0) as Bal  
+
+2018-01-29 10:10:16.5768 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @superkinder составляет -515,00 
+
+2018-01-29 10:10:16.5768 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:superkinder amount:485 to:infom 
+
+2018-01-29 10:10:16.5768 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('superkinder' ,485 ,'infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 10:10:16.6789 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:10:16.7617 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 10:10:16.9278 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-29 10:10:16.9278 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:10:17.0146 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'infom'), 0) as Bal  
+
+2018-01-29 10:10:17.0971 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @infom составляет -1121,00 
+
+2018-01-29 10:10:17.0971 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:superkinder amount:485 to:tretyakroman 
+
+2018-01-29 10:10:17.1071 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('superkinder' ,485 ,'tretyakroman' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 10:10:17.2147 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'tretyakroman' 
+
+2018-01-29 10:10:17.2935 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 10:10:17.4700 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | ERROR | Удаленный сервер возвратил ошибку: (400) Недопустимый запрос. 
+
+2018-01-29 10:10:17.4700 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'tretyakroman' 
+
+2018-01-29 10:10:17.4700 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'tretyakroman' 
+
+2018-01-29 10:10:17.5590 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'tretyakroman'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'tretyakroman'), 0) as Bal  
+
+2018-01-29 10:10:17.6399 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @tretyakroman составляет 2,00 
+
+2018-01-29 10:10:17.6399 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:superkinder amount:485 to:sergeiaf 
+
+2018-01-29 10:10:17.6399 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('superkinder' ,485 ,'sergeiaf' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 10:10:17.7402 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'sergeiaf' 
+
+2018-01-29 10:10:17.8189 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 10:10:18.0026 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'sergeiaf' 
+
+2018-01-29 10:10:18.0026 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'sergeiaf' 
+
+2018-01-29 10:10:18.0850 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'sergeiaf'), 0) as Bal  
+
+2018-01-29 10:10:18.1760 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @sergeiaf составляет -710,00 
+
+2018-01-29 10:10:18.1760 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части
+Транзакция 105 успешно добавлена
+Транзакция 106 успешно добавлена
+Транзакция 107 успешно добавлена
+Баланс пользователя @superkinder составляет -515,00
+Баланс пользователя @infom составляет -1121,00
+Баланс пользователя @tretyakroman составляет 2,00
+Баланс пользователя @sergeiaf составляет -710,00
+ 
+
+2018-01-29 10:10:18.3527 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:10:18.3577 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 147141378 ,'private' ,'', 'Superkinder' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 147141378) 
+
+2018-01-29 10:10:18.4368 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:10:18.4368 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 147141378 , 147141378, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 147141378 AND [user_id] = 147141378) 
+
+2018-01-29 10:10:33.9782 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:10:33.9842 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:670 user_id:288805897 chat_id:-156558308 username:TretyakRoman name: Третьяк Роман date: 1517209832 message:'/d' 
+
+2018-01-29 10:10:33.9842 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 10:10:33.9842 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2018-01-29 10:10:33.9992 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2018-01-29 10:10:34.0782 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'TretyakRoman'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'TretyakRoman'), 0) as Bal  
+
+2018-01-29 10:10:34.1590 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'TretyakRoman' GROUP BY to_user 
+
+2018-01-29 10:10:34.2384 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: TretyakRoman to: Infom amount: 343,00  
+
+2018-01-29 10:10:34.2384 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: TretyakRoman to: Sergeiaf amount: 144,00  
+
+2018-01-29 10:10:34.2491 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: TretyakRoman to: superkinder amount: -485,00  
+
+2018-01-29 10:10:34.2491 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @TretyakRoman. Баланс: 2,00
+ @Infom должен 343,00 @TretyakRoman
+ @Sergeiaf должен 144,00 @TretyakRoman
+ @TretyakRoman должен 485,00 @superkinder
+ 
+
+2018-01-29 10:10:34.4591 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:10:34.4591 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'TretyakRoman' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-29 10:10:34.5423 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:10:34.5473 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 288805897, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 288805897) 
+
+2018-01-29 10:10:38.0256 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 300 
+
+2018-01-29 10:10:43.5105 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:10:43.5155 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:673 user_id:147141378 chat_id:147141378 username:Superkinder name: Михаил Сенокосов date: 1517209842 message:'/d' 
+
+2018-01-29 10:10:43.5155 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 10:10:43.5155 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Superkinder' 
+
+2018-01-29 10:10:43.5325 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Superkinder' 
+
+2018-01-29 10:10:43.6120 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Superkinder'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Superkinder'), 0) as Bal  
+
+2018-01-29 10:10:43.6987 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Superkinder' GROUP BY to_user 
+
+2018-01-29 10:10:43.7865 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: Infom amount: -30,00  
+
+2018-01-29 10:10:43.7865 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: sergeiaf amount: 485,00  
+
+2018-01-29 10:10:43.7945 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: tretyakroman amount: 485,00  
+
+2018-01-29 10:10:43.7945 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Superkinder. Баланс: 940,00
+ @Superkinder должен 30,00 @Infom
+ @sergeiaf должен 485,00 @Superkinder
+ @tretyakroman должен 485,00 @Superkinder
+ 
+
+2018-01-29 10:10:43.9904 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:10:43.9904 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 147141378 ,'private' ,'', 'Superkinder' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 147141378) 
+
+2018-01-29 10:10:44.0745 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:10:44.0745 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 147141378 , 147141378, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 147141378 AND [user_id] = 147141378) 
+
+2018-01-29 10:11:43.0708 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:11:43.0758 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:676 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1517209902 message:'/t @Infom 211 @superkinder @infom @sergeiaf' 
+
+2018-01-29 10:11:43.0758 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-29 10:11:43.0758 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Infom 211 @superkinder @infom @sergeiaf' 
+
+2018-01-29 10:11:43.0888 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Infom' 
+
+2018-01-29 10:11:43.0888 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '211' 
+
+2018-01-29 10:11:43.0888 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@superkinder @infom @sergeiaf  
+
+2018-01-29 10:11:43.0888 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'superkinder' 
+
+2018-01-29 10:11:43.1066 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'infom' 
+
+2018-01-29 10:11:43.1066 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'sergeiaf' 
+
+2018-01-29 10:11:43.1066 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 3, сам пользователь False 
+
+2018-01-29 10:11:43.1200 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-29 10:11:43.1200 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 10:11:43.2033 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'superkinder' 
+
+2018-01-29 10:11:43.2033 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'superkinder' 
+
+2018-01-29 10:11:43.2128 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:11:43.2913 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'infom' 
+
+2018-01-29 10:11:43.2913 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-29 10:11:43.2913 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:11:43.3792 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '2' to 'sergeiaf' 
+
+2018-01-29 10:11:43.3792 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'sergeiaf' 
+
+2018-01-29 10:11:43.3882 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'sergeiaf' 
+
+2018-01-29 10:11:43.4672 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-29 10:11:43.4672 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 10:11:43.5517 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-29 10:11:43.6324 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -1121,00 
+
+2018-01-29 10:11:43.6374 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:70 to:superkinder 
+
+2018-01-29 10:11:43.6374 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,70 ,'superkinder' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 10:11:43.7415 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:11:43.8228 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 10:11:43.9969 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'superkinder' 
+
+2018-01-29 10:11:43.9969 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'superkinder' 
+
+2018-01-29 10:11:44.0780 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'superkinder'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'superkinder'), 0) as Bal  
+
+2018-01-29 10:11:44.1574 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @superkinder составляет 870,00 
+
+2018-01-29 10:11:44.1574 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:70 to:infom 
+
+2018-01-29 10:11:44.1673 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,70 ,'infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 10:11:44.2639 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:11:44.3418 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 10:11:44.5430 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-29 10:11:44.5430 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-29 10:11:44.6276 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'infom'), 0) as Bal  
+
+2018-01-29 10:11:44.7079 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @infom составляет -1051,00 
+
+2018-01-29 10:11:44.7123 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Infom amount:71 to:sergeiaf 
+
+2018-01-29 10:11:44.7123 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Infom' ,71 ,'sergeiaf' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 10:11:44.8238 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'sergeiaf' 
+
+2018-01-29 10:11:44.9044 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 10:11:45.0797 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'sergeiaf' 
+
+2018-01-29 10:11:45.0797 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'sergeiaf' 
+
+2018-01-29 10:11:45.1629 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'sergeiaf'), 0) as Bal  
+
+2018-01-29 10:11:45.2406 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @sergeiaf составляет -781,00 
+
+2018-01-29 10:11:45.2466 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части
+Транзакция 108 успешно добавлена
+Транзакция 109 успешно добавлена
+Транзакция 110 успешно добавлена
+Баланс пользователя @Infom составляет -1121,00
+Баланс пользователя @superkinder составляет 870,00
+Баланс пользователя @infom составляет -1051,00
+Баланс пользователя @sergeiaf составляет -781,00
+ 
+
+2018-01-29 10:11:45.4300 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:11:45.4340 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-29 10:11:45.5168 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:11:45.5168 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-01-29 10:11:45.8104 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 360 
+
+2018-01-29 10:11:59.9004 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:11:59.9004 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:682 user_id:147141378 chat_id:147141378 username:Superkinder name: Михаил Сенокосов date: 1517209919 message:'/d' 
+
+2018-01-29 10:11:59.9004 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 10:11:59.9154 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Superkinder' 
+
+2018-01-29 10:11:59.9154 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Superkinder' 
+
+2018-01-29 10:11:59.9985 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Superkinder'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Superkinder'), 0) as Bal  
+
+2018-01-29 10:12:00.0775 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Superkinder' GROUP BY to_user 
+
+2018-01-29 10:12:00.1576 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: Infom amount: -100,00  
+
+2018-01-29 10:12:00.1576 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: sergeiaf amount: 485,00  
+
+2018-01-29 10:12:00.1666 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: tretyakroman amount: 485,00  
+
+2018-01-29 10:12:00.1666 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Superkinder. Баланс: 870,00
+ @Superkinder должен 100,00 @Infom
+ @sergeiaf должен 485,00 @Superkinder
+ @tretyakroman должен 485,00 @Superkinder
+ 
+
+2018-01-29 10:12:00.3400 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:12:00.3400 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 147141378 ,'private' ,'', 'Superkinder' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 147141378) 
+
+2018-01-29 10:12:00.4240 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:12:00.4240 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 147141378 , 147141378, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 147141378 AND [user_id] = 147141378) 
+
+2018-01-29 10:12:50.3614 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 420 
+
+2018-01-29 10:13:37.7618 | Telegram.Request.TelegramRequest.WhatsType | ERROR | Значение счетчика не может быть меньше нуля.
+Имя параметра: count 
+
+2018-01-29 10:13:37.7618 | Telegram.Request.TelegramRequest.WhatsType | ERROR | Значение счетчика не может быть меньше нуля.
+Имя параметра: count 
+
+2018-01-29 10:13:37.7728 | Telegram.Request.TelegramRequest.WhatsType | ERROR | Значение счетчика не может быть меньше нуля.
+Имя параметра: count 
+
+2018-01-29 10:13:37.7728 | Telegram.Request.TelegramRequest.WhatsType | ERROR | Значение счетчика не может быть меньше нуля.
+Имя параметра: count 
+
+2018-01-29 10:13:37.7728 | Telegram.Request.TelegramRequest.WhatsType | ERROR | Значение счетчика не может быть меньше нуля.
+Имя параметра: count 
+
+2018-01-29 10:13:37.7889 | Telegram.Request.TelegramRequest.WhatsType | ERROR | Значение счетчика не может быть меньше нуля.
+Имя параметра: count 
+
+2018-01-29 10:13:37.7889 | Telegram.Request.TelegramRequest.WhatsType | ERROR | Значение счетчика не может быть меньше нуля.
+Имя параметра: count 
+
+2018-01-29 10:13:37.7889 | Telegram.Request.TelegramRequest.WhatsType | ERROR | Значение счетчика не может быть меньше нуля.
+Имя параметра: count 
+
+2018-01-29 10:13:48.6297 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:13:48.6338 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:686 user_id:2730927 chat_id:-302255597 username:Infom name: Ruslan Kasimov date: 1517210028 message:'/d' 
+
+2018-01-29 10:13:48.6338 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 10:13:48.6338 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-29 10:13:48.6489 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 10:13:48.7275 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-29 10:13:48.8071 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Infom' GROUP BY to_user 
+
+2018-01-29 10:13:48.8870 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: amarshalkin amount: -128,00  
+
+2018-01-29 10:13:48.8870 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Infom amount: 0,00  
+
+2018-01-29 10:13:48.8960 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Kasim_RI amount: -761,00  
+
+2018-01-29 10:13:48.8960 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Sergeiaf amount: 152,00  
+
+2018-01-29 10:13:48.8960 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: superkinder amount: 100,00  
+
+2018-01-29 10:13:48.8960 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Svetlana_Shulgina amount: 0,00  
+
+2018-01-29 10:13:48.9159 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: TretyakRoman amount: -343,00  
+
+2018-01-29 10:13:48.9159 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Infom. Баланс: -980,00
+ @Infom должен 128,00 @amarshalkin
+ @Infom должен 761,00 @Kasim_RI
+ @Sergeiaf должен 152,00 @Infom
+ @superkinder должен 100,00 @Infom
+ @Infom должен 343,00 @TretyakRoman
+ 
+
+2018-01-29 10:13:49.0939 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:13:49.0989 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -302255597 ,'group' ,'Производственное совещание', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -302255597) 
+
+2018-01-29 10:13:49.1994 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:13:49.1994 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -302255597 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -302255597 AND [user_id] = 2730927) 
+
+2018-01-29 10:13:49.5329 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:13:49.5389 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:687 user_id:459569 chat_id:-302255597 username:Sergeiaf name: Sergei Fedorov date: 1517210028 message:'/d@DeeBeeTeeBot' 
+
+2018-01-29 10:13:49.5389 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 10:13:49.5389 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-29 10:13:49.5553 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-29 10:13:49.6335 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-01-29 10:13:49.7136 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Sergeiaf' GROUP BY to_user 
+
+2018-01-29 10:13:49.7924 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: Infom amount: -152,00  
+
+2018-01-29 10:13:49.7924 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: superkinder amount: -485,00  
+
+2018-01-29 10:13:49.8034 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: TretyakRoman amount: -144,00  
+
+2018-01-29 10:13:49.8034 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Sergeiaf. Баланс: -781,00
+ @Sergeiaf должен 152,00 @Infom
+ @Sergeiaf должен 485,00 @superkinder
+ @Sergeiaf должен 144,00 @TretyakRoman
+ 
+
+2018-01-29 10:13:50.1288 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:13:50.1348 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -302255597 ,'group' ,'Производственное совещание', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -302255597) 
+
+2018-01-29 10:13:50.2163 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:13:50.2163 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -302255597 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -302255597 AND [user_id] = 459569) 
+
+2018-01-29 10:13:53.7049 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 480 
+
+2018-01-29 10:14:01.3550 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:14:01.3550 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:692 user_id:288805897 chat_id:-302255597 username:TretyakRoman name: Третьяк Роман date: 1517210040 message:'/d' 
+
+2018-01-29 10:14:01.3650 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 10:14:01.3650 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2018-01-29 10:14:01.3650 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2018-01-29 10:14:01.4521 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'TretyakRoman'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'TretyakRoman'), 0) as Bal  
+
+2018-01-29 10:14:01.5531 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'TretyakRoman' GROUP BY to_user 
+
+2018-01-29 10:14:01.6658 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: TretyakRoman to: Infom amount: 343,00  
+
+2018-01-29 10:14:01.6658 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: TretyakRoman to: Sergeiaf amount: 144,00  
+
+2018-01-29 10:14:01.6658 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: TretyakRoman to: superkinder amount: -485,00  
+
+2018-01-29 10:14:01.6798 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @TretyakRoman. Баланс: 2,00
+ @Infom должен 343,00 @TretyakRoman
+ @Sergeiaf должен 144,00 @TretyakRoman
+ @TretyakRoman должен 485,00 @superkinder
+ 
+
+2018-01-29 10:14:01.8482 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:14:01.8532 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -302255597 ,'group' ,'Производственное совещание', 'TretyakRoman' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -302255597) 
+
+2018-01-29 10:14:01.9343 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:14:01.9343 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -302255597 , 288805897, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -302255597 AND [user_id] = 288805897) 
+
+2018-01-29 10:14:18.5101 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:14:18.5101 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:695 user_id:147141378 chat_id:-302255597 username:Superkinder name: Михаил Сенокосов date: 1517210057 message:'/d' 
+
+2018-01-29 10:14:18.5201 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 10:14:18.5201 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Superkinder' 
+
+2018-01-29 10:14:18.5201 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Superkinder' 
+
+2018-01-29 10:14:18.6079 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Superkinder'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Superkinder'), 0) as Bal  
+
+2018-01-29 10:14:18.6879 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Superkinder' GROUP BY to_user 
+
+2018-01-29 10:14:18.7672 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: Infom amount: -100,00  
+
+2018-01-29 10:14:18.7722 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: sergeiaf amount: 485,00  
+
+2018-01-29 10:14:18.7722 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Superkinder to: tretyakroman amount: 485,00  
+
+2018-01-29 10:14:18.7722 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Superkinder. Баланс: 870,00
+ @Superkinder должен 100,00 @Infom
+ @sergeiaf должен 485,00 @Superkinder
+ @tretyakroman должен 485,00 @Superkinder
+ 
+
+2018-01-29 10:14:18.9953 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:14:18.9953 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -302255597 ,'group' ,'Производственное совещание', 'Superkinder' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -302255597) 
+
+2018-01-29 10:14:19.0823 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:14:19.0863 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -302255597 , 147141378, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -302255597 AND [user_id] = 147141378) 
+
+2018-01-29 10:14:58.1501 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 540 
+
+2018-01-29 10:16:03.7017 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 600 
+
+2018-01-29 10:17:09.4745 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 660 
+
+2018-01-29 10:18:17.5020 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 720 
+
+2018-01-29 10:19:25.7976 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 780 
+
+2018-01-29 10:20:30.0881 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 840 
+
+2018-01-29 10:21:35.6308 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 900 
+
+2018-01-29 10:22:46.9038 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 960 
+
+2018-01-29 10:23:57.7468 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1020 
+
+2018-01-29 10:25:02.2856 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1080 
+
+2018-01-29 10:26:06.6664 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1140 
+
+2018-01-29 10:27:11.3735 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1200 
+
+2018-01-29 10:28:17.7137 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1260 
+
+2018-01-29 10:29:26.4113 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1320 
+
+2018-01-29 10:29:59.2542 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 10:29:59.2632 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:698 user_id:147141378 chat_id:147141378 username:Superkinder name: Михаил Сенокосов date: 1517210998 message:'/help' 
+
+2018-01-29 10:29:59.8241 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /help 
+
+2018-01-29 10:29:59.8241 | DeeBeeTeeDB.DBAPI.Command_help | INFO | Возврат результата команды help с сообщением Поддерживаются команды 
+/balance /b 
+/details /d 
+/hello 
+/help 
+/start 
+/transaction /t 
+
+2018-01-29 10:30:00.0236 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 10:30:00.0236 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 147141378 ,'private' ,'', 'Superkinder' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 147141378) 
+
+2018-01-29 10:30:00.1074 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 10:30:00.1214 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 147141378 , 147141378, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 147141378 AND [user_id] = 147141378) 
+
+2018-01-29 10:30:32.0413 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1380 
+
+2018-01-29 10:31:36.6569 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1440 
+
+2018-01-29 10:32:44.4176 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1500 
+
+2018-01-29 10:33:51.3101 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1560 
+
+2018-01-29 10:34:59.4956 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1620 
+
+2018-01-29 10:36:07.8520 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1680 
+
+2018-01-29 10:37:18.0748 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1740 
+
+2018-01-29 10:38:27.7486 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1800 
+
+2018-01-29 10:39:35.2984 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1860 
+
+2018-01-29 10:40:42.7393 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1920 
+
+2018-01-29 10:41:49.5645 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1980 
+
+2018-01-29 10:42:54.1933 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2040 
+
+2018-01-29 10:44:00.0043 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2100 
+
+2018-01-29 10:45:04.7021 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2160 
+
+2018-01-29 10:46:12.4468 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2220 
+
+2018-01-29 10:47:22.8737 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2280 
+
+2018-01-29 10:48:37.1968 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2340 
+
+2018-01-29 10:49:45.4360 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2400 
+
+2018-01-29 10:50:53.2712 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2460 
+
+2018-01-29 10:52:01.9273 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2520 
+
+2018-01-29 10:53:13.9304 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2580 
+
+2018-01-29 10:54:18.3323 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2640 
+
+2018-01-29 10:55:22.9482 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2700 
+
+2018-01-29 10:56:28.5376 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2760 
+
+2018-01-29 10:57:33.0820 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2820 
+
+2018-01-29 10:58:42.3857 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2880 
+
+2018-01-29 10:59:46.8045 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2940 
+
+2018-01-29 11:00:53.0119 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3000 
+
+2018-01-29 11:01:57.7717 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3060 
+
+2018-01-29 11:03:02.9439 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3120 
+
+2018-01-29 11:04:09.7149 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3180 
+
+2018-01-29 11:05:16.8843 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3240 
+
+2018-01-29 11:06:26.4291 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3300 
+
+2018-01-29 11:07:41.4454 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3360 
+
+2018-01-29 11:08:51.3654 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3420 
+
+2018-01-29 11:10:00.7674 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3480 
+
+2018-01-29 11:11:07.1571 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3540 
+
+2018-01-29 11:12:14.9498 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3600 
+
+2018-01-29 11:13:20.1706 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3660 
+
+2018-01-29 11:14:25.7390 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3720 
+
+2018-01-29 11:15:31.1479 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3780 
+
+2018-01-29 11:16:36.0592 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3840 
+
+2018-01-29 11:17:44.2206 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3900 
+
+2018-01-29 11:18:50.7668 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3960 
+
+2018-01-29 11:19:56.2370 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4020 
+
+2018-01-29 11:21:00.7752 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4080 
+
+2018-01-29 11:22:05.2156 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4140 
+
+2018-01-29 11:23:15.6085 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4200 
+
+2018-01-29 11:24:20.0481 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4260 
+
+2018-01-29 11:25:24.5661 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4320 
+
+2018-01-29 11:26:31.1435 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4380 
+
+2018-01-29 11:27:38.3113 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4440 
+
+2018-01-29 11:28:52.5027 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4500 
+
+2018-01-29 11:29:59.4595 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4560 
+
+2018-01-29 11:31:04.3628 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4620 
+
+2018-01-29 11:32:08.7966 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4680 
+
+2018-01-29 11:33:16.9364 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4740 
+
+2018-01-29 11:34:26.8787 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4800 
+
+2018-01-29 11:35:33.3236 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4860 
+
+2018-01-29 11:36:40.8189 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4920 
+
+2018-01-29 11:37:48.8633 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4980 
+
+2018-01-29 11:38:56.6228 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5040 
+
+2018-01-29 11:40:05.9040 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5100 
+
+2018-01-29 11:41:10.2469 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5160 
+
+2018-01-29 11:42:16.5493 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5220 
+
+2018-01-29 11:43:27.4968 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5280 
+
+2018-01-29 11:44:31.8699 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5340 
+
+2018-01-29 11:45:37.0346 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5400 
+
+2018-01-29 11:46:42.2313 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5460 
+
+2018-01-29 11:47:50.3123 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5520 
+
+2018-01-29 11:48:56.4994 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5580 
+
+2018-01-29 11:50:02.9762 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5640 
+
+2018-01-29 11:51:07.5655 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5700 
+
+2018-01-29 11:52:12.1291 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5760 
+
+2018-01-29 11:53:19.8716 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5820 
+
+2018-01-29 11:54:26.3695 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5880 
+
+2018-01-29 11:55:32.1899 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5940 
+
+2018-01-29 11:56:38.3870 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6000 
+
+2018-01-29 11:57:43.6051 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6060 
+
+2018-01-29 11:58:51.0907 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6120 
+
+2018-01-29 12:00:00.4389 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6180 
+
+2018-01-29 12:01:06.9548 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6240 
+
+2018-01-29 12:02:13.4714 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6300 
+
+2018-01-29 12:03:23.4925 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6360 
+
+2018-01-29 12:04:31.5411 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6420 
+
+2018-01-29 12:05:38.2284 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6480 
+
+2018-01-29 12:06:44.7538 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6540 
+
+2018-01-29 12:07:51.4381 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6600 
+
+2018-01-29 12:08:57.1236 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6660 
+
+2018-01-29 12:10:02.9226 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6720 
+
+2018-01-29 12:11:07.9574 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6780 
+
+2018-01-29 12:12:12.6500 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6840 
+
+2018-01-29 12:13:19.4482 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6900 
+
+2018-01-29 12:14:32.1023 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6960 
+
+2018-01-29 12:15:38.9369 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7020 
+
+2018-01-29 12:16:43.6977 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7080 
+
+2018-01-29 12:17:48.2773 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7140 
+
+2018-01-29 12:18:59.1539 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7200 
+
+2018-01-29 12:20:05.8933 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7260 
+
+2018-01-29 12:21:12.3280 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7320 
+
+2018-01-29 12:22:22.0728 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7380 
+
+2018-01-29 12:23:33.2859 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7440 
+
+2018-01-29 12:24:42.0073 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7500 
+
+2018-01-29 12:25:47.7361 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7560 
+
+2018-01-29 12:26:52.9216 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7620 
+
+2018-01-29 12:28:00.4107 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7680 
+
+2018-01-29 12:29:07.5292 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7740 
+
+2018-01-29 12:30:12.9732 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7800 
+
+2018-01-29 12:31:18.3931 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7860 
+
+2018-01-29 12:32:26.4617 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7920 
+
+2018-01-29 12:33:31.0577 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7980 
+
+2018-01-29 12:34:36.7851 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8040 
+
+2018-01-29 12:35:41.2754 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8100 
+
+2018-01-29 12:36:45.7078 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8160 
+
+2018-01-29 12:37:51.9669 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8220 
+
+2018-01-29 12:39:02.8554 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8280 
+
+2018-01-29 12:40:11.0330 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8340 
+
+2018-01-29 12:41:17.5777 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8400 
+
+2018-01-29 12:42:24.0843 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8460 
+
+2018-01-29 12:43:34.5338 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8520 
+
+2018-01-29 12:44:42.1328 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8580 
+
+2018-01-29 12:45:46.4561 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8640 
+
+2018-01-29 12:46:50.9948 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8700 
+
+2018-01-29 12:47:55.4042 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8760 
+
+2018-01-29 12:49:07.6983 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8820 
+
+2018-01-29 12:50:15.3830 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8880 
+
+2018-01-29 12:51:24.8004 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8940 
+
+2018-01-29 12:52:31.3406 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9000 
+
+2018-01-29 12:53:41.0530 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9060 
+
+2018-01-29 12:54:50.3968 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9120 
+
+2018-01-29 12:56:37.5327 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9180 
+
+2018-01-29 12:57:42.1879 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9240 
+
+2018-01-29 13:23:06.7208 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:07.1041 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:07.5678 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:07.8007 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.0513 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.1832 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.4580 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.5470 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.6023 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.6741 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.7061 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.7252 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.7742 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.7962 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.8092 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.8332 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.8662 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.8823 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.8823 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.8953 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.8953 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.8953 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9133 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9133 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9253 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9253 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9393 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9393 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9393 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9553 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9553 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9553 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9773 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9773 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9893 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9893 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:08.9893 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0063 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0063 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0224 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0224 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0364 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0484 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0484 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0484 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0674 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9300 
+
+2018-01-29 13:23:09.0674 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0794 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0794 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0794 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0954 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0954 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.0954 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1164 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1494 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1614 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1614 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1735 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1735 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1735 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1905 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1905 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.1905 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2075 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2075 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2075 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2245 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2245 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2367 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2367 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2367 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2539 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2539 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2539 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2705 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2705 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2825 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2825 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2825 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2985 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2985 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.2985 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3165 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3165 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3165 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3335 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3335 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3335 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3495 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3495 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3495 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3665 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3665 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3785 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3785 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3785 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3951 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3951 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.3951 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4121 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4322 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4412 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4412 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4412 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4572 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4572 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4572 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9360 
+
+2018-01-29 13:23:09.4722 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4722 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4722 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4872 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4872 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.4872 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5032 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5032 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5032 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5182 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5182 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5182 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5332 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5332 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5332 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5502 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5502 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5502 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5662 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5662 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5662 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5853 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5853 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5963 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5963 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.5963 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6133 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6133 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6293 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6293 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6293 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6453 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6453 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6583 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6583 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6583 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6743 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6743 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6743 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6923 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6923 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.6923 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7063 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7063 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7063 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7213 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7213 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7213 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7213 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7394 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7394 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7394 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7534 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7534 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7534 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7674 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7674 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7674 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7844 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7844 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.7844 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9420 
+
+2018-01-29 13:23:09.8034 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8034 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8154 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8154 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8154 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8334 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8334 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8334 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8514 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8514 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8634 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8634 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:23:09.8634 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 13:24:10.0683 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9480 
+
+2018-01-29 13:25:17.3929 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9540 
+
+2018-01-29 13:26:25.3199 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9600 
+
+2018-01-29 13:27:31.8389 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9660 
+
+2018-01-29 13:28:38.8358 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9720 
+
+2018-01-29 13:29:53.4698 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9780 
+
+2018-01-29 13:31:05.1440 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9840 
+
+2018-01-29 13:32:09.4183 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9900 
+
+2018-01-29 13:33:14.9941 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9960 
+
+2018-01-29 13:34:22.4379 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10020 
+
+2018-01-29 13:35:26.9407 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10080 
+
+2018-01-29 13:36:31.4720 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10140 
+
+2018-01-29 13:37:35.8495 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10200 
+
+2018-01-29 13:38:40.3826 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10260 
+
+2018-01-29 13:39:45.3528 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10320 
+
+2018-01-29 13:40:49.8010 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10380 
+
+2018-01-29 13:41:58.3485 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10440 
+
+2018-01-29 13:43:16.9116 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10500 
+
+2018-01-29 13:44:23.1523 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10560 
+
+2018-01-29 13:45:30.1859 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10620 
+
+2018-01-29 13:46:35.8768 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10680 
+
+2018-01-29 13:47:40.4882 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10740 
+
+2018-01-29 13:48:44.9433 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10800 
+
+2018-01-29 13:49:49.6521 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10860 
+
+2018-01-29 13:50:55.5936 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10920 
+
+2018-01-29 13:52:00.2910 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10980 
+
+2018-01-29 13:53:04.9993 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11040 
+
+2018-01-29 13:54:15.8317 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11100 
+
+2018-01-29 13:55:23.7651 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11160 
+
+2018-01-29 13:56:28.2997 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11220 
+
+2018-01-29 13:57:34.8486 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11280 
+
+2018-01-29 13:58:39.3382 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11340 
+
+2018-01-29 13:59:48.7300 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11400 
+
+2018-01-29 14:00:54.5451 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11460 
+
+2018-01-29 14:01:58.9262 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11520 
+
+2018-01-29 14:03:04.8541 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11580 
+
+2018-01-29 14:04:09.3001 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11640 
+
+2018-01-29 14:05:15.8338 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11700 
+
+2018-01-29 14:06:21.5558 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11760 
+
+2018-01-29 14:07:28.0387 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11820 
+
+2018-01-29 14:08:32.9658 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11880 
+
+2018-01-29 14:09:46.5710 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11940 
+
+2018-01-29 14:10:50.9038 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12000 
+
+2018-01-29 14:11:56.4874 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12060 
+
+2018-01-29 14:13:01.1958 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12120 
+
+2018-01-29 14:14:06.0618 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12180 
+
+2018-01-29 14:15:15.5188 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12240 
+
+2018-01-29 14:33:50.6557 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:50.6888 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:51.1361 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:51.4783 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:51.6535 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:51.9016 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.3129 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.4950 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5250 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5380 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5460 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5460 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5671 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5671 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5821 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5821 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5931 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.5931 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6081 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6081 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12300 
+
+2018-01-29 14:33:52.6291 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6291 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6431 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6431 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6551 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6551 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6551 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6721 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6721 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6871 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.6871 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.7012 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.7012 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.7012 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:52.7452 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 14:33:57.6589 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 14:33:57.6589 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:701 user_id:459569 chat_id:-156558308 username:Sergeiaf name: Sergei Fedorov date: 1517225046 message:'/t @Sergeiaf 900 @Sergeiaf  @Infom @TretyakRoman' 
+
+2018-01-29 14:33:58.2246 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-29 14:33:58.2246 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Sergeiaf 900 @Sergeiaf  @Infom @TretyakRoman' 
+
+2018-01-29 14:33:58.2343 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Sergeiaf' 
+
+2018-01-29 14:33:58.2343 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '900' 
+
+2018-01-29 14:33:58.2343 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@Sergeiaf  @Infom @TretyakRoman  
+
+2018-01-29 14:33:58.2343 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Sergeiaf' 
+
+2018-01-29 14:33:58.2534 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'Infom' 
+
+2018-01-29 14:33:58.2534 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'TretyakRoman' 
+
+2018-01-29 14:33:58.2534 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 3, сам пользователь True 
+
+2018-01-29 14:33:58.2664 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-29 14:33:58.2664 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-29 14:33:58.3494 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'Sergeiaf' 
+
+2018-01-29 14:33:58.3574 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-29 14:33:58.3574 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-29 14:33:58.4465 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'Infom' 
+
+2018-01-29 14:33:58.4515 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-29 14:33:58.4515 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 14:33:58.5345 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '2' to 'TretyakRoman' 
+
+2018-01-29 14:33:58.5345 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2018-01-29 14:33:58.5446 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2018-01-29 14:33:58.6226 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-29 14:33:58.6276 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-29 14:33:58.7051 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-01-29 14:33:58.7922 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Sergeiaf составляет -781,00 
+
+2018-01-29 14:33:58.7972 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Sergeiaf amount:300 to:Infom 
+
+2018-01-29 14:33:58.7972 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Sergeiaf' ,300 ,'Infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 14:33:58.8923 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 14:33:58.9714 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 14:33:59.2222 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-29 14:33:59.2332 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 14:33:59.3168 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-29 14:33:59.4215 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -1280,00 
+
+2018-01-29 14:33:59.4215 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Sergeiaf amount:300 to:TretyakRoman 
+
+2018-01-29 14:33:59.4215 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Sergeiaf' ,300 ,'TretyakRoman' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-29 14:33:59.5275 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2018-01-29 14:33:59.6055 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-29 14:33:59.8134 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | ERROR | Удаленный сервер возвратил ошибку: (403) Запрещено. 
+
+2018-01-29 14:33:59.8134 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'TretyakRoman' 
+
+2018-01-29 14:33:59.8134 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'TretyakRoman' 
+
+2018-01-29 14:33:59.9065 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'TretyakRoman'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'TretyakRoman'), 0) as Bal  
+
+2018-01-29 14:33:59.9852 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @TretyakRoman составляет -298,00 
+
+2018-01-29 14:33:59.9852 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части
+Транзакция 111 успешно добавлена
+Транзакция 112 успешно добавлена
+Баланс пользователя @Sergeiaf составляет -781,00
+Баланс пользователя @Infom составляет -1280,00
+Баланс пользователя @TretyakRoman составляет -298,00
+ 
+
+2018-01-29 14:34:00.3355 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 14:34:00.3355 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-29 14:34:00.4221 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 14:34:00.4221 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 459569) 
+
+2018-01-29 14:34:48.7298 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12360 
+
+2018-01-29 14:35:57.3108 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12420 
+
+2018-01-29 14:37:05.0797 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12480 
+
+2018-01-29 14:38:11.1266 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12540 
+
+2018-01-29 14:39:20.9119 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12600 
+
+2018-01-29 14:40:33.6613 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12660 
+
+2018-01-29 14:41:45.3527 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12720 
+
+2018-01-29 14:42:49.9191 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12780 
+
+2018-01-29 14:44:06.9137 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12840 
+
+2018-01-29 14:45:17.4066 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12900 
+
+2018-01-29 14:46:24.8283 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12960 
+
+2018-01-29 14:47:29.8224 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13020 
+
+2018-01-29 14:48:34.5288 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13080 
+
+2018-01-29 14:49:43.7762 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13140 
+
+2018-01-29 14:50:55.8763 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13200 
+
+2018-01-29 14:52:03.0654 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13260 
+
+2018-01-29 14:53:09.8314 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13320 
+
+2018-01-29 14:54:17.2533 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13380 
+
+2018-01-29 14:55:25.5399 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13440 
+
+2018-01-29 14:56:33.5039 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13500 
+
+2018-01-29 14:57:42.2158 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13560 
+
+2018-01-29 14:58:49.6140 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13620 
+
+2018-01-29 15:00:00.5335 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13680 
+
+2018-01-29 15:01:08.6457 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13740 
+
+2018-01-29 15:02:15.2660 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13800 
+
+2018-01-29 15:03:21.8912 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13860 
+
+2018-01-29 15:37:58.5228 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 15:37:59.0900 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 15:37:59.6514 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 15:37:59.7575 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 15:38:00.0266 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 15:38:00.1967 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 15:38:00.2938 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 15:38:00.4259 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 15:38:04.8780 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 15:38:04.8940 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:705 user_id:459569 chat_id:-156558308 username:Sergeiaf name: Sergei Fedorov date: 1517228317 message:'/d' 
+
+2018-01-29 15:38:05.4567 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 15:38:05.4567 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-29 15:38:05.4737 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-29 15:38:05.5575 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-01-29 15:38:05.6415 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Sergeiaf' GROUP BY to_user 
+
+2018-01-29 15:38:05.7331 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: Infom amount: 148,00  
+
+2018-01-29 15:38:05.7331 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: superkinder amount: -485,00  
+
+2018-01-29 15:38:05.7331 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Sergeiaf to: TretyakRoman amount: 156,00  
+
+2018-01-29 15:38:05.7491 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Sergeiaf. Баланс: -181,00
+ @Infom должен 148,00 @Sergeiaf
+ @Sergeiaf должен 485,00 @superkinder
+ @TretyakRoman должен 156,00 @Sergeiaf
+ 
+
+2018-01-29 15:38:05.9189 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 15:38:05.9234 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-29 15:38:06.0099 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 15:38:06.0149 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 459569) 
+
+2018-01-29 15:38:06.2545 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-29 15:38:06.2545 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:706 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1517228955 message:'/d' 
+
+2018-01-29 15:38:06.2687 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /d 
+
+2018-01-29 15:38:06.2687 | DeeBeeTeeDB.DBAPI.Command_details | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-29 15:38:06.2687 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-29 15:38:06.3568 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-29 15:38:06.4357 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | GetUserDetailsSQL: SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = 'Infom' GROUP BY to_user 
+
+2018-01-29 15:38:06.5155 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: amarshalkin amount: -128,00  
+
+2018-01-29 15:38:06.5155 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Infom amount: 0,00  
+
+2018-01-29 15:38:06.5155 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Kasim_RI amount: -761,00  
+
+2018-01-29 15:38:06.5155 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Sergeiaf amount: -148,00  
+
+2018-01-29 15:38:06.5335 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: superkinder amount: 100,00  
+
+2018-01-29 15:38:06.5335 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: Svetlana_Shulgina amount: 0,00  
+
+2018-01-29 15:38:06.5335 | DeeBeeTeeDB.DBAPI.GetUserDetails | TRACE | Generate dbt from: Infom to: TretyakRoman amount: -343,00  
+
+2018-01-29 15:38:06.5465 | DeeBeeTeeDB.DBAPI.Command_details | INFO | Возврат результата команды details с сообщениемДетали пользователя @Infom. Баланс: -1280,00
+ @Infom должен 128,00 @amarshalkin
+ @Infom должен 761,00 @Kasim_RI
+ @Infom должен 148,00 @Sergeiaf
+ @superkinder должен 100,00 @Infom
+ @Infom должен 343,00 @TretyakRoman
+ 
+
+2018-01-29 15:38:06.7182 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-29 15:38:06.7182 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-29 15:38:06.8043 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-29 15:38:06.8043 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-01-29 15:38:09.1915 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13920 
+
+2018-01-29 15:39:13.7177 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13980 
+
+2018-01-29 15:40:19.0131 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14040 
+
+2018-01-29 15:41:23.8300 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14100 
+
+2018-01-29 15:42:30.5226 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14160 
+
+2018-01-29 15:43:40.3334 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14220 
+
+2018-01-29 15:44:50.5875 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14280 
+
+2018-01-29 15:46:09.5591 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14340 
+
+2018-01-29 15:47:20.1383 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14400 
+
+2018-01-29 15:48:28.0476 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14460 
+
+2018-01-29 15:49:34.6833 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14520 
+
+2018-01-29 15:50:41.9014 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14580 
+
+2018-01-29 15:51:49.8480 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14640 
+
+2018-01-29 15:52:55.9613 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14700 
+
+2018-01-29 15:54:02.5887 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14760 
+
+2018-01-29 15:55:09.2600 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14820 
+
+2018-01-29 15:56:15.6184 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14880 
+
+2018-01-29 15:57:24.7549 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14940 
+
+2018-01-29 15:58:29.1617 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15000 
+
+2018-01-29 15:59:33.7778 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15060 
+
+2018-01-29 16:00:39.0884 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15120 
+
+2018-01-29 16:01:52.5087 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15180 
+
+2018-01-29 16:02:57.0731 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15240 
+
+2018-01-29 16:04:01.8681 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15300 
+
+2018-01-29 16:05:09.8293 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15360 
+
+2018-01-29 16:06:22.7361 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15420 
+
+2018-01-29 16:07:28.2865 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15480 
+
+2018-01-29 16:29:38.5519 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 16:29:39.1800 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 16:29:39.5262 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 16:29:39.8134 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 16:29:48.0963 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15540 
+
+2018-01-29 16:31:02.1350 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15600 
+
+2018-01-29 16:32:08.3013 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15660 
+
+2018-01-29 16:33:14.0607 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15720 
+
+2018-01-29 16:34:20.5720 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15780 
+
+2018-01-29 16:35:25.4163 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15840 
+
+2018-01-29 16:36:32.9272 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15900 
+
+2018-01-29 16:37:37.7660 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15960 
+
+2018-01-29 16:38:42.1870 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16020 
+
+2018-01-29 16:39:48.2691 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16080 
+
+2018-01-29 16:40:54.9416 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16140 
+
+2018-01-29 16:42:00.4962 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16200 
+
+2018-01-29 16:43:10.2231 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16260 
+
+2018-01-29 16:44:14.6558 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16320 
+
+2018-01-29 16:45:19.2320 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16380 
+
+2018-01-29 16:46:26.5337 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16440 
+
+2018-01-29 16:47:31.7345 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16500 
+
+2018-01-29 16:48:36.3999 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16560 
+
+2018-01-29 16:49:41.4016 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16620 
+
+2018-01-29 16:50:48.7967 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16680 
+
+2018-01-29 16:51:55.1679 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16740 
+
+2018-01-29 16:53:01.1973 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16800 
+
+2018-01-29 16:54:05.8076 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16860 
+
+2018-01-29 16:55:10.3559 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16920 
+
+2018-01-29 16:56:18.7833 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16980 
+
+2018-01-29 16:57:23.9384 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17040 
+
+2018-01-29 16:58:28.3267 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17100 
+
+2018-01-29 16:59:33.2729 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17160 
+
+2018-01-29 17:02:57.5306 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.1037 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.2088 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.3482 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.3814 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.4660 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.4800 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.4930 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.5510 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.5981 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.6471 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.7422 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.7882 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.7962 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.7962 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.8352 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.8682 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.9023 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.9403 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.9573 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:58.9853 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.0103 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.0454 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.0624 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.0974 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.1704 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.2525 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.2825 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.2915 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.2915 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17220 
+
+2018-01-29 17:02:59.2915 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.3085 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.3085 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.3235 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.3235 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.3456 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.3676 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.3916 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.4116 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.4316 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.4496 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.4616 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.4616 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:02:59.4616 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-29 17:03:53.2384 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17280 
+
+2018-01-29 17:04:57.8169 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17340 
+
+2018-01-29 17:07:12.4277 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17400 
+
+2018-01-29 17:08:17.3522 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17460 
+
+2018-01-29 17:09:22.4523 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17520 
+
+2018-01-29 17:10:29.4093 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17580 
+
+2018-01-29 17:11:35.3639 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17640 
+
+2018-01-29 17:12:39.6988 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17700 
+
+2018-01-29 17:13:44.3846 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17760 
+
+2018-01-29 17:14:48.6850 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17820 
+
+2018-01-29 17:15:54.6409 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17880 
+
+2018-01-29 17:17:00.7748 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17940 
+

@@ -1,0 +1,1888 @@
+2018-01-19 09:10:34.8599 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-19 09:10:34.9291 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-19 09:10:35.4953 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-19 09:11:40.1120 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 60 
+
+2018-01-19 09:12:44.7416 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 120 
+
+2018-01-19 09:13:49.5735 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 180 
+
+2018-01-19 09:14:59.0859 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 240 
+
+2018-01-19 09:16:08.6272 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 300 
+
+2018-01-19 09:17:14.7719 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 360 
+
+2018-01-19 09:18:21.9230 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 420 
+
+2018-01-19 09:19:27.7798 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 480 
+
+2018-01-19 09:20:38.6182 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 540 
+
+2018-01-19 09:21:45.6815 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 600 
+
+2018-01-19 09:22:51.4578 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 660 
+
+2018-01-19 09:23:57.4152 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 720 
+
+2018-01-19 09:25:13.7930 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 780 
+
+2018-01-19 09:26:19.8977 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 840 
+
+2018-01-19 09:27:27.3288 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 900 
+
+2018-01-19 09:28:33.2927 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 960 
+
+2018-01-19 09:29:39.0218 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1020 
+
+2018-01-19 09:30:49.1058 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1080 
+
+2018-01-19 09:31:56.2663 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1140 
+
+2018-01-19 09:33:00.5997 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1200 
+
+2018-01-19 09:34:07.5306 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1260 
+
+2018-01-19 09:35:12.0935 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1320 
+
+2018-01-19 09:36:17.3471 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1380 
+
+2018-01-19 09:37:22.1394 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1440 
+
+2018-01-19 09:38:26.7746 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1500 
+
+2018-01-19 09:39:31.4075 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1560 
+
+2018-01-19 09:40:45.9806 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1620 
+
+2018-01-19 09:41:51.3477 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1680 
+
+2018-01-19 09:42:57.1491 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1740 
+
+2018-01-19 09:44:01.4568 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1800 
+
+2018-01-19 09:45:05.9112 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1860 
+
+2018-01-19 09:46:10.6248 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1920 
+
+2018-01-19 09:47:15.2751 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 1980 
+
+2018-01-19 09:48:20.8380 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2040 
+
+2018-01-19 09:49:26.1924 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2100 
+
+2018-01-19 09:50:35.7879 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2160 
+
+2018-01-19 09:51:40.2098 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2220 
+
+2018-01-19 09:52:45.7435 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2280 
+
+2018-01-19 09:53:51.2497 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2340 
+
+2018-01-19 09:55:01.6132 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2400 
+
+2018-01-19 09:56:16.2623 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2460 
+
+2018-01-19 09:57:28.5639 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2520 
+
+2018-01-19 09:58:34.7611 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2580 
+
+2018-01-19 09:59:40.7824 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2640 
+
+2018-01-19 10:00:50.1238 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2700 
+
+2018-01-19 10:01:59.4093 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2760 
+
+2018-01-19 10:03:07.3930 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2820 
+
+2018-01-19 10:04:18.4936 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2880 
+
+2018-01-19 10:05:24.9646 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 2940 
+
+2018-01-19 10:06:35.3901 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3000 
+
+2018-01-19 10:07:40.7936 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3060 
+
+2018-01-19 10:08:47.0066 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3120 
+
+2018-01-19 10:09:51.8208 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3180 
+
+2018-01-19 10:10:57.2847 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3240 
+
+2018-01-19 10:12:01.9496 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3300 
+
+2018-01-19 10:13:07.3926 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3360 
+
+2018-01-19 10:14:13.3600 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3420 
+
+2018-01-19 10:15:26.6930 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3480 
+
+2018-01-19 10:16:31.9027 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3540 
+
+2018-01-19 10:17:36.3570 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3600 
+
+2018-01-19 10:18:41.7638 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3660 
+
+2018-01-19 10:19:46.9920 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3720 
+
+2018-01-19 10:20:56.2659 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3780 
+
+2018-01-19 10:22:04.2597 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3840 
+
+2018-01-19 10:23:08.5934 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3900 
+
+2018-01-19 10:24:13.0536 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 3960 
+
+2018-01-19 10:25:24.0668 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4020 
+
+2018-01-19 10:26:32.2236 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4080 
+
+2018-01-19 10:27:37.9295 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4140 
+
+2018-01-19 10:28:43.1091 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4200 
+
+2018-01-19 10:29:48.0193 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4260 
+
+2018-01-19 10:31:01.0792 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4320 
+
+2018-01-19 10:32:07.3338 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4380 
+
+2018-01-19 10:33:12.3507 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4440 
+
+2018-01-19 10:34:19.2636 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4500 
+
+2018-01-19 10:35:27.1212 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4560 
+
+2018-01-19 10:36:37.4746 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4620 
+
+2018-01-19 10:37:45.7957 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4680 
+
+2018-01-19 10:38:51.8333 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4740 
+
+2018-01-19 10:39:57.7688 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4800 
+
+2018-01-19 10:41:04.7778 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4860 
+
+2018-01-19 10:42:13.3540 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4920 
+
+2018-01-19 10:43:18.0904 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 4980 
+
+2018-01-19 10:44:24.2519 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5040 
+
+2018-01-19 10:45:35.4640 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5100 
+
+2018-01-19 10:46:41.5279 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5160 
+
+2018-01-19 10:47:46.6039 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5220 
+
+2018-01-19 10:48:52.3973 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5280 
+
+2018-01-19 10:49:59.1237 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5340 
+
+2018-01-19 10:51:03.4931 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5400 
+
+2018-01-19 10:52:14.7293 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5460 
+
+2018-01-19 10:53:19.2721 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5520 
+
+2018-01-19 10:54:23.5933 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5580 
+
+2018-01-19 10:55:28.0941 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5640 
+
+2018-01-19 10:56:32.9939 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5700 
+
+2018-01-19 10:57:39.5245 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5760 
+
+2018-01-19 10:58:44.0049 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5820 
+
+2018-01-19 10:59:48.4079 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5880 
+
+2018-01-19 11:00:56.5291 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 5940 
+
+2018-01-19 11:02:02.5177 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6000 
+
+2018-01-19 11:03:11.4454 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6060 
+
+2018-01-19 11:04:17.0562 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6120 
+
+2018-01-19 11:05:23.1229 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6180 
+
+2018-01-19 11:06:27.6047 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6240 
+
+2018-01-19 11:07:35.2603 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6300 
+
+2018-01-19 11:08:39.7753 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6360 
+
+2018-01-19 11:09:44.9121 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6420 
+
+2018-01-19 11:10:49.5603 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6480 
+
+2018-01-19 11:11:57.7869 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6540 
+
+2018-01-19 11:13:02.3678 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6600 
+
+2018-01-19 11:14:07.9058 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6660 
+
+2018-01-19 11:15:15.3849 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6720 
+
+2018-01-19 11:16:21.6203 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6780 
+
+2018-01-19 11:17:26.4727 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6840 
+
+2018-01-19 11:18:32.0581 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6900 
+
+2018-01-19 11:19:36.6306 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 6960 
+
+2018-01-19 11:20:47.3799 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7020 
+
+2018-01-19 11:21:57.3488 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7080 
+
+2018-01-19 11:23:01.9015 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7140 
+
+2018-01-19 11:24:06.2256 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7200 
+
+2018-01-19 11:25:10.7387 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7260 
+
+2018-01-19 11:26:26.4426 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7320 
+
+2018-01-19 11:27:35.4093 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7380 
+
+2018-01-19 11:28:42.3873 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7440 
+
+2018-01-19 11:29:46.7969 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7500 
+
+2018-01-19 11:30:51.3264 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7560 
+
+2018-01-19 11:31:59.4349 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7620 
+
+2018-01-19 11:33:05.3273 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7680 
+
+2018-01-19 11:34:10.8314 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7740 
+
+2018-01-19 11:35:15.5420 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7800 
+
+2018-01-19 11:36:22.3180 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7860 
+
+2018-01-19 11:37:31.7620 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7920 
+
+2018-01-19 11:38:40.6797 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 7980 
+
+2018-01-19 11:39:45.9259 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8040 
+
+2018-01-19 11:40:53.0770 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8100 
+
+2018-01-19 11:41:58.7692 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8160 
+
+2018-01-19 11:43:13.6925 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8220 
+
+2018-01-19 11:44:18.0647 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8280 
+
+2018-01-19 11:45:24.8146 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8340 
+
+2018-01-19 11:46:37.1414 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8400 
+
+2018-01-19 11:47:44.1344 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8460 
+
+2018-01-19 11:48:49.5511 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8520 
+
+2018-01-19 11:49:53.9424 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8580 
+
+2018-01-19 11:50:58.7670 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8640 
+
+2018-01-19 11:52:03.5804 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8700 
+
+2018-01-19 11:53:08.3288 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8760 
+
+2018-01-19 11:54:14.2808 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8820 
+
+2018-01-19 11:55:21.7730 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8880 
+
+2018-01-19 11:56:27.6611 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 8940 
+
+2018-01-19 11:57:35.9256 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9000 
+
+2018-01-19 11:58:43.7123 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9060 
+
+2018-01-19 11:59:49.8019 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9120 
+
+2018-01-19 12:00:57.6154 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9180 
+
+2018-01-19 12:02:04.5010 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9240 
+
+2018-01-19 12:03:08.8483 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9300 
+
+2018-01-19 12:04:14.8479 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9360 
+
+2018-01-19 12:05:19.8133 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9420 
+
+2018-01-19 12:06:24.4199 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9480 
+
+2018-01-19 12:07:29.4121 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9540 
+
+2018-01-19 12:08:33.7650 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9600 
+
+2018-01-19 12:09:41.0334 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9660 
+
+2018-01-19 12:10:47.8882 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9720 
+
+2018-01-19 12:11:57.8303 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9780 
+
+2018-01-19 12:13:03.6281 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9840 
+
+2018-01-19 12:14:09.4719 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9900 
+
+2018-01-19 12:15:15.4149 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 9960 
+
+2018-01-19 12:16:21.8856 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10020 
+
+2018-01-19 12:17:26.2297 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10080 
+
+2018-01-19 12:18:30.9748 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10140 
+
+2018-01-19 12:19:35.3685 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10200 
+
+2018-01-19 12:20:40.5952 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10260 
+
+2018-01-19 12:21:49.6310 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10320 
+
+2018-01-19 12:22:55.2770 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10380 
+
+2018-01-19 12:23:59.8671 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10440 
+
+2018-01-19 12:25:04.3055 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10500 
+
+2018-01-19 12:26:13.5035 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10560 
+
+2018-01-19 12:27:27.4386 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10620 
+
+2018-01-19 12:28:41.1737 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10680 
+
+2018-01-19 12:29:46.3095 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10740 
+
+2018-01-19 12:30:53.7351 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10800 
+
+2018-01-19 12:32:01.0136 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10860 
+
+2018-01-19 12:33:06.0475 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10920 
+
+2018-01-19 12:34:12.0249 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 10980 
+
+2018-01-19 12:35:16.5015 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11040 
+
+2018-01-19 12:36:25.9877 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11100 
+
+2018-01-19 12:37:33.9464 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11160 
+
+2018-01-19 12:38:40.0780 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11220 
+
+2018-01-19 12:39:44.8236 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11280 
+
+2018-01-19 12:40:49.7001 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11340 
+
+2018-01-19 12:41:57.7699 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11400 
+
+2018-01-19 12:43:12.7214 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11460 
+
+2018-01-19 12:44:17.3277 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11520 
+
+2018-01-19 12:45:23.4645 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11580 
+
+2018-01-19 12:46:30.4510 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11640 
+
+2018-01-19 12:47:36.4144 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11700 
+
+2018-01-19 12:48:42.7549 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11760 
+
+2018-01-19 12:49:47.3335 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11820 
+
+2018-01-19 12:50:53.8427 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11880 
+
+2018-01-19 12:52:09.3332 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 11940 
+
+2018-01-19 12:53:15.8499 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12000 
+
+2018-01-19 12:54:20.5031 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12060 
+
+2018-01-19 12:55:26.6046 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12120 
+
+2018-01-19 12:56:31.4610 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12180 
+
+2018-01-19 12:57:36.8065 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12240 
+
+2018-01-19 12:58:45.8391 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12300 
+
+2018-01-19 12:59:50.5664 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12360 
+
+2018-01-19 13:00:55.7277 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12420 
+
+2018-01-19 13:02:00.6405 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12480 
+
+2018-01-19 13:03:05.1919 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12540 
+
+2018-01-19 13:04:09.5811 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12600 
+
+2018-01-19 13:05:16.8224 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12660 
+
+2018-01-19 13:06:24.6752 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12720 
+
+2018-01-19 13:07:31.9216 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12780 
+
+2018-01-19 13:08:39.5953 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12840 
+
+2018-01-19 13:09:44.3814 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12900 
+
+2018-01-19 13:10:50.7261 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 12960 
+
+2018-01-19 13:11:55.5439 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13020 
+
+2018-01-19 13:13:01.6006 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13080 
+
+2018-01-19 13:14:07.2701 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13140 
+
+2018-01-19 13:15:11.8492 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13200 
+
+2018-01-19 13:16:16.4846 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13260 
+
+2018-01-19 13:17:21.2079 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13320 
+
+2018-01-19 13:18:32.9914 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13380 
+
+2018-01-19 13:19:37.7785 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13440 
+
+2018-01-19 13:20:43.1816 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13500 
+
+2018-01-19 13:21:53.6686 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13560 
+
+2018-01-19 13:22:59.1110 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13620 
+
+2018-01-19 13:24:03.7364 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13680 
+
+2018-01-19 13:25:11.6239 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13740 
+
+2018-01-19 13:26:18.8066 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13800 
+
+2018-01-19 13:27:35.4941 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13860 
+
+2018-01-19 13:28:47.5435 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13920 
+
+2018-01-19 13:29:54.6874 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 13980 
+
+2018-01-19 13:31:03.5058 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14040 
+
+2018-01-19 13:32:12.2402 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14100 
+
+2018-01-19 14:42:01.7398 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 14:42:02.1019 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 14:42:08.6579 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-19 14:42:08.6669 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:510 user_id:77473985 chat_id:77473985 username:Kasim_RI name: Roman Kasimov date: 1516359435 message:'/t @kasim_ri 781 @kasim_ri @infom' 
+
+2018-01-19 14:42:09.2775 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-19 14:42:09.3025 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@kasim_ri 781 @kasim_ri @infom' 
+
+2018-01-19 14:42:09.3025 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'kasim_ri' 
+
+2018-01-19 14:42:09.3206 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '781' 
+
+2018-01-19 14:42:09.3206 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@kasim_ri @infom  
+
+2018-01-19 14:42:09.3346 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'kasim_ri' 
+
+2018-01-19 14:42:09.3346 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'infom' 
+
+2018-01-19 14:42:09.3346 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 2, сам пользователь True 
+
+2018-01-19 14:42:09.3506 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'kasim_ri' 
+
+2018-01-19 14:42:09.3506 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'kasim_ri' 
+
+2018-01-19 14:42:09.4406 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'kasim_ri' 
+
+2018-01-19 14:42:09.4406 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'kasim_ri' 
+
+2018-01-19 14:42:09.4406 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'kasim_ri' 
+
+2018-01-19 14:42:09.5424 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'infom' 
+
+2018-01-19 14:42:09.5424 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-19 14:42:09.5524 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-19 14:42:09.6305 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'kasim_ri' 
+
+2018-01-19 14:42:09.6305 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'kasim_ri' 
+
+2018-01-19 14:42:09.7165 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'kasim_ri'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'kasim_ri'), 0) as Bal  
+
+2018-01-19 14:42:09.7966 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @kasim_ri составляет -730,00 
+
+2018-01-19 14:42:09.8036 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:kasim_ri amount:391 to:infom 
+
+2018-01-19 14:42:09.8036 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('kasim_ri' ,391 ,'infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-19 14:42:10.1643 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-19 14:42:10.2441 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-19 14:42:13.2264 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'infom' 
+
+2018-01-19 14:42:13.2264 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'infom' 
+
+2018-01-19 14:42:13.3124 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'infom'), 0) as Bal  
+
+2018-01-19 14:42:13.4014 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @infom составляет 45,00 
+
+2018-01-19 14:42:13.4014 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части
+Транзакция 73 успешно добавлена
+Баланс пользователя @kasim_ri составляет -730,00
+Баланс пользователя @infom составляет 45,00
+ 
+
+2018-01-19 14:42:14.0799 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-19 14:42:14.0934 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 77473985 ,'private' ,'', 'Kasim_RI' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 77473985) 
+
+2018-01-19 14:42:14.2004 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-19 14:42:14.2069 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 77473985 , 77473985, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 77473985 AND [user_id] = 77473985) 
+
+2018-01-19 14:42:14.4861 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-19 14:42:14.5116 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:511 user_id:459569 chat_id:-156558308 username:Sergeiaf name: Сергей Федоров date: 1516360548 message:'/t' 
+
+2018-01-19 14:42:14.5401 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-19 14:42:14.5498 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '' 
+
+2018-01-19 14:42:15.0594 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-19 14:42:15.0594 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-19 14:42:15.1525 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-19 14:42:15.1525 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 459569) 
+
+2018-01-19 14:42:28.7777 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14160 
+
+2018-01-19 14:42:54.8941 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-19 14:42:54.8941 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:517 user_id:459569 chat_id:-156558308 username:Sergeiaf name: Сергей Федоров date: 1516362168 message:'/t @Sergeiaf 340 @Infom' 
+
+2018-01-19 14:42:54.9061 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-19 14:42:54.9061 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@Sergeiaf 340 @Infom' 
+
+2018-01-19 14:42:54.9061 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'Sergeiaf' 
+
+2018-01-19 14:42:54.9237 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '340' 
+
+2018-01-19 14:42:54.9237 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'Infom' 
+
+2018-01-19 14:42:54.9357 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-19 14:42:54.9357 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-19 14:42:55.0208 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-19 14:42:55.0308 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-19 14:42:55.1134 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:Sergeiaf amount:340 to:Infom 
+
+2018-01-19 14:42:55.1224 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('Sergeiaf' ,340 ,'Infom' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-19 14:42:55.4039 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-19 14:42:55.4879 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-19 14:42:55.7441 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Sergeiaf' 
+
+2018-01-19 14:42:55.7521 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Sergeiaf' 
+
+2018-01-19 14:42:55.8320 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Sergeiaf'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Sergeiaf'), 0) as Bal  
+
+2018-01-19 14:42:55.9111 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Sergeiaf составляет 715,00 
+
+2018-01-19 14:42:55.9222 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'Infom' 
+
+2018-01-19 14:42:55.9222 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'Infom' 
+
+2018-01-19 14:42:56.0341 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'Infom'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'Infom'), 0) as Bal  
+
+2018-01-19 14:42:56.1133 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @Infom составляет -295,00 
+
+2018-01-19 14:42:56.1223 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 74 успешно добавлена
+Баланс пользователя @Sergeiaf составляет 715,00
+Баланс пользователя @Infom составляет -295,00 
+
+2018-01-19 14:42:56.3237 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-19 14:42:56.3331 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT -156558308 ,'group' ,'ОФФшор', 'Sergeiaf' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = -156558308) 
+
+2018-01-19 14:42:56.4163 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-19 14:42:56.4213 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT -156558308 , 459569, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = -156558308 AND [user_id] = 459569) 
+
+2018-01-19 14:43:44.2003 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14220 
+
+2018-01-19 14:44:54.5502 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14280 
+
+2018-01-19 14:46:01.5164 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14340 
+
+2018-01-19 14:47:09.1413 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14400 
+
+2018-01-19 14:48:16.5244 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14460 
+
+2018-01-19 14:49:24.3367 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14520 
+
+2018-01-19 14:50:31.9594 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14580 
+
+2018-01-19 14:51:41.5130 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14640 
+
+2018-01-19 14:52:47.5418 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14700 
+
+2018-01-19 14:53:53.9729 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14760 
+
+2018-01-19 14:54:58.5622 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14820 
+
+2018-01-19 14:56:03.2496 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14880 
+
+2018-01-19 14:57:08.0631 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 14940 
+
+2018-01-19 14:58:13.9363 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15000 
+
+2018-01-19 14:59:24.0791 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15060 
+
+2018-01-19 15:00:30.2345 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15120 
+
+2018-01-19 15:01:34.9250 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15180 
+
+2018-01-19 15:02:46.6206 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15240 
+
+2018-01-19 15:03:57.2515 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15300 
+
+2018-01-19 15:05:01.8977 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15360 
+
+2018-01-19 15:06:07.2466 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15420 
+
+2018-01-19 15:07:12.0706 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15480 
+
+2018-01-19 15:08:18.3561 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15540 
+
+2018-01-19 15:09:31.0510 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15600 
+
+2018-01-19 15:10:35.9257 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15660 
+
+2018-01-19 15:11:41.0538 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15720 
+
+2018-01-19 15:12:47.4271 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15780 
+
+2018-01-19 15:13:55.5018 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15840 
+
+2018-01-19 15:15:02.6728 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15900 
+
+2018-01-19 15:16:09.1816 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 15960 
+
+2018-01-19 15:17:13.7563 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16020 
+
+2018-01-19 15:18:21.7823 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16080 
+
+2018-01-19 15:19:30.8489 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16140 
+
+2018-01-19 15:20:35.5005 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16200 
+
+2018-01-19 15:21:40.3358 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16260 
+
+2018-01-19 15:22:46.2692 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16320 
+
+2018-01-19 15:23:52.4692 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16380 
+
+2018-01-19 15:24:57.7828 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16440 
+
+2018-01-19 15:26:03.7237 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16500 
+
+2018-01-19 15:27:08.8240 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16560 
+
+2018-01-19 15:28:20.0952 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16620 
+
+2018-01-19 15:29:24.9394 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16680 
+
+2018-01-19 15:30:30.4258 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16740 
+
+2018-01-19 15:31:41.4523 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16800 
+
+2018-01-19 15:33:06.5702 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16860 
+
+2018-01-19 15:34:13.7664 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16920 
+
+2018-01-19 15:35:19.4256 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 16980 
+
+2018-01-19 15:36:24.7726 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17040 
+
+2018-01-19 15:37:29.5698 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17100 
+
+2018-01-19 15:38:39.2885 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17160 
+
+2018-01-19 15:39:50.1247 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17220 
+
+2018-01-19 15:40:54.9416 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17280 
+
+2018-01-19 15:42:00.7007 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17340 
+
+2018-01-19 15:43:10.9936 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17400 
+
+2018-01-19 15:44:20.6973 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17460 
+
+2018-01-19 15:45:25.8909 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17520 
+
+2018-01-19 15:46:30.7641 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17580 
+
+2018-01-19 15:47:36.6704 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17640 
+
+2018-01-19 15:48:46.7165 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17700 
+
+2018-01-19 15:49:55.8323 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17760 
+
+2018-01-19 15:51:01.3105 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17820 
+
+2018-01-19 15:52:06.7647 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17880 
+
+2018-01-19 15:53:16.7087 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 17940 
+
+2018-01-19 15:54:31.8567 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18000 
+
+2018-01-19 15:55:38.7156 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18060 
+
+2018-01-19 15:56:44.1294 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18120 
+
+2018-01-19 15:57:51.1151 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18180 
+
+2018-01-19 15:58:56.8410 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18240 
+
+2018-01-19 16:00:06.0641 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18300 
+
+2018-01-19 16:01:14.3422 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18360 
+
+2018-01-19 16:02:20.0743 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18420 
+
+2018-01-19 16:03:28.7649 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18480 
+
+2018-01-19 16:04:33.4365 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18540 
+
+2018-01-19 16:05:40.3637 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18600 
+
+2018-01-19 16:06:45.0992 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18660 
+
+2018-01-19 16:07:49.8290 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18720 
+
+2018-01-19 16:08:54.6820 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18780 
+
+2018-01-19 16:10:00.8798 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18840 
+
+2018-01-19 16:11:05.5706 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18900 
+
+2018-01-19 16:12:13.1329 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 18960 
+
+2018-01-19 16:13:18.1188 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19020 
+
+2018-01-19 16:14:24.0840 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19080 
+
+2018-01-19 16:15:30.0752 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19140 
+
+2018-01-19 16:16:34.6788 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19200 
+
+2018-01-19 16:17:40.0289 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19260 
+
+2018-01-19 16:18:45.8830 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19320 
+
+2018-01-19 16:19:53.7257 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19380 
+
+2018-01-19 16:20:59.0271 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19440 
+
+2018-01-19 16:22:03.5918 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19500 
+
+2018-01-19 16:23:08.3377 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19560 
+
+2018-01-19 16:24:22.2086 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19620 
+
+2018-01-19 16:25:28.8293 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19680 
+
+2018-01-19 16:26:36.4320 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19740 
+
+2018-01-19 16:27:41.2808 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19800 
+
+2018-01-19 16:28:57.9037 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19860 
+
+2018-01-19 16:30:08.1934 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19920 
+
+2018-01-19 16:31:13.0880 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 19980 
+
+2018-01-19 16:32:18.2438 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20040 
+
+2018-01-19 16:33:22.7559 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20100 
+
+2018-01-19 16:34:31.8920 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20160 
+
+2018-01-19 16:35:37.5818 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20220 
+
+2018-01-19 16:36:42.4790 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20280 
+
+2018-01-19 16:37:47.2673 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20340 
+
+2018-01-19 16:38:54.4369 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20400 
+
+2018-01-19 16:40:02.8467 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20460 
+
+2018-01-19 16:41:09.7857 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20520 
+
+2018-01-19 16:42:16.4385 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20580 
+
+2018-01-19 16:43:21.2812 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20640 
+
+2018-01-19 16:44:26.0091 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20700 
+
+2018-01-19 16:45:36.9706 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20760 
+
+2018-01-19 16:46:41.5304 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20820 
+
+2018-01-19 16:47:47.6493 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20880 
+
+2018-01-19 16:48:54.5004 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 20940 
+
+2018-01-19 17:26:55.5558 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.5768 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.5838 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.5838 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.5838 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6008 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6008 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6008 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6179 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6179 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6179 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6349 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6349 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6349 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6499 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6499 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6499 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6659 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6659 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6779 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6779 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6929 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.6929 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7099 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7099 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7099 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7269 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7269 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21000 
+
+2018-01-19 17:26:55.7269 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7429 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7429 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7429 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7599 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7599 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.7710 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.8640 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:55.9534 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:56.6519 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:56.7799 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.3103 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.3803 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.4314 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.6025 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.6946 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.6946 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.7316 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.7616 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.7746 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.7746 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8417 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8537 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8537 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8537 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8697 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8697 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8697 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8877 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8877 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8987 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8987 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.8987 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9147 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9147 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9147 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9307 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9307 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9437 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9437 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9437 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9587 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9587 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9587 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9587 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9767 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9767 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9767 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9918 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9918 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:57.9918 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0068 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0068 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0208 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0208 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0208 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0398 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0398 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0528 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0528 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0528 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21060 
+
+2018-01-19 17:26:58.0688 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0688 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0688 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0848 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.0848 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1140 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1255 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1438 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1558 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1638 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1638 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1638 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1818 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1978 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.1978 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2158 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2158 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2288 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2288 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2288 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2448 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2448 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2578 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2578 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2578 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2744 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2744 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2744 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2915 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.2915 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3025 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3025 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3025 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3185 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3185 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3185 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3335 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3335 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3335 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3335 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:26:58.3535 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 17:27:22.7174 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21120 
+
+2018-01-19 17:28:28.3531 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21180 
+
+2018-01-19 17:29:33.2511 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21240 
+
+2018-01-19 17:30:46.7993 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21300 
+
+2018-01-19 17:31:53.0971 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21360 
+
+2018-01-19 17:32:58.7058 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21420 
+
+2018-01-19 17:34:05.3273 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21480 
+
+2018-01-19 17:35:14.1559 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21540 
+
+2018-01-19 17:36:18.8629 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21600 
+
+2018-01-19 17:37:24.1215 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21660 
+
+2018-01-19 17:38:29.6415 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21720 
+
+2018-01-19 17:39:34.3941 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21780 
+
+2018-01-19 17:40:42.4824 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21840 
+
+2018-01-19 17:41:49.4997 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21900 
+
+2018-01-19 17:43:04.7970 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 21960 
+
+2018-01-19 17:44:14.2737 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22020 
+
+2018-01-19 17:45:25.9675 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22080 
+
+2018-01-19 17:46:32.8455 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22140 
+
+2018-01-19 17:47:38.3939 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22200 
+
+2018-01-19 17:48:44.5049 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22260 
+
+2018-01-19 17:49:48.9904 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22320 
+
+2018-01-19 17:50:53.3581 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22380 
+
+2018-01-19 17:51:57.9444 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22440 
+
+2018-01-19 17:53:02.3043 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22500 
+
+2018-01-19 17:54:06.7923 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22560 
+
+2018-01-19 17:55:11.2719 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22620 
+
+2018-01-19 17:56:17.8147 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22680 
+
+2018-01-19 17:57:23.7486 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22740 
+
+2018-01-19 17:58:28.4201 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22800 
+
+2018-01-19 17:59:35.6850 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22860 
+
+2018-01-19 18:00:46.8852 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22920 
+
+2018-01-19 18:01:51.5903 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 22980 
+
+2018-01-19 18:02:56.8115 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23040 
+
+2018-01-19 18:04:02.8743 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23100 
+
+2018-01-19 18:05:17.2291 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23160 
+
+2018-01-19 18:06:23.3495 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23220 
+
+2018-01-19 18:07:28.3991 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23280 
+
+2018-01-19 18:08:32.9032 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23340 
+
+2018-01-19 18:09:38.6401 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23400 
+
+2018-01-19 18:10:53.2499 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23460 
+
+2018-01-19 18:11:57.8644 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23520 
+
+2018-01-19 18:13:02.1599 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23580 
+
+2018-01-19 18:14:07.1215 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23640 
+
+2018-01-19 18:15:12.0989 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23700 
+
+2018-01-19 18:16:21.2472 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23760 
+
+2018-01-19 18:17:25.9852 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23820 
+
+2018-01-19 18:18:30.4334 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23880 
+
+2018-01-19 18:19:37.6488 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 23940 
+
+2018-01-19 18:20:43.2090 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24000 
+
+2018-01-19 18:21:49.6404 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24060 
+
+2018-01-19 18:22:55.0898 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24120 
+
+2018-01-19 18:23:59.5041 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24180 
+
+2018-01-19 18:25:04.5661 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24240 
+
+2018-01-19 18:26:15.4345 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24300 
+
+2018-01-19 18:27:20.8203 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24360 
+
+2018-01-19 18:28:25.6865 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24420 
+
+2018-01-19 18:29:34.5020 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24480 
+
+2018-01-19 18:30:43.3821 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24540 
+
+2018-01-19 18:31:49.1303 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24600 
+
+2018-01-19 18:32:55.5092 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24660 
+
+2018-01-19 18:34:00.1074 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24720 
+
+2018-01-19 18:35:06.9321 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24780 
+
+2018-01-19 18:36:15.3636 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24840 
+
+2018-01-19 18:37:20.1529 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24900 
+
+2018-01-19 18:38:24.6876 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 24960 
+
+2018-01-19 18:39:33.5110 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25020 
+
+2018-01-19 18:40:39.5107 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25080 
+
+2018-01-19 18:41:45.2380 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25140 
+
+2018-01-19 18:42:51.4696 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25200 
+
+2018-01-19 18:43:58.2609 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25260 
+
+2018-01-19 18:45:02.7338 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25320 
+
+2018-01-19 18:46:18.3577 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25380 
+
+2018-01-19 18:47:23.0821 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25440 
+
+2018-01-19 18:48:27.3678 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25500 
+
+2018-01-19 18:49:32.4992 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25560 
+
+2018-01-19 18:50:37.8800 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25620 
+
+2018-01-19 18:51:42.2511 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25680 
+
+2018-01-19 18:52:47.0788 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25740 
+
+2018-01-19 18:53:52.0215 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25800 
+
+2018-01-19 18:54:57.0421 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25860 
+
+2018-01-19 18:56:01.9646 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25920 
+
+2018-01-19 18:57:07.0690 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 25980 
+
+2018-01-19 18:58:13.0928 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26040 
+
+2018-01-19 18:59:17.8249 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26100 
+
+2018-01-19 19:00:22.7296 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26160 
+
+2018-01-19 19:08:48.5018 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:49.0282 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:49.4885 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:49.8127 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:49.8698 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:49.9889 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.1680 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.1680 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.1680 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.1880 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.3021 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.3241 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.3241 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.3471 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.3861 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4301 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4482 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4482 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4682 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4682 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4792 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4792 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4792 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4972 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4972 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.4972 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.5162 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.5162 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.5322 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.5322 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.5432 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.5762 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26220 
+
+2018-01-19 19:08:50.5762 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.5932 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.5932 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6083 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6083 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6083 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6233 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6233 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6233 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6373 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6373 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6373 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6513 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6513 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6513 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6513 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6703 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6703 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6703 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6863 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6863 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.6863 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7023 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7023 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7133 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7133 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7133 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7303 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7303 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7303 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7474 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7474 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7474 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7634 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7634 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7634 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7794 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7794 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7794 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7954 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7954 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.7954 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8114 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8114 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8114 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8274 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8274 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8404 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8764 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8764 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8894 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.8894 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9015 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9015 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9015 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9185 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9185 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9185 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9345 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9345 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9345 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26280 
+
+2018-01-19 19:08:50.9515 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9515 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9775 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:50.9935 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0069 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0175 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0175 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0290 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0290 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0290 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0425 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0425 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0425 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0425 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0605 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0605 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0605 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0730 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0730 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0730 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0730 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0915 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0915 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.0915 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1048 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1048 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1048 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1198 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1198 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1198 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1358 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1358 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1358 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1508 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1508 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1508 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1508 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1724 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1724 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1839 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1839 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1839 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1989 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1989 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.1989 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2149 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2149 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2149 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2309 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2309 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2309 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2449 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2449 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2449 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2609 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2609 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2609 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2799 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2799 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2919 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.2919 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26340 
+
+2018-01-19 19:08:51.2919 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3080 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3080 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3080 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3265 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3265 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3416 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3416 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3416 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3596 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3596 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3706 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3706 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3706 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3876 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3876 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.3876 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4076 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4076 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4196 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4196 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4196 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4366 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4366 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4366 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4506 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4506 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4506 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4676 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4676 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4676 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4816 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4816 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4816 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4957 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4957 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4957 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.4957 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5147 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5147 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5257 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5257 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5257 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5257 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5437 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5437 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5437 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5577 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5577 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5577 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5577 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5757 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5757 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5757 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5907 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5907 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.5907 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6047 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6047 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6047 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6047 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26400 
+
+2018-01-19 19:08:51.6227 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6227 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6227 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6367 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6367 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6367 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6367 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6538 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6538 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6538 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6668 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6668 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6668 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6668 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6848 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6848 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6848 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6978 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6978 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6978 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.6978 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7148 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7148 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7148 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7148 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7328 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7328 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7328 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7455 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7455 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7455 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7455 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7635 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7635 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7635 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7764 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7764 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7764 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7764 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7944 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7944 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.7944 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8074 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8074 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8074 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8074 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8264 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8264 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8264 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8398 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8398 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8398 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8539 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8539 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8539 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8539 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8714 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8714 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8714 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8714 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8889 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26460 
+
+2018-01-19 19:08:51.8889 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.8889 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.9021 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.9021 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.9021 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.9021 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.9204 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.9204 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.9204 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:08:51.9374 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно разрешить удаленное имя: 'api.telegram.org' 
+
+2018-01-19 19:09:52.3598 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26520 
+
+2018-01-19 19:11:00.7685 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26580 
+
+2018-01-19 19:12:09.5401 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26640 
+
+2018-01-19 19:13:14.7886 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26700 
+
+2018-01-19 19:14:19.1051 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26760 
+
+2018-01-19 19:15:24.2799 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26820 
+
+2018-01-19 19:16:30.8606 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26880 
+
+2018-01-19 19:17:36.4806 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 26940 
+
+2018-01-19 19:18:41.8454 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 27000 
+
+2018-01-19 19:19:47.4170 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 27060 
+
+2018-01-19 19:20:52.2187 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 27120 
+
+2018-01-19 19:22:01.1068 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 27180 
+
+2018-01-19 19:23:06.7606 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 27240 
+
+2018-01-19 19:24:11.8071 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 27300 
+
+2018-01-19 19:25:16.2385 | Telegram.Request.TelegramRequest.GetUpdates | TRACE | HTTP request number 27360 
+

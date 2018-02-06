@@ -9,3 +9,5 @@ D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\Syst
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\NLog.config
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\NLog.dll
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\NLog.xml
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\Topshelf.dll
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\Topshelf.xml

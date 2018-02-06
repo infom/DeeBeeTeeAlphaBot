@@ -1,0 +1,424 @@
+2018-01-24 16:57:47.0657 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-24 16:57:47.1097 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-24 16:57:47.7219 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-24 16:58:03.0877 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-24 16:58:03.0997 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:611 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1516802282 message:'/t @ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 16:58:03.5424 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-24 16:58:03.5424 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 16:58:03.5424 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'ivan' 
+
+2018-01-24 16:58:03.5561 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '200' 
+
+2018-01-24 16:58:03.5561 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'boris ?dfsfdfsdfsd' 
+
+2018-01-24 16:58:03.5561 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 16:58:03.5561 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 16:58:03.6473 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'boris ?dfsfdfsdfsd' 
+
+2018-01-24 16:58:03.6473 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris ?dfsfdfsdfsd' 
+
+2018-01-24 16:58:03.9478 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-24 16:58:03.9478 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-24 16:58:04.0340 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-24 16:58:04.0390 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-01-24 17:04:25.7466 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-24 17:04:25.7926 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-24 17:04:26.3801 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-24 17:04:27.1329 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-24 17:04:27.1329 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:614 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1516802660 message:'/t @ivan 200 @boris @petr  павп апв пывап ывап р' 
+
+2018-01-24 17:04:27.5834 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-24 17:04:27.5834 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@ivan 200 @boris @petr  павп апв пывап ывап р' 
+
+2018-01-24 17:04:27.6044 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'ivan' 
+
+2018-01-24 17:04:27.6044 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '200' 
+
+2018-01-24 17:04:27.6204 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@boris @petr  павп апв пывап ывап р  
+
+2018-01-24 17:04:27.6204 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'boris' 
+
+2018-01-24 17:04:27.6334 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'petr' 
+
+2018-01-24 17:04:27.6334 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | find description ' павп апв пывап ывап р ' 
+
+2018-01-24 17:04:27.6334 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 2, сам пользователь False 
+
+2018-01-24 17:04:27.6545 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:04:27.6545 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:04:27.7382 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'boris' 
+
+2018-01-24 17:04:27.7432 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'boris' 
+
+2018-01-24 17:04:27.7432 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:04:27.8301 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'petr' 
+
+2018-01-24 17:04:27.8391 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'petr' 
+
+2018-01-24 17:04:27.8391 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'petr' 
+
+2018-01-24 17:04:27.9312 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:04:27.9312 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:04:28.0269 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'ivan'), 0) as Bal  
+
+2018-01-24 17:04:28.1151 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @ivan составляет 5202,00 
+
+2018-01-24 17:04:28.1151 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:ivan amount:100 to:boris 
+
+2018-01-24 17:04:28.1151 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('ivan' ,100 ,'boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-24 17:04:28.2153 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:04:28.3040 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-24 17:04:31.6052 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | ERROR | Удаленный сервер возвратил ошибку: (400) Недопустимый запрос. 
+
+2018-01-24 17:04:31.6052 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'boris' 
+
+2018-01-24 17:04:31.6222 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:04:31.7142 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'boris'), 0) as Bal  
+
+2018-01-24 17:04:31.7980 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @boris составляет 165,00 
+
+2018-01-24 17:04:31.8065 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:ivan amount:100 to:petr 
+
+2018-01-24 17:04:31.8065 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('ivan' ,100 ,'petr' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-24 17:04:31.9069 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'petr' 
+
+2018-01-24 17:04:31.9909 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-24 17:04:32.1780 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | ERROR | Удаленный сервер возвратил ошибку: (400) Недопустимый запрос. 
+
+2018-01-24 17:04:32.1780 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'petr' 
+
+2018-01-24 17:04:32.1950 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'petr' 
+
+2018-01-24 17:04:32.2774 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'petr'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'petr'), 0) as Bal  
+
+2018-01-24 17:04:32.3686 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @petr составляет -5567,00 
+
+2018-01-24 17:04:32.3686 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части
+Транзакция 90 успешно добавлена
+Транзакция 91 успешно добавлена
+Баланс пользователя @ivan составляет 5202,00
+Баланс пользователя @boris составляет 165,00
+Баланс пользователя @petr составляет -5567,00
+ 
+
+2018-01-24 17:04:32.6850 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-24 17:04:32.6946 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-24 17:04:32.7754 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-24 17:04:32.7754 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-01-24 17:07:34.1633 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-24 17:07:34.2251 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-24 17:07:34.7148 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-24 17:07:35.1175 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-24 17:07:35.1175 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:617 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1516802851 message:'/t @ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:07:36.1875 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-24 17:07:36.1995 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:07:36.2085 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'ivan' 
+
+2018-01-24 17:07:36.2085 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '200' 
+
+2018-01-24 17:07:36.2265 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:07:36.2265 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:07:36.2445 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:07:36.3270 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:07:36.3360 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:07:36.6068 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-24 17:07:36.6068 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-24 17:07:36.6948 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-24 17:07:36.6948 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-01-24 17:10:45.9698 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-24 17:10:46.0159 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-24 17:10:46.5952 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-24 17:10:57.7265 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-24 17:10:57.7265 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:620 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1516803056 message:'/t @ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:10:58.1621 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-24 17:10:58.1621 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:10:58.1751 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'ivan' 
+
+2018-01-24 17:10:58.1751 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '200' 
+
+2018-01-24 17:10:58.1751 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'oris' 
+
+2018-01-24 17:10:58.1751 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Описание '?dfsfdfsdfsd' 
+
+2018-01-24 17:10:58.1941 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:10:58.1941 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:10:58.2771 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'oris' 
+
+2018-01-24 17:10:58.2862 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'oris' 
+
+2018-01-24 17:10:59.2044 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-24 17:10:59.2135 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-24 17:10:59.2975 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-24 17:10:59.3025 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-01-24 17:11:39.7259 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-24 17:11:39.7883 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-24 17:11:40.2511 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-24 17:11:44.9351 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-24 17:11:44.9421 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:623 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1516803104 message:'/t @ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:11:45.3612 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-24 17:11:45.3675 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:11:45.3675 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'ivan' 
+
+2018-01-24 17:11:45.3675 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '200' 
+
+2018-01-24 17:11:45.3805 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'bori' 
+
+2018-01-24 17:11:45.3805 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Описание '?dfsfdfsdfsd' 
+
+2018-01-24 17:11:45.3805 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:11:45.3935 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:11:45.4722 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'bori' 
+
+2018-01-24 17:11:45.4722 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'bori' 
+
+2018-01-24 17:11:45.7395 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-24 17:11:45.7395 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-24 17:11:45.8277 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-24 17:11:45.8327 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-01-24 17:11:58.1572 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-24 17:11:58.2074 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-24 17:11:58.6913 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-24 17:12:04.4063 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-24 17:12:04.4193 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:626 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1516803124 message:'/t @ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:12:04.8472 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-24 17:12:04.8472 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@ivan 200 @boris ?dfsfdfsdfsd' 
+
+2018-01-24 17:12:04.8702 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'ivan' 
+
+2018-01-24 17:12:04.8792 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '200' 
+
+2018-01-24 17:12:04.8792 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь to 'boris' 
+
+2018-01-24 17:12:04.8792 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Описание '?dfsfdfsdfsd' 
+
+2018-01-24 17:12:04.8952 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:12:04.8952 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:12:04.9802 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'boris' 
+
+2018-01-24 17:12:04.9892 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:12:05.0712 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:ivan amount:200 to:boris 
+
+2018-01-24 17:12:05.0712 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('ivan' ,200 ,'boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-24 17:12:05.1764 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:12:05.2553 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-24 17:12:05.4417 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | ERROR | Удаленный сервер возвратил ошибку: (400) Недопустимый запрос. 
+
+2018-01-24 17:12:05.4417 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:12:05.4577 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:12:05.5362 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'ivan'), 0) as Bal  
+
+2018-01-24 17:12:05.6174 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @ivan составляет 5602,00 
+
+2018-01-24 17:12:05.6174 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'boris' 
+
+2018-01-24 17:12:05.6354 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:12:05.7210 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'boris'), 0) as Bal  
+
+2018-01-24 17:12:05.8031 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @boris составляет -35,00 
+
+2018-01-24 17:12:05.8031 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Транзакция 92 успешно добавлена
+Баланс пользователя @ivan составляет 5602,00
+Баланс пользователя @boris составляет -35,00 
+
+2018-01-24 17:12:05.9871 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-24 17:12:05.9871 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-24 17:12:06.0822 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-24 17:12:06.0822 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
+2018-01-24 17:12:29.0937 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск бота 
+
+2018-01-24 17:12:29.1440 | DeeBeeTeeAlphaBot.Program.Main | INFO | Подключение к БД 
+
+2018-01-24 17:12:29.5893 | DeeBeeTeeAlphaBot.Program.Main | INFO | Запуск пуллинга telegram API 
+
+2018-01-24 17:12:46.0338 | Telegram.Request.TelegramRequest.GetUpdates | DEBUG | New message event 
+
+2018-01-24 17:12:46.0338 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | DEBUG | New message: message_id:629 user_id:2730927 chat_id:2730927 username:Infom name: Ruslan Kasimov date: 1516803164 message:'/t @ivan 200 @boris @petr А тут описание будет а342' 
+
+2018-01-24 17:12:46.4570 | DeeBeeTeeAlphaBot.Program.Tr_MessageText | INFO | Получение команды /t 
+
+2018-01-24 17:12:46.4570 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Начала парсинга транзакции в строке '@ivan 200 @boris @petr А тут описание будет а342' 
+
+2018-01-24 17:12:46.4570 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь from 'ivan' 
+
+2018-01-24 17:12:46.4720 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Сумма '200' 
+
+2018-01-24 17:12:46.4720 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Обнаружена мультитранзакция, поиск пользователей в подстроке '@boris @petr А тут описание будет а342  
+
+2018-01-24 17:12:46.4720 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'boris' 
+
+2018-01-24 17:12:46.4720 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | add user  'petr' 
+
+2018-01-24 17:12:46.4890 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | find description 'А тут описание будет а342' 
+
+2018-01-24 17:12:46.4890 | DeeBeeTeeDB.DBAPI.Command_transaction | TRACE | Количество пользователей to в мультитранзакции 2, сам пользователь False 
+
+2018-01-24 17:12:46.4890 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:12:46.5020 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:12:46.5805 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '0' to 'boris' 
+
+2018-01-24 17:12:46.5805 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'boris' 
+
+2018-01-24 17:12:46.5805 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:12:46.6702 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Пользователь номер '1' to 'petr' 
+
+2018-01-24 17:12:46.6782 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Поиск пользователя 'petr' 
+
+2018-01-24 17:12:46.6782 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'petr' 
+
+2018-01-24 17:12:46.7737 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'ivan' 
+
+2018-01-24 17:12:46.7737 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'ivan' 
+
+2018-01-24 17:12:46.8607 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'ivan'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'ivan'), 0) as Bal  
+
+2018-01-24 17:12:46.9532 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @ivan составляет 5602,00 
+
+2018-01-24 17:12:46.9633 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:ivan amount:100 to:boris 
+
+2018-01-24 17:12:46.9773 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('ivan' ,100 ,'boris' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-24 17:12:47.0718 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:12:47.1550 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-24 17:12:47.3406 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | ERROR | Удаленный сервер возвратил ошибку: (400) Недопустимый запрос. 
+
+2018-01-24 17:12:47.3466 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'boris' 
+
+2018-01-24 17:12:47.3466 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'boris' 
+
+2018-01-24 17:12:47.4393 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'boris'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'boris'), 0) as Bal  
+
+2018-01-24 17:12:47.5200 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @boris составляет -135,00 
+
+2018-01-24 17:12:47.5200 | DeeBeeTeeDB.DBAPI.Command_transaction | DEBUG | Выполнение в SQL транзакции from:ivan amount:100 to:petr 
+
+2018-01-24 17:12:47.5375 | DeeBeeTeeDB.DBAPI.NewTransaction | TRACE | NewTransactionSQLParam: INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('ivan' ,100 ,'petr' ,getdate() ,0) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC 
+
+2018-01-24 17:12:47.6329 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'petr' 
+
+2018-01-24 17:12:47.7129 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | INFO | Отправка сообщения пользователю о новой транзакции в личный чат 
+
+2018-01-24 17:12:47.8689 | DeeBeeTeeAlphaBot.Program.RegisterTransaction | ERROR | Удаленный сервер возвратил ошибку: (400) Недопустимый запрос. 
+
+2018-01-24 17:12:47.8689 | DeeBeeTeeDB.DBAPI.Command_balance | DEBUG | Поиск пользователя 'petr' 
+
+2018-01-24 17:12:47.8794 | DeeBeeTeeDB.DBAPI.SearchUser | TRACE | UserSearchSQL: SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = 'petr' 
+
+2018-01-24 17:12:47.9612 | DeeBeeTeeDB.DBAPI.GetUserBalance | TRACE | GetUserBalanceSQL: SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = 'petr'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = 'petr'), 0) as Bal  
+
+2018-01-24 17:12:48.0422 | DeeBeeTeeDB.DBAPI.Command_balance | INFO | Возврат результата команды balance с сообщением Баланс пользователя @petr составляет -5667,00 
+
+2018-01-24 17:12:48.0522 | DeeBeeTeeDB.DBAPI.Command_transaction | INFO | Возврат результата команды transaction с сообщением Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части
+Транзакция 93 успешно добавлена
+Транзакция 94 успешно добавлена
+Баланс пользователя @ivan составляет 5602,00
+Баланс пользователя @boris составляет -135,00
+Баланс пользователя @petr составляет -5667,00
+ 
+
+2018-01-24 17:12:48.2374 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat update 
+
+2018-01-24 17:12:48.2374 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUpdateSQL: INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT 2730927 ,'private' ,'', 'Infom' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = 2730927) 
+
+2018-01-24 17:12:48.3340 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | Chat users update 
+
+2018-01-24 17:12:48.3340 | DeeBeeTeeDB.DBAPI.UpdateChat | TRACE | ChatUsersUpdateSQL: INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT 2730927 , 2730927, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = 2730927 AND [user_id] = 2730927) 
+
