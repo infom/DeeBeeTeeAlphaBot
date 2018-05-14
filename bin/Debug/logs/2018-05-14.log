@@ -1,0 +1,22 @@
+2018-05-14 21:51:36.8494 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-05-14 21:51:36.8965 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-05-14 21:56:38.9071 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-05-14 21:56:38.9581 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-05-14 21:56:40.0615 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+
+2018-05-14 21:56:45.3471 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Удаленный сервер возвратил ошибку: (409) Конфликт. 
+
+2018-05-14 21:56:49.6171 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Удаленный сервер возвратил ошибку: (409) Конфликт. 
+
+2018-05-14 21:59:59.1206 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-05-14 21:59:59.1666 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-05-14 21:59:59.9016 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+
+2018-05-14 22:00:01.3774 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Удаленный сервер возвратил ошибку: (409) Конфликт. 
+

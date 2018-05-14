@@ -113,6 +113,9 @@ namespace DeeBeeTeeAlphaBot
                 case "/transaction":
                     answer = d.Command_transaction(message);
                     break;
+                case "/terminate7165":
+                    Application.Shutdown;
+                    break;
                 default:
                     answer = $"Извините я команду '{command}' не поддерживаю. Поддерживаемые команды можно посмотреть /help";
                     break;
@@ -121,7 +124,7 @@ namespace DeeBeeTeeAlphaBot
             m.SendMessage(answer, e.chat.id);
             d.UpdateChat(e.chat.id, e.chat.type, e.from.id, e.from.username, e.chat.title);
             // Сообщение мне!
-            m.SendMessage("New message from @" + e.from.username + ": " + message, 2730927);
+            m.SendMessage("New " + e.chat.type + " message from @" + e.from.username + ": " + message, 2730927);
             d.Disconnect();
 
         }

@@ -11,3 +11,14 @@ D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\NLog
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\NLog.xml
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\Topshelf.dll
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\Topshelf.xml
+D:\Projects\DeeBeeTee\AlphaBot\bin\Debug\NLog.config
+D:\Projects\DeeBeeTee\AlphaBot\bin\Debug\DeeBeeTeeAlphaBot.exe.config
+D:\Projects\DeeBeeTee\AlphaBot\bin\Debug\DeeBeeTeeAlphaBot.exe
+D:\Projects\DeeBeeTee\AlphaBot\bin\Debug\DeeBeeTeeAlphaBot.pdb
+D:\Projects\DeeBeeTee\AlphaBot\bin\Debug\NLog.xml
+D:\Projects\DeeBeeTee\AlphaBot\bin\Debug\Topshelf.xml
+D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.csprojAssemblyReference.cache
+D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.csproj.CoreCompileInputs.cache
+D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.csproj.CopyComplete
+D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.exe
+D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.pdb
