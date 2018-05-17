@@ -1,0 +1,8 @@
+2018-04-19 16:52:12.6549 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-04-19 16:52:12.7018 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-04-19 16:52:13.3814 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+
+2018-04-19 16:52:34.5331 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно соединиться с удаленным сервером 
+

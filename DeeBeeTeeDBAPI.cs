@@ -52,9 +52,9 @@ namespace DeeBeeTeeDB
             #region SQL
             _GetUserBalanceSQL = "SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = '%UserName%'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = '%UserName%'), 0) as Bal ";
             _UserSearchSQL = "SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = '%UserName%'";
-            _NewUserSQL = "INSERT INTO [dbo].[users] ([user] ,[assign_date],[limit], [user_id]) VALUES ('%UserName%', getdate(), %Limit%, %UserId%) SELECT top 1 uid FROM [dbo].[users] order by assign_date DESC";
-            _NewTransactionSQL = "INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('%FromUser%' ,%Amount% ,'%ToUser%' ,getdate() ,%OID%) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC";
-            _GetUserDetailsSQL = "SELECT to_user, SUM(amount) as amount FROM (SELECT [tid], [from_user], [amount], [to_user] FROM [dbo].[transactions] union SELECT [tid], [to_user], [amount]*(-1), [from_user] FROM [dbo].[transactions] ) AS T WHERE from_user = '%UserName%' GROUP BY to_user";
+            _NewUserSQL = "INSERT INTO [dbo].[users] ([user] ,[assign_date],[limit], [user_id]) VALUES ('%UserName%', getdate(), %Limit%, %UserId%); insert into gnode (ID, uid, username, balance) SELECT top 1 uid, uid, '%UserName%', %Limit% FROM [dbo].[users] order by assign_date DESC; SELECT top 1 uid FROM [dbo].[users] order by assign_date DESC";
+            _NewTransactionSQL = "INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('%FromUser%' ,%Amount% ,'%ToUser%' ,getdate() ,%OID%); exec NewTransaction '%FromUser%' ,'%ToUser%', %Amount% ; exec Rebalance 1, 2; SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC";
+            _GetUserDetailsSQL = "EXEC Details '%UserName%' ;";
             _UpdateChatSQL = "INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT %ChatId% ,'%ChatType%' ,'%ChatTitle%', '%ChatUsername%' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = %ChatId%)";
             _UpdateChatUsersSQL = "INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT %ChatId% , %UserId%, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = %ChatId% AND [user_id] = %UserId%)";
             #endregion

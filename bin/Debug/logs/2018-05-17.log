@@ -1,0 +1,26 @@
+2018-05-17 16:27:58.4192 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-05-17 16:27:58.4667 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-05-17 16:27:58.9025 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+
+2018-05-17 16:28:20.0212 | Telegram.Request.TelegramRequest.GetUpdates | ERROR | Невозможно соединиться с удаленным сервером 
+
+2018-05-17 16:28:36.8246 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-05-17 16:28:36.8776 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-05-17 16:28:37.3388 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+
+2018-05-17 17:04:40.6834 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-05-17 17:04:40.7514 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-05-17 17:04:41.2518 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+
+2018-05-17 17:15:47.0905 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-05-17 17:15:47.1365 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-05-17 17:15:47.5792 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+

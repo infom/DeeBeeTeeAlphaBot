@@ -114,7 +114,8 @@ namespace DeeBeeTeeAlphaBot
                     answer = d.Command_transaction(message);
                     break;
                 case "/terminate7165":
-                    Application.Shutdown;
+                    Environment.Exit(0);
+                    answer = "exiting...";
                     break;
                 default:
                     answer = $"Извините я команду '{command}' не поддерживаю. Поддерживаемые команды можно посмотреть /help";
