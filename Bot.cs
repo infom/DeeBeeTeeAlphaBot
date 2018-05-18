@@ -114,7 +114,6 @@ namespace DeeBeeTeeAlphaBot
                     answer = d.Command_transaction(message);
                     break;
                 case "/terminate7165":
-                    Environment.Exit(0);
                     answer = "exiting...";
                     break;
                 default:
@@ -127,6 +126,10 @@ namespace DeeBeeTeeAlphaBot
             // Сообщение мне!
             m.SendMessage("New " + e.chat.type + " message from @" + e.from.username + ": " + message, 2730927);
             d.Disconnect();
+            if (answer == "exiting...")
+            {
+                Environment.Exit(0);
+            };
 
         }
         private void Tr_MessageSticker(object sendr, MessageSticker e)
