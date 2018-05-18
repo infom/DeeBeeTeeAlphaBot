@@ -22,3 +22,4 @@ D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.csproj.CoreCompileInp
 D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.csproj.CopyComplete
 D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.exe
 D:\Projects\DeeBeeTee\AlphaBot\obj\Debug\DeeBeeTeeAlphaBot.pdb
+D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Debug\System.Data.Common.dll

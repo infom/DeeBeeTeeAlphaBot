@@ -16,7 +16,7 @@ namespace DeeBeeTeeAlphaBot
 
         public void Start()
         {
-            logger.Info("Запуск бота");
+            logger.Info("Starting bot");
             TelegramRequest Tr = new TelegramRequest(MainSettings.Default.Token, MainSettings.Default.API_URL);
             Tr.MessageText += Tr_MessageText;
             Tr.MessageSticker += Tr_MessageSticker;
@@ -31,10 +31,10 @@ namespace DeeBeeTeeAlphaBot
             Db.RegTransactionEvent += RegisterTransaction;
 
 
-            logger.Info("Подключение к БД");
+            logger.Info("Connection to DB");
             Db.Connect();
 
-            logger.Info("Запуск пуллинга telegram API");
+            logger.Info("Start pooling telegram API");
             Tr.GetUpdates();
 
             //Console.ReadLine();

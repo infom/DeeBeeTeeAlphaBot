@@ -585,6 +585,11 @@
             Stops the Host
             </summary>
         </member>
+        <member name="M:Topshelf.HostControl.Stop(Topshelf.TopshelfExitCode)">
+            <summary>
+            Stops the Host, returning the specified exit code
+            </summary>
+        </member>
         <member name="M:Topshelf.HostControl.Restart">
             <summary>
             Restarts the Host

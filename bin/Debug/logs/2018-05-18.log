@@ -1,0 +1,18 @@
+2018-05-18 11:33:13.3650 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск бота 
+
+2018-05-18 11:33:13.4286 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Подключение к БД 
+
+2018-05-18 11:33:13.9359 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Запуск пуллинга telegram API 
+
+2018-05-18 11:45:00.3220 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Starting bot 
+
+2018-05-18 11:45:00.3630 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Connection to DB 
+
+2018-05-18 11:45:00.8131 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Start pooling telegram API 
+
+2018-05-18 14:38:08.4238 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Starting bot 
+
+2018-05-18 14:38:08.5108 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Connection to DB 
+
+2018-05-18 14:38:09.0179 | DeeBeeTeeAlphaBot.Bot.Start | INFO | Start pooling telegram API 
+
