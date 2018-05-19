@@ -113,7 +113,7 @@ namespace DeeBeeTeeAlphaBot
                 case "/transaction":
                     answer = d.Command_transaction(message);
                     break;
-                case "/terminate8901":
+                case "/terminate9616":
                     answer = "exiting...";
                     break;
                 default:
