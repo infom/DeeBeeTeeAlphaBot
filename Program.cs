@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net;
-using System.Threading;
-using System.Data.SqlClient;
-using Telegram;
-using Telegram.Request;
-using DeeBeeTeeDB;
-using NLog;
-using Topshelf;
+﻿using Topshelf;
 
 namespace DeeBeeTeeAlphaBot
 {

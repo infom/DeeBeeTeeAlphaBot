@@ -9,3 +9,13 @@ D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Release\NL
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Release\NLog.xml
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\obj\Release\DeeBeeTeeAlphaBot.csprojResolveAssemblyReference.cache
 D:\Projects\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\DeeBeeTeeAlphaBot\bin\Release\Topshelf.dll
+D:\Projects\DeeBeeTee\TelegramBot\bin\Release\NLog.config
+D:\Projects\DeeBeeTee\TelegramBot\bin\Release\DeeBeeTeeAlphaBot.exe.config
+D:\Projects\DeeBeeTee\TelegramBot\bin\Release\DeeBeeTeeAlphaBot.exe
+D:\Projects\DeeBeeTee\TelegramBot\bin\Release\DeeBeeTeeAlphaBot.pdb
+D:\Projects\DeeBeeTee\TelegramBot\bin\Release\NLog.xml
+D:\Projects\DeeBeeTee\TelegramBot\obj\Release\DeeBeeTeeAlphaBot.csprojAssemblyReference.cache
+D:\Projects\DeeBeeTee\TelegramBot\obj\Release\DeeBeeTeeAlphaBot.csproj.CoreCompileInputs.cache
+D:\Projects\DeeBeeTee\TelegramBot\obj\Release\DeeBeeTeeAlphaBot.csproj.CopyComplete
+D:\Projects\DeeBeeTee\TelegramBot\obj\Release\DeeBeeTeeAlphaBot.exe
+D:\Projects\DeeBeeTee\TelegramBot\obj\Release\DeeBeeTeeAlphaBot.pdb

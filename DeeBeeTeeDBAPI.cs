@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using NLog;
 
@@ -53,7 +50,7 @@ namespace DeeBeeTeeDB
             _GetUserBalanceSQL = "SELECT ISNULL((select SUM(amount) from dbo.[transactions] WHERE [from_user] = '%UserName%'),0) - ISNULL((select SUM(amount) from dbo.[transactions] WHERE [to_user] = '%UserName%'), 0) as Bal ";
             _UserSearchSQL = "SELECT uid, [user], assign_date, limit, user_id from dbo.[users] where [user] = '%UserName%'";
             _NewUserSQL = "INSERT INTO [dbo].[users] ([user] ,[assign_date],[limit], [user_id]) VALUES ('%UserName%', getdate(), %Limit%, %UserId%); insert into gnode (ID, uid, username, balance) SELECT top 1 uid, uid, '%UserName%', %Limit% FROM [dbo].[users] order by assign_date DESC; SELECT top 1 uid FROM [dbo].[users] order by assign_date DESC";
-            _NewTransactionSQL = "INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('%FromUser%' ,%Amount% ,'%ToUser%' ,getdate() ,%OID%); exec NewTransaction '%FromUser%' ,'%ToUser%', %Amount% ; exec Rebalance 1, 2; SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC";
+            _NewTransactionSQL = "INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('%FromUser%' ,%Amount% ,'%ToUser%' ,getdate() ,%OID%) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC; exec NewTransaction '%FromUser%' ,'%ToUser%', %Amount% ; exec Rebalance 1, 2";
             _GetUserDetailsSQL = "EXEC Details '%UserName%' ;";
             _UpdateChatSQL = "INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT %ChatId% ,'%ChatType%' ,'%ChatTitle%', '%ChatUsername%' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = %ChatId%)";
             _UpdateChatUsersSQL = "INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT %ChatId% , %UserId%, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = %ChatId% AND [user_id] = %UserId%)";
@@ -266,6 +263,9 @@ namespace DeeBeeTeeDB
                 tran.to.user = ToUser;
                 tran.to.user_id = su.user_id;
                 RegTransactionEvent(this, tran);
+
+
+
                 return tid;
             }
             catch (SqlException e)
@@ -291,9 +291,52 @@ namespace DeeBeeTeeDB
             return r;
         }
 
+        public string Command_a_balance(string message)
+        {
+            string r;
+            string username = message.Trim();
+            username = username.Replace("/a_balance", "");
+            username = username.Trim();
+            username = username.Substring(1, username.Length - 1);
+            logger.Debug($"Поиск пользователя '{username}'");
+            User su = SearchUser(username);
+            if (su.uid == 0)
+            {
+                r = "Пользователь с именем " + username + " не найден. Для создание пользователя необходимо написать /start";
+            }
+            else
+            {
+                r = "Баланс пользователя @" + username + " составляет " + GetUserBalance(username).ToString();
+            }
+            logger.Info("Возврат результата команды balance с сообщением " + r);
+            return r;
+        }
+
         public string Command_details(string username, string cparams)
         {
             string r;
+            logger.Debug($"Поиск пользователя '{username}'");
+            User su = SearchUser(username);
+            if (su.uid == 0)
+            {
+                r = "Пользователь с именем @" + username + " не найден. Для создание пользователя необходимо написать /start";
+            }
+            else
+            {
+                r = "Детали пользователя @" + username + ". Баланс: " + GetUserBalance(username).ToString() + "\r\n" + GetUserDetails(username);
+            }
+
+            logger.Info("Возврат результата команды details с сообщением" + r);
+            return r;
+        }
+
+        public string Command_a_details(string message)
+        {
+            string r;
+            string username = message.Trim();
+            username = username.Replace("/a_details", "");
+            username = username.Trim();
+            username = username.Substring(1, username.Length - 1);
             logger.Debug($"Поиск пользователя '{username}'");
             User su = SearchUser(username);
             if (su.uid == 0)
@@ -363,6 +406,7 @@ namespace DeeBeeTeeDB
         {
             string r = "";
             string m = message.Replace("/transaction","");
+            string[] words = message.Trim().Split(' ');
             string desc = "";
             m = m.Replace("/t", "");
             m = m.Replace("@DeeBeeTeeBot", "");
@@ -480,7 +524,7 @@ namespace DeeBeeTeeDB
                 User su = SearchUser(from_user);
                 if (su.uid == 0)
                 {
-                    r = "Пользователь @" + from_user + " не подключен к системею. Регистрация мультитранзакции невозможна";
+                    r = "Пользователь @" + from_user + " не подключен к системе. Регистрация мультитранзакции невозможна";
                     return r;
                 }
 
@@ -492,7 +536,7 @@ namespace DeeBeeTeeDB
                     su = SearchUser(to_user);
                     if (su.uid == 0)
                     {
-                        r = "Пользователь @" + to_user + " не подключен к системею. Регистрация мультитранзакции невозможна";
+                        r = "Пользователь @" + to_user + " не подключен к системе. Регистрация мультитранзакции невозможна";
                         return r;
                     }
                 };

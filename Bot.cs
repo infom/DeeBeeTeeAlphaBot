@@ -113,8 +113,18 @@ namespace DeeBeeTeeAlphaBot
                 case "/transaction":
                     answer = d.Command_transaction(message);
                     break;
+                
+                //Admins command
+                case "/a_balance":
+                    answer = d.Command_a_balance(message);
+                    break;
+                case "/a_details":
+                    answer = d.Command_a_details(message);
+                    break;
                 case "/terminate9616":
-                    answer = "exiting...";
+                    answer = "Emergency shutdown";
+                    //TelegramRequest TelR = sendr as TelegramRequest;
+                    //TelR.ForceTerminate = true;
                     break;
                 default:
                     answer = $"Извините я команду '{command}' не поддерживаю. Поддерживаемые команды можно посмотреть /help";
@@ -126,11 +136,6 @@ namespace DeeBeeTeeAlphaBot
             // Сообщение мне!
             m.SendMessage("New " + e.chat.type + " message from @" + e.from.username + ": " + message, 2730927);
             d.Disconnect();
-            if (answer == "exiting...")
-            {
-                Environment.Exit(0);
-            };
-
         }
         private void Tr_MessageSticker(object sendr, MessageSticker e)
         {

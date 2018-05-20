@@ -1439,6 +1439,7 @@ namespace Telegram
             }
             int LastUpdateID = 0;
             int RequestCounter = 0;
+            public bool ForceTerminate = false;
             //События
             public event ResponseText MessageText;
             public event ResponseSticker MessageSticker;
@@ -1465,6 +1466,10 @@ namespace Telegram
                             };
                             string response = webClient.DownloadString("https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
                             //logger.Trace("HTTP response: "+ response);
+                            if (RequestCounter == 1)
+                            {
+                                logger.Debug("First connection to Telegram API was successful! Response: " + response);
+                            };
                             if (response.Length <= 23)
                             {
                                 System.Threading.Thread.Sleep(1000);
@@ -1581,6 +1586,10 @@ namespace Telegram
                                         }
                                 }
                                 #endregion
+                            }
+                            if (ForceTerminate)
+                            {
+                                Environment.Exit(0);
                             }
                         }
                     }
