@@ -1589,6 +1589,7 @@ namespace Telegram
                             }
                             if (ForceTerminate)
                             {
+                                response = webClient.DownloadString("https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
                                 Environment.Exit(0);
                             }
                         }

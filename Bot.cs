@@ -123,8 +123,8 @@ namespace DeeBeeTeeAlphaBot
                     break;
                 case "/terminate9616":
                     answer = "Emergency shutdown";
-                    //TelegramRequest TelR = sendr as TelegramRequest;
-                    //TelR.ForceTerminate = true;
+                    TelegramRequest TelR = sendr as TelegramRequest;
+                    TelR.ForceTerminate = true;
                     break;
                 default:
                     answer = $"Извините я команду '{command}' не поддерживаю. Поддерживаемые команды можно посмотреть /help";
