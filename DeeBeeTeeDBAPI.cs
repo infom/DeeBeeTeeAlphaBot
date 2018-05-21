@@ -464,7 +464,7 @@ namespace DeeBeeTeeDB
                         ToUser = m.Substring(AtPos + 1, p - 1 - AtPos);
                         logger.Trace("add user  '" + ToUser + "'");
                         ToUsers.Add(ToUser);
-                        FromUserInMulti = FromUserInMulti || (ToUser == from_user);
+                        FromUserInMulti = FromUserInMulti || (ToUser.ToLower() == from_user.ToLower());
                         AtPos = -1;
 
                         if (p < m.Length - 1)
@@ -542,14 +542,14 @@ namespace DeeBeeTeeDB
                 };
 
                 decimal c_amount = Math.Floor(amount / (ToUsers.Count));
-                string b = Command_balance(from_user) + "\r\n";
+                string b = "";
                 decimal last_amount = amount - c_amount * (ToUsers.Count - 1);
-                r = "Обнаружена команда мультитранзакции, будет добавлено несколько транзакция с делением суммы на целые части\r\n";
+                r = "Обнаружена команда мультитранзакции, будет добавлено несколько транзакций с делением суммы на целые части\r\n";
                 for (int u = 0; u < ToUsers.Count; u++)
                 {
                     string to_user = ToUsers[u];
                     int tid;
-                    if (from_user == to_user) { continue; };
+                    if (from_user.ToLower() == to_user.ToLower()) { continue; };
                     amount = c_amount;
                     if (u < ToUsers.Count - 1)
                     {
@@ -565,7 +565,7 @@ namespace DeeBeeTeeDB
                     r = r + "Транзакция " + tid.ToString() + " успешно добавлена\r\n" ;
                     b = b + Command_balance(to_user) + "\r\n";
                 };
-                r = r + b;
+                r = r + Command_balance(from_user) + "\r\n" + b;
 
 
             };
