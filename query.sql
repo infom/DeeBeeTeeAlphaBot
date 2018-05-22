@@ -29,3 +29,5 @@ select gnode2.username, gedge.amount
 from gnode gnode1, gedge, gnode gnode2
 where match(gnode1-(gedge)->gnode2) AND gnode1.username = 'infom'
 
+SELECT * from transactions
+

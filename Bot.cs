@@ -84,6 +84,12 @@ namespace DeeBeeTeeAlphaBot
             }
 
             logger.Info("Получение команды " + command);
+
+            if (command.StartsWith("/tid_"))
+            {
+                answer = d.Command_tid(command, command_params);
+            }
+            else
             switch (command)
             {
                 case "/balance":
@@ -113,7 +119,13 @@ namespace DeeBeeTeeAlphaBot
                 case "/transaction":
                     answer = d.Command_transaction(message);
                     break;
-                
+                case "/j":
+                    answer = d.Command_journal(e.from.username, command_params);
+                    break;
+                case "/journal":
+                    answer = d.Command_journal(e.from.username, command_params);
+                    break;
+
                 //Admins command
                 case "/a_balance":
                     answer = d.Command_a_balance(message);

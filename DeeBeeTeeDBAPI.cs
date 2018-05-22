@@ -37,6 +37,9 @@ namespace DeeBeeTeeDB
         string _NewUserSQL;
         string _NewTransactionSQL;
         string _GetUserDetailsSQL;
+        string _GetUserJournalSQL;
+        string _GetTransactionInfoSQL;
+        string _DeleteTransactionSQL;
         string _UpdateChatSQL;
         string _UpdateChatUsersSQL;
         public event RegTransaction RegTransactionEvent;
@@ -52,6 +55,9 @@ namespace DeeBeeTeeDB
             _NewUserSQL = "INSERT INTO [dbo].[users] ([user] ,[assign_date],[limit], [user_id]) VALUES ('%UserName%', getdate(), %Limit%, %UserId%); insert into gnode (ID, uid, username, balance) SELECT top 1 uid, uid, '%UserName%', %Limit% FROM [dbo].[users] order by assign_date DESC; SELECT top 1 uid FROM [dbo].[users] order by assign_date DESC";
             _NewTransactionSQL = "INSERT INTO [dbo].[transactions] ([from_user] ,[amount] ,[to_user] ,[operation_date] ,[oid]) VALUES ('%FromUser%' ,%Amount% ,'%ToUser%' ,getdate() ,%OID%) SELECT top 1 tid FROM [dbo].[transactions] order by [operation_date] DESC; exec NewTransaction '%FromUser%' ,'%ToUser%', %Amount% ; exec Rebalance 1, 2";
             _GetUserDetailsSQL = "EXEC Details '%UserName%' ;";
+            _GetUserJournalSQL = "select top %Count% * from( SELECT tid,  to_user, amount, operation_date from transactions where from_user = '%UserName%' union SELECT tid,  from_user, -1*amount, operation_date from transactions where to_user = '%UserName%') A order by operation_date DESC";
+            _GetTransactionInfoSQL = "SELECT TOP 1 tid, from_user,  to_user, amount, operation_date from transactions where tid = %tid%";
+            _DeleteTransactionSQL = "DELETE from transactions where tid = %tid% ; exec NewTransaction '%FromUser%' ,'%ToUser%', '%Amount%' ; exec Rebalance 1, 2";
             _UpdateChatSQL = "INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT %ChatId% ,'%ChatType%' ,'%ChatTitle%', '%ChatUsername%' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = %ChatId%)";
             _UpdateChatUsersSQL = "INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT %ChatId% , %UserId%, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = %ChatId% AND [user_id] = %UserId%)";
             #endregion
@@ -130,6 +136,45 @@ namespace DeeBeeTeeDB
 
                 reader.Close();
                 return details;
+            }
+            catch (SqlException e)
+            {
+                logger.Error(e.Message);
+                return e.ToString();
+            }
+        }
+
+        public string GetUserJournal(string UserName, int count)
+        {
+            try
+            {
+                string SQL = _GetUserJournalSQL.Replace("%UserName%", UserName);
+                SQL = SQL.Replace("%Count%", count.ToString());
+                SqlCommand command = new SqlCommand(SQL, connection);
+                logger.Trace("GetUserjournalSQL: " + command.CommandText);
+                SqlDataReader reader = command.ExecuteReader();
+                string journal = "";
+                string user2;
+                decimal amount;
+                int tid;
+                DateTime opdate;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        //tid,  to_user, amount, operation_date
+                        tid = reader.GetInt32(0);
+                        user2 = reader.GetString(1);
+                        amount = reader.GetDecimal(2);
+                        opdate = reader.GetDateTime(3);
+                        logger.Trace($"Generate journal record from: {UserName} to: {user2} amount: {amount} tid: {tid} date: {opdate}");
+
+                        journal = journal + $"{opdate} @{user2} {amount} /tid_{tid}\r\n";
+                    }
+                }
+
+                reader.Close();
+                return journal;
             }
             catch (SqlException e)
             {
@@ -330,6 +375,123 @@ namespace DeeBeeTeeDB
             return r;
         }
 
+        public string Command_tid(string command, string cparams)
+        {
+            string r = "";
+            string tidstr;
+            int tid;
+            logger.Debug($"Получение tid из '{command}'");
+
+            tidstr = command.Replace("/tid_", "").Trim();
+
+            if (int.TryParse(tidstr, out tid) == false)
+            {
+                r = "Команда управления транзакцией неправильная. Принимаются только команды вида /tid_XXX. Где XXX - это номер транзакции";
+
+                return r;
+            }
+
+            if (cparams.Trim() == "")
+            {
+                logger.Debug($"Запрос информации по транзакции '{tid}'");
+                r = "Информация о транзакции \r\n" + GetTransactionInfo(tid)+ "\r\n Для удаления транзакции введите /tid_" + tidstr+" delete";
+            }
+            else if (cparams.Trim() == "delete")
+            {
+                logger.Debug($"Удаление транзакции '{tid}'");
+                r = DeleteTransaction(tid);
+            }
+
+            logger.Info("Возврат результата команды tid с сообщением" + r);
+            return r;
+        }
+
+        private string DeleteTransaction(int tid)
+        {
+            try
+            {
+                string SQL = _GetTransactionInfoSQL.Replace("%tid%", tid.ToString());
+                SqlCommand commandI = new SqlCommand(SQL, connection);
+                logger.Trace("_GetTransactionInfoSQL: " + commandI.CommandText);
+                SqlDataReader readerI = commandI.ExecuteReader();
+                string user_from = "";
+                string user_to = "";
+                decimal amount = 0;
+                if (readerI.HasRows)
+                {
+                    while (readerI.Read())
+                    {
+                        //tid, from_user,  to_user, amount, operation_date
+                        user_from = readerI.GetString(1);
+                        user_to = readerI.GetString(2);
+                        amount = readerI.GetDecimal(3);
+                        logger.Trace($"Get transaction info from: {user_from} to: {user_to} tid: {tid} amount:{amount}");
+                    }
+                }
+
+                readerI.Close();
+
+                SQL = _DeleteTransactionSQL.Replace("%tid%", tid.ToString());
+                SQL = SQL.Replace("%ToUser%", user_from);
+                SQL = SQL.Replace("%FromUser%", user_to);
+                SQL = SQL.Replace("%Amount%", amount.ToString().Replace(",","."));
+                SqlCommand commandD = new SqlCommand(SQL, connection);
+                logger.Trace("_DeleteTransactionSQL: " + commandD.CommandText);
+                SqlDataReader readerD = commandD.ExecuteReader();
+                readerD.Close();
+
+                string r = "Транзакция "+tid.ToString()+ " успешно удалена!\r\n"+ Command_balance(user_from)+"\r\n"+ Command_balance(user_to);
+
+                return r;
+                ;
+            }
+            catch (SqlException e)
+            {
+                logger.Error(e.Message);
+                return e.ToString();
+            }
+        }
+
+        private string GetTransactionInfo(int tid)
+        {
+            try
+            {
+                string SQL = _GetTransactionInfoSQL.Replace("%tid%", tid.ToString());
+                SqlCommand command = new SqlCommand(SQL, connection);
+                logger.Trace("_GetTransactionInfoSQL: " + command.CommandText);
+                SqlDataReader reader = command.ExecuteReader();
+                string tinfo = "";
+                string user_from;
+                string user_to;
+                decimal amount;
+                DateTime opdate;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        //tid, from_user,  to_user, amount, operation_date
+                        user_from = reader.GetString(1);
+                        user_to = reader.GetString(2);
+                        amount = reader.GetDecimal(3);
+                        opdate = reader.GetDateTime(4);
+
+                        logger.Trace($"Generate transaction info record from: {user_from} to: {user_to} amount: {amount} tid: {tid} date: {opdate}");
+
+                        tinfo = $"tid: {tid}\r\n От кого: @{user_from}\r\n Кому: @{user_to}\r\n Сумма: {amount}\r\n Дата: {opdate}";
+
+                    }
+                }
+
+                reader.Close();
+                return tinfo;
+            }
+            catch (SqlException e)
+            {
+                logger.Error(e.Message);
+                return e.ToString();
+            }
+        }
+
         public string Command_a_details(string message)
         {
             string r;
@@ -399,6 +561,22 @@ namespace DeeBeeTeeDB
             string r;
             r = "Поддерживаются команды \r\n/balance /b \r\n/details /d \r\n/hello \r\n/help \r\n/start \r\n/transaction /t";
             logger.Info("Возврат результата команды help с сообщением " + r);
+            return r;
+        }
+
+        public string Command_journal(string username, string cparams)
+        {
+            int cnt;
+            string r;
+            if (int.TryParse(cparams, out cnt) == false)
+            {
+                r = "Команда журнала транзакций неправильная. Принимаются только команды вида /j 100. Где 100 - это количество последних записей";
+                return r;
+            }
+
+            r = "Журнал операций пользователя @" + username + ". Последние " +cnt.ToString() +" записей \r\n" + GetUserJournal(username, cnt);
+
+            logger.Info("Возврат результата команды journal с сообщением" + r);
             return r;
         }
 
