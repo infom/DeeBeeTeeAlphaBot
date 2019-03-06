@@ -1458,13 +1458,13 @@ namespace Telegram
                     {
                         using (WebClient webClient = new WebClient())
                         {
-                            //logger.Trace("New HTTP request: https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
+                            //logger.Trace("New HTTP request: _link + _token + "/getupdates?offset=" + (LastUpdateID + 1));
                             RequestCounter += 1;
                             if ((RequestCounter % 60) == 0)
                             {
                                 logger.Trace("HTTP request number " + RequestCounter);
                             };
-                            string response = webClient.DownloadString("https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
+                            string response = webClient.DownloadString(_link + _token + "/getupdates?offset=" + (LastUpdateID + 1));
                             //logger.Trace("HTTP response: "+ response);
                             if (RequestCounter == 1)
                             {
@@ -1589,7 +1589,7 @@ namespace Telegram
                             }
                             if (ForceTerminate)
                             {
-                                response = webClient.DownloadString("https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
+                                response = webClient.DownloadString(_link + _token + "/getupdates?offset=" + (LastUpdateID + 1));
                                 Environment.Exit(0);
                             }
                         }
@@ -2008,14 +2008,14 @@ namespace Telegram
                 NameValueCollection pars = new NameValueCollection();
                 pars.Add("chat_id", chatID.ToString());
                 pars.Add("sticker", IDsticker);
-                webClient.UploadValues("https://api.telegram.org/bot" + _token + "/sendSticker", pars);
+                webClient.UploadValues(_link + _token + "/sendSticker", pars);
             }
         }
         async public Task SendVideoInputFile(int chatID, string pathToVideo, string caption = "")
         {
             using (var form = new MultipartFormDataContent())
             {
-                string url = string.Format("https://api.telegram.org/bot{0}/sendVideo", _token);
+                string url = _link + _token + "/sendVideo";
                 string fileName = pathToVideo.Split('\\').Last();
 
                 form.Add(new StringContent(chatID.ToString(), Encoding.UTF8), "chat_id");
@@ -2039,14 +2039,14 @@ namespace Telegram
                 pars.Add("chat_id", chatID.ToString());
                 pars.Add("video", _linkToVideo);
                 pars.Add("caption", caption);
-                webClient.UploadValues("https://api.telegram.org/bot" + _token + "/sendVideo", pars);
+                webClient.UploadValues(_link + _token + "/sendVideo", pars);
             }
         }
         async public Task SendVoiceInputFile(int chatID, string pathToVoice, string caption = "", int duration = 0)
         {
             using (MultipartFormDataContent form = new MultipartFormDataContent())
             {
-                string url = "https://api.telegram.org/bot" + _token + "/sendVoice";
+                string url = _link + _token + "/sendVoice";
                 string fileName = pathToVoice.Split('\\').Last();
 
                 form.Add(new StringContent(chatID.ToString(), Encoding.UTF8), "chat_id");
@@ -2070,7 +2070,7 @@ namespace Telegram
                 pars.Add("chat_id", chatID.ToString());
                 pars.Add("voice", _linkToAudio);
                 pars.Add("caption", caption);
-                webClient.UploadValues("https://api.telegram.org/bot" + _token + "/sendVoice", pars);
+                webClient.UploadValues(_link + _token + "/sendVoice", pars);
             }
         }
         public void SendLocation(int chatID, float latitude, float longitude)
@@ -2081,7 +2081,7 @@ namespace Telegram
                 pars.Add("chat_id", chatID.ToString());
                 pars.Add("latitude", latitude.ToString());
                 pars.Add("longitude", longitude.ToString());
-                webClient.UploadValues("https://api.telegram.org/bot" + _token + "/SendLocation", pars);
+                webClient.UploadValues(_link + _token + "/SendLocation", pars);
             }
         }
         public void SendVenue(int chatID, float latitude, float longitude, string title, string address, string foursquare_id = "1")
@@ -2095,7 +2095,7 @@ namespace Telegram
                 pars.Add("title", title);
                 pars.Add("address", address);
                 pars.Add("foursquare_id", foursquare_id);
-                webClient.UploadValues("https://api.telegram.org/bot" + _token + "/SendVenue", pars);
+                webClient.UploadValues(_link + _token + "/SendVenue", pars);
             }
         }
         public void SendContact(int chatID, string phone_number, string first_name, string last_name)
@@ -2107,7 +2107,7 @@ namespace Telegram
                 pars.Add("phone_number", phone_number);
                 pars.Add("first_name", first_name);
                 pars.Add("last_name", last_name);
-                webClient.UploadValues("https://api.telegram.org/bot" + _token + "/SendContact", pars);
+                webClient.UploadValues(_link + _token + "/SendContact", pars);
             }
         }
         public void SendChatAction(int chatID, ChatAction action)
@@ -2117,7 +2117,7 @@ namespace Telegram
                 NameValueCollection pars = new NameValueCollection();
                 pars.Add("chat_id", chatID.ToString());
                 pars.Add("action", action.ToString());
-                webClient.UploadValues("https://api.telegram.org/bot" + _token + "/sendChatAction", pars);
+                webClient.UploadValues(_link + _token + "/sendChatAction", pars);
             }
         }
         public enum ChatAction

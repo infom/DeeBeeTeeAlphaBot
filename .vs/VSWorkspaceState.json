@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\data"
   ],
-  "SelectedNode": "\\DeeBeeTeeAlphaBot.csproj",
+  "SelectedNode": "\\TelegramAPI.cs",
   "PreviewInSolutionExplorer": false
 }
