@@ -42,6 +42,8 @@ namespace DeeBeeTeeDB
         string _DeleteTransactionSQL;
         string _UpdateChatSQL;
         string _UpdateChatUsersSQL;
+        string _ChatIsolateSQL;
+        string _CheckChatIsolatedSQL;
         public event RegTransaction RegTransactionEvent;
         public DBAPI(string DataSource, string UserID, string Password, string InitialCatalog)
         {
@@ -60,6 +62,8 @@ namespace DeeBeeTeeDB
             _DeleteTransactionSQL = "DELETE from transactions where tid = %tid% ; exec NewTransaction '%FromUser%' ,'%ToUser%', '%Amount%' ; exec Rebalance 1, 2";
             _UpdateChatSQL = "INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT %ChatId% ,'%ChatType%' ,'%ChatTitle%', '%ChatUsername%' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = %ChatId%)";
             _UpdateChatUsersSQL = "INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT %ChatId% , %UserId%, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = %ChatId% AND [user_id] = %UserId%)";
+            _ChatIsolateSQL = "UPDATE [dbo].[chats] SET isolated = TRUE WHERE chat_id = %ChatId%";
+            _CheckChatIsolatedSQL = "SELECT isolated from [dbo].[chats] WHERE chat_id = %ChatId%";
             #endregion
 
         }
@@ -218,6 +222,37 @@ namespace DeeBeeTeeDB
             }
         }
 
+        public bool CheckIsolated(int chat_id)
+        {
+            try
+            {
+                logger.Trace("Check chat isolated");
+                bool BCheck;
+                string __CheckChatIsolatedSQLParam = _CheckChatIsolatedSQL.Replace("%ChatId%", chat_id.ToString());
+                SqlCommand command = new SqlCommand(__CheckChatIsolatedSQLParam, connection);
+                logger.Trace("ChatUpdateSQL: " + command.CommandText);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    BCheck = reader.GetBoolean(0);
+                }
+                else
+                {
+                    BCheck = false;
+                }
+
+
+                reader.Close();
+                return BCheck;
+            }
+            catch (SqlException e)
+            {
+                logger.Error(e.Message);
+                return false;
+            }
+
+        }
+
         public User SearchUser(string UserName)
         {
             User _user = new User();
@@ -282,6 +317,24 @@ namespace DeeBeeTeeDB
                 return 0;
             }
         }
+
+        public int ChatIsolate(int chat_id)
+        {
+            try
+            {
+                string _ChatIsolateSQLParams = _ChatIsolateSQL.Replace("%ChatId%", chat_id.ToString());
+                SqlCommand command = new SqlCommand(_ChatIsolateSQLParams, connection);
+                logger.Trace("ChatIsolateSQLParams: " + command.CommandText);
+                SqlDataReader reader = command.ExecuteReader();
+                return 1;
+            }
+            catch (SqlException e)
+            {
+                logger.Error(e.Message);
+                return 0;
+            }
+        }
+        
 
         public int NewTransaction(string FromUser, string ToUser, decimal Amount, string Description = "")
         {
@@ -578,6 +631,51 @@ namespace DeeBeeTeeDB
 
             logger.Info("Возврат результата команды journal с сообщением" + r);
             return r;
+        }
+
+        
+        public string Command_isolate_request(string username, int chatid, string cparams)
+        {
+            string r;
+
+            r = "Внимание вы пытаетесь изолировать данный чат. \r\nДанная процедура приведет к тому что все транзакции, регистрируемые в нем, будут видны только в этом чате. Нигде в другом месте они отображаться не будут. Так же не будет выполняться балансировка долгов между всему участниками системы, а только внутри чата!" 
+                + ". Процедура необратима. Если вы хотите её выполнить, то кликнете по команде /isolate_" + chatid.ToString() + " . Хорошо подумайте перед выполнением";
+
+            logger.Info("Возврат результата команды isolate с сообщением" + r);
+            return r;
+        }
+
+        public string Command_isolate(string command, int chatid, string cparams)
+        {
+            string r = "";
+            string chatstr;
+            int chatid_fromcommand;
+            logger.Debug($"Получение chatid из '{command}'");
+
+            chatstr = command.Replace("/isolate_", "").Trim();
+
+            if (int.TryParse(chatstr, out chatid_fromcommand) == false)
+            {
+                r = "Команда изоляции чата неправильная. Принимаются только команды вида /isolate_XXX. Где XXX - это номер чата";
+                return r;
+            }
+
+            if (chatid != chatid_fromcommand)
+            {
+                r = "Команда изоляции чата неправильная. Принимаются только команды вида /isolate_XXX. Где XXX - это номер чата. Команды принимаются только из этого же чата";
+                return r;
+            }
+
+            logger.Debug($"Попытка изоляции чата'{chatid}'");
+
+            int uid = ChatIsolate(chatid);
+
+            r = "Поздравляем ваш чат №" + chatid.ToString() + " изолирован. Теперь никто не узнает о транзакциях и долгах, регистрируемых здесь вне этого чата ! Всем пользователям этого чата необходимо выполнить команду /start в этом чате заново !";
+
+
+            logger.Info("Возврат результата команды isolate с сообщением " + r);
+            return r;
+
         }
 
         public string Command_transaction(string message)

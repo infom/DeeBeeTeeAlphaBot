@@ -40,3 +40,13 @@ C:\Users\kasimov\Source\Repos\DeeBeeTeeAlphaBot\obj\Debug\DeeBeeTeeAlphaBot.cspr
 C:\Users\kasimov\Source\Repos\DeeBeeTeeAlphaBot\obj\Debug\DeeBeeTeeAlphaBot.csproj.CopyComplete
 C:\Users\kasimov\Source\Repos\DeeBeeTeeAlphaBot\obj\Debug\DeeBeeTeeAlphaBot.exe
 C:\Users\kasimov\Source\Repos\DeeBeeTeeAlphaBot\obj\Debug\DeeBeeTeeAlphaBot.pdb
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\bin\Debug\NLog.config
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\bin\Debug\DeeBeeTeeAlphaBot.exe.config
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\bin\Debug\DeeBeeTeeAlphaBot.exe
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\bin\Debug\DeeBeeTeeAlphaBot.pdb
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\bin\Debug\NLog.xml
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\obj\Debug\DeeBeeTeeAlphaBot.csprojAssemblyReference.cache
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\obj\Debug\DeeBeeTeeAlphaBot.csproj.CoreCompileInputs.cache
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\obj\Debug\DeeBeeTeeAlphaBot.csproj.CopyComplete
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\obj\Debug\DeeBeeTeeAlphaBot.exe
+C:\Users\kasimov\Source\Rep\DeeBeeTeeTelegramBot\obj\Debug\DeeBeeTeeAlphaBot.pdb

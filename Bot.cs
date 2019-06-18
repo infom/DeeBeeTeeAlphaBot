@@ -85,6 +85,18 @@ namespace DeeBeeTeeAlphaBot
 
             logger.Info("Получение команды " + command);
 
+            logger.Info("Проверка изоляции чата" + command);
+            bool _isolated = d.CheckIsolated(e.chat.id);
+            if (_isolated)
+            {
+                command = command.Replace("@", "@" + e.chat.id.ToString() + "___");
+            }
+
+            if (command.StartsWith("/isolate_"))
+            {
+                answer = d.Command_isolate(command, e.chat.id, command_params);
+            }
+            else
             if (command.StartsWith("/tid_"))
             {
                 answer = d.Command_tid(command, command_params);
@@ -125,9 +137,12 @@ namespace DeeBeeTeeAlphaBot
                 case "/journal":
                     answer = d.Command_journal(e.from.username, command_params);
                     break;
+                case "/isolate":
+                    answer = d.Command_isolate_request(e.from.username, e.chat.id, command_params);
+                    break;
 
-                //Admins command
-                case "/a_balance":
+                    //Admins command
+                    case "/a_balance":
                     answer = d.Command_a_balance(message);
                     break;
                 case "/a_details":
