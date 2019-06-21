@@ -87,9 +87,12 @@ namespace DeeBeeTeeAlphaBot
 
             logger.Info("Проверка изоляции чата" + command);
             bool _isolated = d.CheckIsolated(e.chat.id);
+            string _username = e.from.username;
             if (_isolated)
             {
-                command = command.Replace("@", "@" + e.chat.id.ToString() + "___");
+                _username = e.chat.id.ToString() + "___" + e.from.username;
+                message = message.Replace("@", "@" + e.chat.id.ToString() + "___");
+                command_params = command_params.Replace("@", "@" + e.chat.id.ToString() + "___");
             }
 
             if (command.StartsWith("/isolate_"))
@@ -105,16 +108,16 @@ namespace DeeBeeTeeAlphaBot
             switch (command)
             {
                 case "/balance":
-                    answer = d.Command_balance(e.from.username, command_params);
+                    answer = d.Command_balance(_username, command_params);
                     break;
                 case "/b":
-                    answer = d.Command_balance(e.from.username, command_params);
+                    answer = d.Command_balance(_username, command_params);
                     break;
                 case "/details":
-                    answer = d.Command_details(e.from.username, command_params);
+                    answer = d.Command_details(_username, command_params);
                     break;
                 case "/d":
-                    answer = d.Command_details(e.from.username, command_params);
+                    answer = d.Command_details(_username, command_params);
                     break;
                 case "/hello":
                     answer = d.Command_hello();
@@ -123,7 +126,7 @@ namespace DeeBeeTeeAlphaBot
                     answer = d.Command_help(command_params);
                     break;
                 case "/start":
-                    answer = d.Command_start(e.from.username, e.from.id);
+                    answer = d.Command_start(_username, e.from.id);
                     break;
                 case "/t":
                     answer = d.Command_transaction(message);
@@ -132,13 +135,13 @@ namespace DeeBeeTeeAlphaBot
                     answer = d.Command_transaction(message);
                     break;
                 case "/j":
-                    answer = d.Command_journal(e.from.username, command_params);
+                    answer = d.Command_journal(_username, command_params);
                     break;
                 case "/journal":
-                    answer = d.Command_journal(e.from.username, command_params);
+                    answer = d.Command_journal(_username, command_params);
                     break;
                 case "/isolate":
-                    answer = d.Command_isolate_request(e.from.username, e.chat.id, command_params);
+                    answer = d.Command_isolate_request(_username, e.chat.id, command_params);
                     break;
 
                     //Admins command
