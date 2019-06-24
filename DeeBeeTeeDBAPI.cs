@@ -62,7 +62,7 @@ namespace DeeBeeTeeDB
             _DeleteTransactionSQL = "DELETE from transactions where tid = %tid% ; exec NewTransaction '%FromUser%' ,'%ToUser%', '%Amount%' ; exec Rebalance 1, 2";
             _UpdateChatSQL = "INSERT INTO [dbo].[chats] ([chat_id],[type],[title],[username]) SELECT %ChatId% ,'%ChatType%' ,'%ChatTitle%', '%ChatUsername%' WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chats] WHERE [chat_id] = %ChatId%)";
             _UpdateChatUsersSQL = "INSERT INTO [dbo].[chatusers] ([chat_id],[user_id],[date_reg]) SELECT %ChatId% , %UserId%, getdate() WHERE NOT EXISTS (SELECT NULL FROM [dbo].[chatusers] WHERE [chat_id] = %ChatId% AND [user_id] = %UserId%)";
-            _ChatIsolateSQL = "UPDATE [dbo].[chats] SET isolated = TRUE WHERE chat_id = %ChatId%";
+            _ChatIsolateSQL = "UPDATE [dbo].[chats] SET isolated = 1 WHERE chat_id = %ChatId%";
             _CheckChatIsolatedSQL = "SELECT isolated from [dbo].[chats] WHERE chat_id = %ChatId%";
             #endregion
 
@@ -230,10 +230,11 @@ namespace DeeBeeTeeDB
                 bool BCheck;
                 string __CheckChatIsolatedSQLParam = _CheckChatIsolatedSQL.Replace("%ChatId%", chat_id.ToString());
                 SqlCommand command = new SqlCommand(__CheckChatIsolatedSQLParam, connection);
-                logger.Trace("ChatUpdateSQL: " + command.CommandText);
+                logger.Trace("CheckChatIsolatedSQL: " + command.CommandText);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
+                    reader.Read();
                     BCheck = reader.GetBoolean(0);
                 }
                 else
@@ -645,6 +646,16 @@ namespace DeeBeeTeeDB
             return r;
         }
 
+        public string Command_private(string username, string cparams)
+        {
+            string r;
+
+            r = "Здесь будет команда рассылки";
+
+            logger.Info("Возврат результата команды private с сообщением" + r);
+            return r;
+        }
+        
         public string Command_isolate(string command, int chatid, string cparams)
         {
             string r = "";
@@ -678,14 +689,16 @@ namespace DeeBeeTeeDB
 
         }
 
-        public string Command_transaction(string message)
+        public string Command_transaction(string username, string message)
         {
             string r = "";
             string m = message.Replace("/transaction","");
             string[] words = message.Trim().Split(' ');
             string desc = "";
+            string from_user;
             m = m.Replace("/t", "");
             m = m.Replace("@DeeBeeTeeBot", "");
+            m = m.Replace("@DeeBeeTeeTestBot", "");
             m = m.Trim();
             logger.Debug($"Начала парсинга транзакции в строке '{m}'");
             int probel = m.IndexOf(' ');
@@ -694,16 +707,29 @@ namespace DeeBeeTeeDB
                 r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Не найдены пробелы";
                 return r;
             }
-            string from_user = m.Substring(1, probel - 1);
-            logger.Debug($"Пользователь from '{from_user}'");
-            m = m.Substring(probel + 1);
-            m = m.Trim();
-            probel = m.IndexOf(' ');
-            if (probel == -1)
+            string after_t = m.Substring(0, probel);
+            logger.Debug($"Сразу после /t '{after_t}'");
+            decimal first_amount = 0;
+            if (Decimal.TryParse(after_t, out first_amount))
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Не найдена сумма";
-                return r;
+                logger.Debug("Видимо пользователь не указан, берем отправителя");
+                from_user = username;
             }
+            else
+            {
+                from_user = m.Substring(1, probel - 1);
+                logger.Debug($"Пользователь from '{from_user}'");
+                m = m.Substring(probel + 1);
+                m = m.Trim();
+                probel = m.IndexOf(' ');
+                if (probel == -1)
+                {
+                    r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Не найдена сумма";
+                    return r;
+                }
+            }
+
+            
             string s_amount = m.Substring(0, probel);
             logger.Debug($"Сумма '{s_amount}'");
             decimal amount = 0;

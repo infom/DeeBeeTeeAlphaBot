@@ -70,6 +70,7 @@ namespace DeeBeeTeeAlphaBot
             d.Connect();
             string answer;
             string message = e.text.Replace("@DeeBeeTeeBot", "");
+            message = message.Replace("@DeeBeeTeeTestBot", "");
             string command_params = "";
             int space = message.IndexOf(" ");
             string command;
@@ -90,9 +91,13 @@ namespace DeeBeeTeeAlphaBot
             string _username = e.from.username;
             if (_isolated)
             {
+                logger.Debug("Чат изолирован!");
                 _username = e.chat.id.ToString() + "___" + e.from.username;
+                logger.Debug("New user name" + _username);
                 message = message.Replace("@", "@" + e.chat.id.ToString() + "___");
+                logger.Debug("New message" + message);
                 command_params = command_params.Replace("@", "@" + e.chat.id.ToString() + "___");
+                logger.Debug("New command_params" + command_params);
             }
 
             if (command.StartsWith("/isolate_"))
@@ -129,10 +134,10 @@ namespace DeeBeeTeeAlphaBot
                     answer = d.Command_start(_username, e.from.id);
                     break;
                 case "/t":
-                    answer = d.Command_transaction(message);
+                    answer = d.Command_transaction(_username, message);
                     break;
                 case "/transaction":
-                    answer = d.Command_transaction(message);
+                    answer = d.Command_transaction(_username, message);
                     break;
                 case "/j":
                     answer = d.Command_journal(_username, command_params);
@@ -142,6 +147,9 @@ namespace DeeBeeTeeAlphaBot
                     break;
                 case "/isolate":
                     answer = d.Command_isolate_request(_username, e.chat.id, command_params);
+                    break;
+                case "/private":
+                    answer = d.Command_private(_username, command_params);
                     break;
 
                     //Admins command
@@ -159,6 +167,11 @@ namespace DeeBeeTeeAlphaBot
                 default:
                     answer = $"Извините я команду '{command}' не поддерживаю. Поддерживаемые команды можно посмотреть /help";
                     break;
+            }
+
+            if (_isolated)
+            {
+                answer = answer.Replace("@" + e.chat.id.ToString() + "___", "@");                
             }
 
             m.SendMessage(answer, e.chat.id);
