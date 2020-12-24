@@ -740,6 +740,7 @@ namespace DeeBeeTeeDB
             try 
             {
                 amount = Convert.ToDecimal(new DataTable().Compute(s_amount, null));
+                amount = Decimal.Ceiling(amount);
                 computed = true;
             }
             catch (Exception e) 
