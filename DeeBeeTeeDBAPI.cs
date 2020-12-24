@@ -737,7 +737,8 @@ namespace DeeBeeTeeDB
             
             try 
             {
-                computed = Decimal.TryParse(new DataTable().Compute(s_amount, null).ToString(), out amount);
+                amount = Convert.ToDecimal(new DataTable().Compute(s_amount, null));
+                computed = true;
             }
             catch (Exception e) 
             {
@@ -748,7 +749,7 @@ namespace DeeBeeTeeDB
             
             if (!computed)
             {
-                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Сумма не преобразуется";
+                r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. @FromUser можно опустить, тогда он будет соответствовать текущему пользователю. Amount может быть простым арифметическим выражением (без пробелов)";
                 return r;
             }
 
@@ -832,7 +833,7 @@ namespace DeeBeeTeeDB
                 }
                 logger.Debug($"Выполнение в SQL транзакции from:{from_user} amount:{amount} to:{to_user}");
                 int tid = NewTransaction(from_user, to_user, amount, desc);
-                r = "Транзакция " + tid.ToString() + " успешно добавлена\r\n" + Command_balance(from_user) + "\r\n" + Command_balance(to_user);
+                r = "Транзакция на сумму " + amount + " с номером " + tid.ToString() + " успешно добавлена\r\n" + Command_balance(from_user) + "\r\n" + Command_balance(to_user);
             }
             else
             {
