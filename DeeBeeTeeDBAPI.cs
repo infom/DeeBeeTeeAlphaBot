@@ -710,7 +710,7 @@ namespace DeeBeeTeeDB
             }
             string after_t = m.Substring(0, probel);
             logger.Debug($"Сразу после /t '{after_t}'");
-            // decimal first_amount = 0;
+
             if (!after_t.Trim().StartsWith("@"))
             {
                 logger.Debug("Видимо пользователь не указан, берем отправителя");
