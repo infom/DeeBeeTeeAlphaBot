@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
 using NLog;
 
 namespace DeeBeeTeeDB
@@ -709,8 +710,8 @@ namespace DeeBeeTeeDB
             }
             string after_t = m.Substring(0, probel);
             logger.Debug($"Сразу после /t '{after_t}'");
-            decimal first_amount = 0;
-            if (Decimal.TryParse(after_t, out first_amount))
+
+            if (!after_t.Trim().StartsWith("@"))
             {
                 logger.Debug("Видимо пользователь не указан, берем отправителя");
                 from_user = username;
@@ -731,13 +732,26 @@ namespace DeeBeeTeeDB
 
             
             string s_amount = m.Substring(0, probel);
-            logger.Debug($"Сумма '{s_amount}'");
             decimal amount = 0;
-            if (Decimal.TryParse(s_amount, out amount) == false)
+            bool computed = false;
+            
+            try 
+            {
+                computed = Decimal.TryParse(new DataTable().Compute(s_amount, null).ToString(), out amount);
+            }
+            catch (Exception e) 
+            {
+                logger.Debug(e.ToString());
+            }
+
+            logger.Debug($"Сумма '{s_amount} ({(computed ? amount.ToString() : "не вычислено")})'");
+            
+            if (!computed)
             {
                 r = "Команда добавления транзакции неправильная. Принимаются только команды вида @FromUser Amount @ToUser(s). Например '@Ivan 226 @Petr'. Сумма не преобразуется";
                 return r;
             }
+
             m = m.Substring(probel + 2);
             m = m.Trim();
             List<string> ToUsers = new List<string>();
