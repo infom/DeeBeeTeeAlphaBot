@@ -744,7 +744,7 @@ namespace DeeBeeTeeDB
                 logger.Debug(e.ToString());
             }
 
-            logger.Debug($"Сумма '{s_amount} (${(computed ? amount.ToString() : "не вычислено")})'");
+            logger.Debug($"Сумма '{s_amount} ({(computed ? amount.ToString() : "не вычислено")})'");
             
             if (!computed)
             {
